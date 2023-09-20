@@ -75,7 +75,7 @@ h2 {
 
 .cabecalho {
   width: 400px;
-  height: 196px;
+  height: 220px;
   background-color: #8a0000;
 }
 
@@ -98,6 +98,9 @@ h2 {
   border: 1px solid #000;
   border-radius: 12px;
   margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .foto-do-usuario {
@@ -115,6 +118,7 @@ h2 {
   flex-direction: column;
 }
 
-.nome-do-usuario h1 {
+.nome-do-usuario {
   color: #fff;
+  padding: 8px;
 }

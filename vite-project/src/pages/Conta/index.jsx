@@ -16,25 +16,25 @@ function Conta() {
         <div className="center">
           <div className="foto-do-usuario"></div>
           <div className="nome-do-usuario">
-            <h1>VIniiiii</h1>
+            <h1>Nome da Conta</h1>
           </div>
         </div>
       </div>
       <div className="ribbon">
         <div className="buttons-ribbon">
-          <div className="element">gerais</div>
-          <div className="element">contato</div>
-          <div className="element">endereço</div>
-          <div className="element">senha</div>
+          <div className="element">Gerais</div>
+          <div className="element">Contato</div>
+          <div className="element">Endereço</div>
+          <div className="element">Senha</div>
         </div>
       </div>
       <div className="align">
         <div className="inputs">
-          <label> </label>
+          <label>Nome</label>
           <InputText />
-          <label> buceta</label>
+          <label> CPF</label>
           <InputText />
-          <label> buceta</label>
+          <label>RG</label>
           <InputText />
         </div>
         <div className="alterar-dados-btn"></div>
