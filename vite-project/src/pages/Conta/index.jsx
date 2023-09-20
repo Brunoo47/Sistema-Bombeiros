@@ -30,7 +30,7 @@ function Conta() {
       </div>
       <div className="align">
         <div className="inputs">
-          <label> buceta</label>
+          <label> </label>
           <InputText />
           <label> buceta</label>
           <InputText />

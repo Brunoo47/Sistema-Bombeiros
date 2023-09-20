@@ -16,7 +16,9 @@ function Informacoes() {
         <div className="inputs">
           <InputText type={"text"} placeholder={"Numero de registro"} />
           <InputText type={"password"} placeholder={"Senha"} />
-          <Button nome={"Logar"} />
+          <Link to={"/conta"}>
+            <Button nome={"Logar"} />
+          </Link>
         </div>
         <div className="footer"></div>
       </div>
