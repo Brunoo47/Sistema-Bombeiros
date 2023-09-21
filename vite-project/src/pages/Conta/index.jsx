@@ -9,7 +9,7 @@ function Conta() {
           <div className="logout">
             <Button
               nome={"logout"}
-              style={{ width: "125px", height: "35px", margin: "8px" }}
+              style={{ width: "262px", height: "62px", margin: "8px" }}
             />
           </div>
         </span>
