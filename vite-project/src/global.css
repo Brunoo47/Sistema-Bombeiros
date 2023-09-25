@@ -24,6 +24,7 @@
 }
 
 .MenuPage {
+  width: 100%;
   height: 90vh;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +40,7 @@
 
 .MenuPageHeader {
   display: flex;
-  align-items: center;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -105,6 +106,17 @@ h2 {
   flex-direction: column;
 }
 
+.menuTitleP {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+}
+
+.menuTitleBottom {
+  margin-bottom: 0.8rem;
+}
+
+
 .buttons-ribbon {
   margin-top: 10px;
   display: flex;
@@ -148,10 +160,16 @@ h2 {
   width: 300px;
   height: 200px;
   margin-left: 1rem;
+  margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   border-radius: 40px;
   background: #efefef;
+  
+}
+
+.cardMenuBottom {
+  height: 300px;
 }
 
 .infosMenu ul {

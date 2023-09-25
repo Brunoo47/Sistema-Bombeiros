@@ -9,7 +9,7 @@ function Menu() {
           <img className="logo" src={Logo} alt="logo do sistema" />
           <img className="avatar" src={Avatar} alt="avatar do user" />
         </div>
-        <div className="menuTitle">
+        <div className="menuTitle menuTitleP ">
           <h1>titulo</h1>
         </div>
         <div className="cardMenu">
@@ -25,10 +25,10 @@ function Menu() {
             <img className="avatar" src={Avatar} alt="avatar do user" />
           </div>
         </div>
-        <div className="menuTitle">
+        <div className="menuTitle menuTitleBottom">
           <h1>Ocorrencias</h1>
         </div>
-        <div className="cardMenu"></div>
+        <div className="cardMenu cardMenuBottom"></div>
       </div>
     </>
   );
