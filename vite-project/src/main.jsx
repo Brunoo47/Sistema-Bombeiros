@@ -6,6 +6,7 @@ import Entrar from "./pages/Entrar";
 import Informacoes from "./pages/Informações";
 import Conta from "./pages/Conta";
 import Ocorrencias from "./pages/Ocorrencias";
+import MetodoOcorrencias from "./pages/MetodoOcorrencias";
 import Menu from "./pages/Menu";
 import layoutPadrao from "./layouts/layoutPadrao";
 
@@ -17,8 +18,8 @@ root.render(
       <Route path="/infos" element={<Informacoes />} />
       <Route path="/conta" element={<Conta />} />
       <Route path="/ocorrencias" element={<Ocorrencias />} />
-
       <Route path="/menu" element={<Menu />} />
+      <Route path="/metodoOcorrencias" element={<MetodoOcorrencias />} />
     </Routes>
   </BrowserRouter>
 );
