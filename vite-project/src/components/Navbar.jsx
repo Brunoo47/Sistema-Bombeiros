@@ -1,21 +1,33 @@
-import menuLogo from "../../assets/menu-2.png";
-import registerLogo from "../../assets/pencil-plus.png";
-import accountLogo from "../../assets/user.png";
-import "./style/navbar.css";
+import menuLogo from "../assets/menu-2.png";
+import registerLogo from "../assets/pencil-plus.png";
+import accountLogo from "../assets/user.png";
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
-   <>
-   <div className="navbar">
-    <nav>
-        <ul>
-            <li><a href=""><img className="" src={menuLogo} alt="Logo menu" /></a></li>
-            <li><a href=""><img classname="" src={registerLogo} alt="Logo registro" /></a></li>
-            <li><a href=""><img className="" src={accountLogo} alt="Logo conta" /></a></li>
-        </ul>
+    return (
+      <div className="navbar">
+        <nav>
+          <ul>
+            <li>
+            <Link to="/menu">
+                <img className="navbaricone" src={menuLogo} alt="Logo menu" />
+                </Link>
+            </li>
+            <li>
+            <Link to="/ocorrencias">
+                <img className="navbaricone" src={registerLogo} alt="Logo registro" />
+                </Link>
+            </li>
+            <li>
+            <Link to="/conta">
+                <img className="navbaricone" src={accountLogo} alt="Logo conta" />
+            </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  }
 
-    </nav>
-    </div>
-    </> 
-    }
-
-export default Navbar;
+  export default Navbar;

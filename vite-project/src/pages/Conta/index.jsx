@@ -1,5 +1,6 @@
 import Button from "../../components/Button";
 import InputText from "../../components/InputText";
+import Navbar from "../../components/Navbar";
 
 function Conta() {
   return (
@@ -9,7 +10,7 @@ function Conta() {
           <div className="logout">
             <Button
               nome={"logout"}
-              style={{ width: "262px", height: "62px", margin: "8px" }}
+              style={{ width: "262px", height: "62px", margin: "5px" }}
             />
           </div>
         </span>
@@ -45,7 +46,10 @@ function Conta() {
             height: "60px",
           }}
         />
+          
       </div>
+      <Navbar />
+    
     </>
   );
 }

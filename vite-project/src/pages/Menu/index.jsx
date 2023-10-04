@@ -1,6 +1,6 @@
+import Navbar from "../../components/Navbar";
 import Logo from "../../assets/logo.png";
 import Avatar from "../../assets/icon.png";
-import Navbar from "../../components/Navbar";
 
 function Menu() {
   return (
@@ -30,7 +30,9 @@ function Menu() {
           <h1>Ocorrencias</h1>
         </div>
         <div className="cardMenu cardMenuBottom"></div>
+        <Navbar />
       </div>
+     
     </>
   );
 }
