@@ -15,7 +15,7 @@ function Navbar() {
                 </Link>
             </li>
             <li>
-            <Link to="/ocorrencias">
+            <Link to="/registrar">
                 <img className="navbaricone" src={registerLogo} alt="Logo registro" />
                 </Link>
             </li>

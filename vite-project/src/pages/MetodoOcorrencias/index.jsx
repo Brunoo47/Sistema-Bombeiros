@@ -1,5 +1,6 @@
 import arrowBack from "../../assets/arrow-back-up.png";
 import InputD from "../../components/InputD";
+import Checkbox from "../../components/checkbox"
 import InputText from "../../components/InputText";
 
 function MetodoOcorrencias() {
@@ -18,6 +19,20 @@ function MetodoOcorrencias() {
                          <InputD type={"text"} placeholder={"Digite o tipo de ocorrência"} style={{width: '80%', height: '15px'}}  />
                     </div>
 
+                    <div className="containercampo">
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       <Checkbox titulo="Campos"/>
+                       
+                       
+
+
+                    </div>
 
 
 

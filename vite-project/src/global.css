@@ -191,15 +191,20 @@ h2 {
 
 /* Página "Ocorrências */
 
+.mainOcorrencia h1 {
+  font-size: 25px;
+}
+
 .menuOcorrencias {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100%;
 }
 
-
 .OcorrenciaPage {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,8 +214,6 @@ h2 {
 .cardOcorrencias {
   width: 360px;
   height: 150px;
-  margin-top: 5rem;
-  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,6 +222,15 @@ h2 {
   background: #efefef;
   font-size: 10px;
   cursor: pointer;
+}
+
+.cardOcorrenciasTop {
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.cardOcorrenciasBottom {
+  margin-bottom: 10rem;
 }
 
 .cardOcorrencias h1 {
@@ -268,6 +280,24 @@ h2 {
   display: flex;
   justify-content: center;
   color: #FFF;
+}
+
+.containercampo {
+  height: calc(100% - 224.19px);
+  margin-left: 20px;
+}
+
+.campo {
+  display: flex;
+}
+
+.campomarcado {
+  width: 50px;
+  height: 3000px;
+}
+
+.campo h4 {
+  margin-left: 10px;
 }
 
 /* Navbar */

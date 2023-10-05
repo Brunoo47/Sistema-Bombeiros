@@ -4,7 +4,7 @@ import iconRegister from "../../assets/file-pencil.png";
 import iconRecord from "../../assets/archive.png";
 import Navbar from "../../components/Navbar";
 
-function Ocorrencias() {
+function Registrar() {
   return (
     <>
       <div className="OcorrenciaPage">
@@ -16,11 +16,11 @@ function Ocorrencias() {
         </div>
         <div className="mainOcorrencia">
         <h1>Ocorrencias</h1>
-        <div className="cardOcorrencias">
+        <div className="cardOcorrencias cardOcorrenciasTop">
         <img className="icone"  src={iconRegister}  alt="icone Registro" />
         <h1>Registrar Ocorrência</h1>  
         </div>
-        <div className="cardOcorrencias">
+        <div className="cardOcorrencias cardOcorrenciasBottom">
           <img className="icone" src={iconRecord} alt="icone Histórico" />
               <h1>Histórico de Ocorrência</h1> 
         </div>
@@ -32,4 +32,4 @@ function Ocorrencias() {
   );
 }
 
-export default Ocorrencias;
+export default Registrar;
