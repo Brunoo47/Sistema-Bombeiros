@@ -1,4 +1,5 @@
 import arrowBack from "../../assets/arrow-back-up.png";
+import React, { useState } from 'react';
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox"
 import InputText from "../../components/InputText";
@@ -22,8 +23,16 @@ function MetodoOcorrencias() {
                     <div className="containercampo">
                        <Checkbox titulo="Causado por animais" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>
                        <Checkbox titulo="Desmoronamento/Deslizamento" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>
-                       <Checkbox titulo="Queda de altura " style={{width: '25px', height: '25px', marginBottom: '10px' }}/>
                        <Checkbox titulo="Afogamento" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>
+                       <div className="containerSelect">
+                       <Checkbox titulo="Queda de altura " style={{width: '25px', height: '25px', marginBottom: '10px' }}/>
+                        <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
+                            <option value="">Selecione a altura</option>
+                            <option value="opcao1">&lt;2m</option>
+                            <option value="opcao2">2m</option>
+                            <option value="opcao3">2m&gt;</option>
+                            </select>
+                        </div>
                        <Checkbox titulo="Atropelamento" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>
                        <Checkbox titulo="Desabamento" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>
                        <Checkbox titulo="Esportivo" style={{width: '25px', height: '25px', marginBottom: '10px'}}/>

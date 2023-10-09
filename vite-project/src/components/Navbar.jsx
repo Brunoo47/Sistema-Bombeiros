@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 
 
 function Navbar() {
+  
     return (
+      <>
       <div className="navbar">
         <nav>
           <ul>
@@ -27,6 +29,7 @@ function Navbar() {
           </ul>
         </nav>
       </div>
+      </>
     );
   }
 
