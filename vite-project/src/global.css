@@ -387,3 +387,16 @@ nav {
   margin-top: 30px;
   margin-left: 10px;
 }
+
+.containerOcular {
+  height: 50px;
+  width: 200px;
+}
+
+.titleOcular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+}
