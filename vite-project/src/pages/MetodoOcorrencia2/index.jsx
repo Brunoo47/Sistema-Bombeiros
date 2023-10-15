@@ -6,8 +6,9 @@ function MetodoOcorrencias2() {
     return (
         <>
             <div className="metOcorrrenciasPage">
+            <div className="metOcorreTitle"></div>
                     <div className="tarjaV">
-                            <div className="metTitle metTitle2">
+                            <div className="metTitle">
                                 <h1>Problemas Encontrados</h1>
                              </div>
                      </div>
