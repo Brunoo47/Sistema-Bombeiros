@@ -1,3 +1,4 @@
+import Navbar from "../../components/Navbar";
 import Logo from "../../assets/logo.png";
 import Avatar from "../../assets/icon.png";
 
@@ -10,7 +11,7 @@ function Menu() {
           <img className="avatar" src={Avatar} alt="avatar do user" />
         </div>
         <div className="menuTitle menuTitleP ">
-          <h1>titulo</h1>
+          <h1>Menu</h1>
         </div>
         <div className="cardMenu">
           <div className="infosMenu">
@@ -29,7 +30,9 @@ function Menu() {
           <h1>Ocorrencias</h1>
         </div>
         <div className="cardMenu cardMenuBottom"></div>
+        <Navbar />
       </div>
+     
     </>
   );
 }
