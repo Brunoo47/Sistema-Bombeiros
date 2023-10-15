@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import InputD from "../../components/InputD";
+import Button from "../../components/Button";
 import Checkbox from "../../components/checkbox";
 import triste from "../../assets/triste.png";
 import indiferente from "../../assets/indiferente.png";
@@ -9,7 +10,7 @@ import neutro from "../../assets/neutro.png";
 function MetodoOcorrencias9() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
+      <div className="metOcorrrenciasPage metOcorronciasPageD">
         <div className="metOcorreTitle"></div>
         <div className="tarjaV">
           <div className="metTitle metTitleLong">
@@ -56,6 +57,14 @@ function MetodoOcorrencias9() {
             />
           </div>
         </div>
+        <Button
+          nome={"Finalizar"}
+          style={{
+            width: "270px",
+            height: "60px",
+            fontSize: "20px",
+          }}
+        />
       </div>
     </>
   );

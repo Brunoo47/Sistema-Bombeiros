@@ -17,6 +17,11 @@ import MetodoOcorrencias6 from "./pages/MetodoOcorrencia6";
 import MetodoOcorrencias7 from "./pages/MetodoOcorrencia7";
 import MetodoOcorrencias8 from "./pages/MetodoOcorrencia8";
 import MetodoOcorrencias9 from "./pages/MetodoOcorrencia9";
+import MetodoHistorico1 from "./pages/MetodoHistorico1";
+import MetodoHistorico2 from "./pages/MetodoHistorico2";
+import MetodoHistorico3 from "./pages/MetodoHistorico3";
+import MetodoHistorico4 from "./pages/MetodoHistorico4";
+import MetodoHistorico5 from "./pages/MetodoHistorico5";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -36,6 +41,10 @@ root.render(
       <Route path="/metodoOcorrencias7" element={<MetodoOcorrencias7 />} />
       <Route path="/metodoOcorrencias8" element={<MetodoOcorrencias8 />} />
       <Route path="/metodoOcorrencias9" element={<MetodoOcorrencias9 />} />
+      <Route path="/metodoHistorico1" element={<MetodoHistorico1 />} />
+      <Route path="/metodoHistorico2" element={<MetodoHistorico2 />} />
+      <Route path="/metodoHistorico3" element={<MetodoHistorico3 />} />
+      <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
     </Routes>
   </BrowserRouter>
 );
