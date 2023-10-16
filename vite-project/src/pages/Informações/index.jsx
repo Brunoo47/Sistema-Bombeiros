@@ -21,7 +21,8 @@ function Informacoes() {
               style={{
                 width:'262px',
                 height: '62px',
-                margin: '8px'
+                margin: '8px',
+                fontSize: '20px'
               }}
             />
           </Link>
