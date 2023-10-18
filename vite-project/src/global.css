@@ -7,6 +7,8 @@
 .botaoPrincipal {
   border: none;
   border-radius: 200px;
+  width: 5rem;
+  height: 2rem;
   background-color: #bf0010;
   color: white;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

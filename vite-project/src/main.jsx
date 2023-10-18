@@ -8,6 +8,7 @@ import Informacoes from "./pages/Informações";
 import Conta from "./pages/Conta";
 import MetodoOcorrencias from "./pages/MetodoOcorrencias";
 import Menu from "./pages/Menu";
+import MenuADM from "./pages/MenuADM";
 import Registrar from "./pages/Registrar";
 import MetodoOcorrencias2 from "./pages/MetodoOcorrencia2";
 import MetodoOcorrencias3 from "./pages/MetodoOcorrencia3";
@@ -22,6 +23,7 @@ import MetodoHistorico2 from "./pages/MetodoHistorico2";
 import MetodoHistorico3 from "./pages/MetodoHistorico3";
 import MetodoHistorico4 from "./pages/MetodoHistorico4";
 import MetodoHistorico5 from "./pages/MetodoHistorico5";
+import Bombeiro from "./pages/Bombeiro";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -45,6 +47,8 @@ root.render(
       <Route path="/metodoHistorico2" element={<MetodoHistorico2 />} />
       <Route path="/metodoHistorico3" element={<MetodoHistorico3 />} />
       <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
+      <Route path="/menuadm" element={<MenuADM />} />
+      <Route path="/bombeiro" element={<Bombeiro />} />
     </Routes>
   </BrowserRouter>
 );

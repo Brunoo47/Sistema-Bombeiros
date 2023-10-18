@@ -1,0 +1,50 @@
+.containerMenuADM {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.headMenuADM {
+    height: 20vh;
+    width: 100%;
+}
+
+.headMenuADM img{
+    width: 73px;
+    /* height: 75px; */
+}
+.headMenuADM h3{
+    text-align: center;
+}
+.menu-body{
+    margin-top: 40px;
+    display: grid;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:  316px;
+    height: 123px;
+    border: none;
+    border-radius: 100px;
+    background-color: #EFEFEF;
+}
+
+.menu-btn img{
+    width: 72px;
+    height: 72.051px;
+}
+
+.menu-btn h3{
+    color: #7A7A7A;
+    font-size: medium;
+    text-align: center;
+}
+
+
