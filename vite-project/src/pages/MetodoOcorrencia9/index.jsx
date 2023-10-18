@@ -6,11 +6,12 @@ import triste from "../../assets/triste.png";
 import indiferente from "../../assets/indiferente.png";
 import feliz from "../../assets/feliz.png";
 import neutro from "../../assets/neutro.png";
+import "./style.css";
 
 function MetodoOcorrencias9() {
   return (
     <>
-      <div className="metOcorrrenciasPage metOcorronciasPageD">
+      <div className="metDTOPage metOcorrenciasPageD">
         <div className="metOcorreTitle"></div>
         <div className="tarjaV">
           <div className="metTitle metTitleLong">

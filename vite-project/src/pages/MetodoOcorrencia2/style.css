@@ -1,0 +1,18 @@
+.metPEPage {
+    height: 100vh;
+    width: 100vw;
+}
+
+.metPETitle {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    display: flex;
+}
+
+.PEContainercampo {
+    height: 100%;
+    width: calc(100% - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }

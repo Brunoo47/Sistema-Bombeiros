@@ -249,17 +249,6 @@ h2 {
 
 /* Página Tipo de Ocorrência */
 
-.metOcorrenciasPage {
-  height: 100vh;
-  width: 100vw;
-}
-
-.metOcorronciasPageD {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .tarjaV {
   width: 100%;
   height: 100px;
@@ -291,14 +280,7 @@ h2 {
   font-size: 13px;
 }
 
-.containercampo {
-  height: calc(100% - 224.19px);
-  width: calc(100% - 20px);
-  margin-left: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 15px;
-}
+/* Componente checkbox */
 
 .campo {
   display: flex;
@@ -386,49 +368,7 @@ nav {
   height: 20px;
 }
 
-/* Página Avaliação Glassgow */
-
-.containerGlassgow {
-  margin-top: 30px;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.containerFieldGlassGow {
-  height: 100px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 70px;
-}
-
-.titleGlassGow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 150px;
-}
-
-.titleGlassGow h4 {
-  margin-bottom: 15px;
-}
-
-.campoGlassGow {
-  display: flex;
-  height: 100px;
-}
-
-.campoGlassGow h4 {
-  display: flex;
-  justify-content: flex-start;
-  width: 150px;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
+/* Visual CheckboxG */
 .checkboxG {
   display: flex;
   flex-direction: column;
@@ -436,177 +376,12 @@ nav {
   height: 100px;
 }
 
-/* Página sinais vitas */
-
-.containerSS {
-  width: calc(100% - 30px);
-  height: 100%;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.fieldSS {
-  width: 90%;
-  height: 50px;
-  display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-.titleSS {
-  display: flex;
-  align-items: center;
-}
-
-.asideSS {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.asideCheckLeft {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.asideCheckRight {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Página Localização dos traumas */
-
-.containerLT {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.containerImagemCorpo {
-  width: 200px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-}
-
-.containerImagemCorpo img {
-  height: 300px;
-}
-
-.titleLT {
-  width: 250px;
-  font-weight: bold;
-  font-size: 14px;
-  word-wrap: break-word;
-  text-align: center;
-}
-
-.containerSelectLT,
-.containerSelectQueimaduras {
-  display: flex;
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.titleSelect {
-  width: 50px;
-}
-
-.optionLT,
-.optionQueimaduras {
-  width: 100px;
-}
-
-/* Páginas queimaduras */
-
-.containerQueimaduras {
-  width: calc(100% - 30px);
-  height: 100vh;
-  margin-top: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.containerSelectQueimaduras {
-  display: flex;
-  justify-content: center;
-}
-
-.titleQueimaduras {
-  width: 350px;
-  text-align: center;
-}
-
-.titleQueimaduras h2 {
-  margin: 0;
-  font-size: 25px;
-}
-
-/* Página Vitíma */
-
-.containerVitima {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-direction: column;
-  margin-top: 40px;
-}
-
-.containerFDC {
-  width: 300px;
-}
-
-.checkboxVitimas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .campo2 {
   height: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   word-wrap: break-word;
-}
-
-/* Página Decisão de Transporte e Objetos recolhidos */
-
-.containerDTO {
-  width: 100vw;
-  height: 100vh;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.containerDecisaoTransporte {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 60px;
-}
-
-.spanOjetos {
-  margin-top: 40px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.metTitleLong {
-  text-align: center;
 }
 
 /* Página Histórico (Materias) */

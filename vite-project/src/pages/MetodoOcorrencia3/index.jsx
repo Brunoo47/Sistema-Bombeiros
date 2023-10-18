@@ -3,19 +3,20 @@ import olho from "../../assets/olho-aberto.png";
 import balao from "../../assets/balao-fala.png";
 import andar from "../../assets/andando.png";
 import CheckboxG from "../../components/checkboxG";
+import "./style.css";
 
 function MetodoOcorrencias3() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle"></div>
+      <div className="metGlassgowPage">
+        <div className="metGlassgowTitle"></div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Avaliação Glassgow</h1>
           </div>
         </div>
 
-        <div className="containercampo containerGlassgow">
+        <div className="containerGlassgow">
           <div className="containerFieldGlassGow">
             <div className="titleGlassGow">
               <h4>Abertura Ocular</h4>

@@ -2,24 +2,25 @@ import arrowBack from "../../assets/seta-esquerda.png";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import InputText from "../../components/InputText";
+import "./style.css"
 
-function MetodoOcorrencias() {
+function MetodoOcorrencias5() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle"></div>
+      <div className="metSVPage">
+        <div className="metSVTitle"></div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Sinais vitais</h1>
           </div>
         </div>
 
-        <div className="containerSS">
-          <div className="fieldSS">
-            <div className="titleSS">
+        <div className="containerSV">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Pressão arterial: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -43,11 +44,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Pulso: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -61,11 +62,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Respiração: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -79,11 +80,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Saturação: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -97,11 +98,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>HGT </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -112,11 +113,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Temperatura </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -130,11 +131,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Saturação: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
@@ -148,11 +149,11 @@ function MetodoOcorrencias() {
             </div>
           </div>
 
-          <div className="fieldSS">
-            <div className="titleSS">
+          <div className="fieldSV">
+            <div className="titleSV">
               <h4>Perfissão: </h4>
             </div>
-            <div className="asideSS">
+            <div className="asideSV">
               <div className="asideCheckLeft">
                 <Checkbox
                   titulo="&lt;2m"
@@ -198,4 +199,4 @@ function MetodoOcorrencias() {
   );
 }
 
-export default MetodoOcorrencias;
+export default MetodoOcorrencias5;

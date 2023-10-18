@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import InputD from "../../components/InputD";
-import Checkbox from "../../components/checkbox"
+import Checkbox from "../../components/checkbox";
+import "./style.css";
 
 function MetodoOcorrencias2() {
+
     return (
         <>
-            <div className="metOcorrrenciasPage">
-            <div className="metOcorreTitle"></div>
+            <div className="metPEPage">
+            <div className="metPETitle"></div>
                     <div className="tarjaV">
                             <div className="metTitle">
                                 <h1>Problemas Encontrados</h1>
                              </div>
-                     </div>
-            
+                     </div>    
 
-                    <div className="containercampo  containercampo2">                 
+                    <div className="PEContainercampo ">                 
                        <Checkbox titulo="Psiquiátrico " style={{width: '25px', height: '25px', marginBottom: '10px' }}/>
                         <div className="containerSelect">
                        <Checkbox titulo="Respiratório " style={{width: '25px', height: '25px', marginBottom: '10px' }}/>
@@ -41,11 +42,12 @@ function MetodoOcorrencias2() {
                             <option value="opcao3">Hemorr. Excessiva</option>
                             </select>
                         </div>
-                    </div>
-                    <span className="spanOcorrencia">Há outra ocorrência?</span>
+                        <span className="spanOcorrencia">Há outra ocorrência?</span>
                     <div className="inputs">
                     <InputD type={"text"} placeholder={"Digite o tipo de ocorrência"} style={{width: '85%', height: '10px', marginBottom: '20px'}}  />
                     </div>
+                    </div>
+                   
                    
             </div>
             

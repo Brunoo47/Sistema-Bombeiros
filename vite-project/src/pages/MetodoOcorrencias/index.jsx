@@ -2,12 +2,13 @@ import arrowBack from "../../assets/seta-esquerda.png";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import InputText from "../../components/InputText";
+import "./style.css";
 
 function MetodoOcorrencias() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle">
+      <div className="metTipoOcorrrenciasPage">
+        <div className="metTipoOcorreTitle">
           <img className="arrow" src={arrowBack} alt="Flecha Back" />
         </div>
         <div className="tarjaV">
@@ -23,7 +24,7 @@ function MetodoOcorrencias() {
           />
         </div>
 
-        <div className="containercampo">
+        <div className="tipoOcorrenciaContainercampo">
           <Checkbox
             titulo="Causado por animais"
             style={{

@@ -2,12 +2,13 @@ import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import InputText from "../../components/InputText";
 import arrowBack from "../../assets/seta-esquerda.png";
+import "./style.css";
 
-function MetodoOcorrencias5() {
+function MetodoOcorrencias4() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle"></div>
+      <div className="metSISEPage">
+        <div className="metSISETitle"></div>
         <div className="tarjaV">
           <div className="metTitle ">
             <h1>Sinais e Sintomas</h1>
@@ -21,7 +22,7 @@ function MetodoOcorrencias5() {
           />
         </div>
 
-        <div className="containercampo">
+        <div className="SISEContainerCampo">
           <Checkbox
             titulo="Abdomên sensível ou rígido"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -262,4 +263,4 @@ function MetodoOcorrencias5() {
   );
 }
 
-export default MetodoOcorrencias5;
+export default MetodoOcorrencias4;

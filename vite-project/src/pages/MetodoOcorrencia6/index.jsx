@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import corpo from "../../assets/corpo.png";
+import "./style.css";
 
 function MetodoOcorrencias6() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle"></div>
+      <div className="metLTPage">
+        <div className="metLTTitle"></div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Localização dos traumas</h1>

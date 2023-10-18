@@ -1,0 +1,34 @@
+.metQPage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.metQTitle {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    display: flex;
+}
+
+.containerQueimaduras {
+    width: calc(100% - 30px);
+    height: 100vh;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .containerSelectQueimaduras {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .titleQueimaduras {
+    width: 350px;
+    text-align: center;
+  }
+  
+  .titleQueimaduras h2 {
+    margin: 0;
+    font-size: 25px;
+  }
