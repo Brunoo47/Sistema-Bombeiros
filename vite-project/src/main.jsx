@@ -44,6 +44,7 @@ root.render(
       <Route path="/metodoHistorico1" element={<MetodoHistorico1 />} />
       <Route path="/metodoHistorico2" element={<MetodoHistorico2 />} />
       <Route path="/metodoHistorico3" element={<MetodoHistorico3 />} />
+      <Route path="/metodoHistorico4" element={<MetodoHistorico4  />} />
       <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
     </Routes>
   </BrowserRouter>

@@ -1,0 +1,49 @@
+.metAnanGPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.containerAnamneseG {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  margin-top: 30px;
+}
+
+.textAnamnese {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.elementAnamneseG {
+  display: flex;
+  width: calc(100% - 20px);
+}
+
+.fieldAnamneseG {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.titleAnamneseG {
+  font-weight: bold;
+  width: 100%;
+}
+
+.fieldAnamneseGVertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fieldAnamneseGInput {
+  display: flex;
+}

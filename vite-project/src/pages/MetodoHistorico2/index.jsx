@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
+import "./style.css";
 
 function MetodoHistorico2() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
+      <div className="metMatHistoricoPage">
         <div className="metOcorreTitle"></div>
         <div className="tarjaV">
           <div className="metTitle">
