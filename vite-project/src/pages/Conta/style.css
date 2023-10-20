@@ -1,0 +1,54 @@
+.containerConta {
+    height: 100vh;
+    max-width: 100vw;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 220px;
+    background-color: #8a0000;
+  }
+  
+  .align {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+.buttons-ribbon {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .element {
+    width: 100px;
+    height: 80px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  
+  .foto-do-usuario {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .nome-do-usuario {
+    color: #fff;
+    padding: 8px;
+  }

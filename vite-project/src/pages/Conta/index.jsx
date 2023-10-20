@@ -1,17 +1,22 @@
 import Button from "../../components/Button";
 import InputText from "../../components/InputText";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import "./style.css";
 
 function Conta() {
   return (
     <>
+    <div className="containerConta">
       <div className="cabecalho">
         <span>
           <div className="logout">
+          <Link to="/">
             <Button
               nome={"logout"}
-              style={{ width: "262px", height: "62px", margin: "5px" }}
+              style={{ width: "150px", height: "40px", margin: "10px" }}
             />
+            </Link>
           </div>
         </span>
         <div className="center">
@@ -49,7 +54,7 @@ function Conta() {
           
       </div>
       <Navbar />
-    
+      </div>
     </>
   );
 }
