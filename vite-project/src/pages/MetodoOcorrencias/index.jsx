@@ -1,15 +1,19 @@
 import arrowBack from "../../assets/seta-esquerda.png";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
-import InputText from "../../components/InputText";
+import MenuButtonO from "../../components/MenuButtonO";
+import { AiOutlineArrowLeft } from "react-icons/ai"
 import "./style.css";
 
 function MetodoOcorrencias() {
   return (
     <>
       <div className="metTipoOcorrrenciasPage">
-        <div className="metTipoOcorreTitle">
-          <img className="arrow" src={arrowBack} alt="Flecha Back" />
+        <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <AiOutlineArrowLeft size={55} color={"#000"} />
+            </div>
+            <MenuButtonO/>
         </div>
         <div className="tarjaV">
           <div className="metTitle">

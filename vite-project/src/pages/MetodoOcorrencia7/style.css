@@ -3,13 +3,6 @@
     height: 100vh;
 }
 
-.metQTitle {
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
-    display: flex;
-}
-
 .containerQueimaduras {
     width: calc(100% - 30px);
     height: 100vh;

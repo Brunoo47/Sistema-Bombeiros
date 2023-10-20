@@ -3,13 +3,6 @@
     width: 100vw;
 }
 
-.metGlassgowTitle {
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
-    display: flex;
-}
-
 .containerGlassgow {
     height: 100%;
     width: calc(100% - 10px);

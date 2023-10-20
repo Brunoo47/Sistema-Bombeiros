@@ -18,11 +18,5 @@
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15px;
   }
-  
-.metTipoOcorreTitle {
-  width: 100%;
-  margin-bottom: 20px;
-  color: #fff;
-  display: flex;
-}
+
 

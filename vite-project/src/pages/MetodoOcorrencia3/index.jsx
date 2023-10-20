@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import olho from "../../assets/olho-aberto.png";
 import balao from "../../assets/balao-fala.png";
 import andar from "../../assets/andando.png";
+import MenuButtonO from "../../components/MenuButtonO";
+import { AiOutlineArrowLeft } from "react-icons/ai"
 import CheckboxG from "../../components/checkboxG";
 import "./style.css";
 
@@ -9,7 +11,12 @@ function MetodoOcorrencias3() {
   return (
     <>
       <div className="metGlassgowPage">
-        <div className="metGlassgowTitle"></div>
+      <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <AiOutlineArrowLeft size={55} color={"#000"} />
+            </div>
+            <MenuButtonO/>
+            </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Avaliação Glassgow</h1>

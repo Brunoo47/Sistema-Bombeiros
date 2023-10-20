@@ -1,6 +1,9 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import InputText from "../../components/InputText";
+import MenuButtonO from "../../components/MenuButtonO";
+import { AiOutlineArrowLeft } from "react-icons/ai"
+import CheckboxG from "../../components/checkboxG";
 import arrowBack from "../../assets/seta-esquerda.png";
 import "./style.css";
 
@@ -8,7 +11,12 @@ function MetodoOcorrencias4() {
   return (
     <>
       <div className="metSISEPage">
-        <div className="metSISETitle"></div>
+      <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <AiOutlineArrowLeft size={55} color={"#000"} />
+            </div>
+            <MenuButtonO/>
+            </div>
         <div className="tarjaV">
           <div className="metTitle ">
             <h1>Sinais e Sintomas</h1>

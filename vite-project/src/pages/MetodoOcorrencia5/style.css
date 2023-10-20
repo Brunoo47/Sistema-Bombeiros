@@ -3,12 +3,6 @@
     height: 100vh;
 }
 
-.metSVTitle {
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
-    display: flex;
-}
 
 .containerSV {
     width: calc(100% - 30px);

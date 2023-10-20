@@ -248,7 +248,7 @@ h2 {
   align-items: center;
 }
 
-/* Página Tipo de Ocorrência */
+/* Layout Tarja  */
 
 .tarjaV {
   width: 100%;
@@ -261,14 +261,14 @@ h2 {
 
 .metOcorreTitle {
   width: 100%;
-  margin-bottom: 20px;
+  height: 70px;
   color: #fff;
   display: flex;
+  justify-content: space-between;
 }
 
-.arrow {
-  height: 40px;
-  width: 40px;
+.arrowIcon {
+  height: 100%;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -389,4 +389,25 @@ nav {
   font-weight: bold;
   width: 300px;
   font-size: 20px;
+}
+
+/* Layout página menu */
+
+.containerMenuButton {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.buttonMenu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.active {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 1;
 }

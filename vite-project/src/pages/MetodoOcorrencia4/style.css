@@ -3,12 +3,7 @@
     width: 100vw;
 }
 
-.metSISETitle {
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
-    display: flex;
-}
+
  
 .SISEContainerCampo {
     height: calc(100% - 224.19px);
