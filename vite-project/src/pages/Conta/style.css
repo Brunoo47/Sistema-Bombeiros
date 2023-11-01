@@ -16,7 +16,7 @@
   }
 
 .buttons-ribbon {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,12 +25,13 @@
   .element {
     width: 100px;
     height: 80px;
-    border: 1px solid #000;
+    border: 10px transparent #000;
     border-radius: 12px;
     margin: 5px;
     display: flex;
     justify-content: center;
     align-items: end;
+    
   }
   
   .foto-do-usuario {
@@ -51,4 +52,9 @@
   .nome-do-usuario {
     color: #fff;
     padding: 8px;
+  }
+
+  .redButton {
+    background-color: red;
+    color: white;
   }

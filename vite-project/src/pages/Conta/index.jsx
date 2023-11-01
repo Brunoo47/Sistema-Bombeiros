@@ -1,11 +1,68 @@
 import Button from "../../components/Button";
 import InputText from "../../components/InputText";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import "./style.css";
 
 function Conta() {
-  return (
+
+  const pageGeral = () => {
+    return (
+      <>
+            <label>Nome</label>
+            <InputText />
+            <label> CPF</label>
+            <InputText />
+            <label>RG</label>
+            <InputText />
+      </>
+    );
+  }
+
+  const pageContato = () => {
+    return (
+      <>
+            <label>Telefone</label>
+            <InputText />
+            <label>Email</label>
+            <InputText />
+          
+      </>
+    );
+  }
+  
+  const pageEndereço = () => {
+    return (
+      <>
+            <label>Rua</label>
+            <InputText />
+            <label>Cidade</label>
+            <InputText />
+          
+      </>
+    );
+  }
+  
+  const pageSenha = () => {
+    return (
+      <>
+            <label>Senha</label>
+            <InputText />
+            <label>Nova senha</label>
+            <InputText />
+      </>
+    );
+  }
+  
+const [mainPage, setMainPage] = useState(pageGeral);
+
+const renderPage = (pageFunction) => {
+   return mainPage => setMainPage(pageFunction);
+   
+}
+
+return (
     <>
     <div className="containerConta">
       <div className="cabecalho">
@@ -28,20 +85,15 @@ function Conta() {
       </div>
       <div className="ribbon">
         <div className="buttons-ribbon">
-          <div className="element">Gerais</div>
-          <div className="element">Contato</div>
-          <div className="element">Endereço</div>
-          <div className="element">Senha</div>
+          <div className="element" onClick={renderPage(pageGeral)}>Gerais</div>
+          <div className="element active" onClick={renderPage(pageContato)}>Contato</div>
+          <div className="element active" onClick={renderPage(pageEndereço)}>Endereço</div>
+          <div className="element active" onClick={renderPage(pageSenha)}>Senha</div>
         </div>
       </div>
       <div className="align">
         <div className="inputs">
-          <label>Nome</label>
-          <InputText />
-          <label> CPF</label>
-          <InputText />
-          <label>RG</label>
-          <InputText />
+          {mainPage}
         </div>
         <div className="alterar-dados-btn"></div>
         <Button

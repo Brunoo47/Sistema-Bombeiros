@@ -1,4 +1,3 @@
-import arrowBack from "../../assets/seta-esquerda.png";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
