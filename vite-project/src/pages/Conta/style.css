@@ -29,9 +29,14 @@
     border-radius: 12px;
     margin: 5px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: end;
-    
+    align-items: center;
+  }
+
+  .element.clicked {
+    background-color: red;
+    opacity: 0.6;
   }
   
   .foto-do-usuario {
