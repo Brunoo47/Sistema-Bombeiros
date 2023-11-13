@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import InputD from "../../components/InputD";
-import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import corpo from "../../assets/corpo.png";
 import "./style.css"
 
 function MetodoOcorrencias7() {

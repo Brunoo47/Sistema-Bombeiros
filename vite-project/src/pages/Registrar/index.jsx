@@ -3,7 +3,6 @@ import Avatar from "../../assets/icon.png";
 import iconRegister from "../../assets/file-pencil.png";
 import iconRecord from "../../assets/archive.png";
 import Navbar from "../../components/Navbar";
-import { FaUserCog } from "react-icons/fa";
 import "./style.css";
 
 

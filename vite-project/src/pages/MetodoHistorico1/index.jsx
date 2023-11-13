@@ -1,7 +1,5 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
-import InputText from "../../components/InputText";
-import arrowBack from "../../assets/seta-esquerda.png";
 import "./style.css";
 
 function MetodoHistorico1() {

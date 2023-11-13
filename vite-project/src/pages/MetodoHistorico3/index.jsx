@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InputD from "../../components/InputD";
-import Checkbox from "../../components/checkbox";
 import "./style.css";
 
 function MetodoHistorico3() {

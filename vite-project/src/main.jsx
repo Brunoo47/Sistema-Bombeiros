@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import "./global.css";
 import Entrar from "./pages/Entrar";
 import Informacoes from "./pages/Informações";
 import Conta from "./pages/Conta";
-import MetodoOcorrencias from "./pages/MetodoOcorrencias";
 import Menu from "./pages/Menu";
 import Registrar from "./pages/Registrar";
+import RegistrarOcorre from "./pages/RegistrarOcorre";
+import MetodoOcorrencias from "./pages/MetodoOcorrencias";
 import MetodoOcorrencias2 from "./pages/MetodoOcorrencia2";
 import MetodoOcorrencias3 from "./pages/MetodoOcorrencia3";
 import MetodoOcorrencias4 from "./pages/MetodoOcorrencia4";
@@ -23,6 +23,7 @@ import MetodoHistorico3 from "./pages/MetodoHistorico3";
 import MetodoHistorico4 from "./pages/MetodoHistorico4";
 import MetodoHistorico5 from "./pages/MetodoHistorico5";
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -32,6 +33,7 @@ root.render(
       <Route path="/conta" element={<Conta />} />
       <Route path="/registrar" element={<Registrar />} />
       <Route path="/menu" element={<Menu />} />
+      <Route path="/RegistrarOcorre" element={<RegistrarOcorre />} />
       <Route path="/metodoOcorrencias" element={<MetodoOcorrencias />} />
       <Route path="/metodoOcorrencias2" element={<MetodoOcorrencias2 />} />
       <Route path="/metodoOcorrencias3" element={<MetodoOcorrencias3 />} />

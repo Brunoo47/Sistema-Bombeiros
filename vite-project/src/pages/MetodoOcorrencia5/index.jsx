@@ -1,9 +1,7 @@
-import arrowBack from "../../assets/seta-esquerda.png";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import InputText from "../../components/InputText";
 import "./style.css"
 
 function MetodoOcorrencias5() {

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import InputD from "../../components/InputD";
-import Checkbox from "../../components/checkbox";
 import Button from "../../components/Button";
 import "./style.css";
 

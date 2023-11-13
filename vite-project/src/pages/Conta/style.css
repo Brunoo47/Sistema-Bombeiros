@@ -34,11 +34,6 @@
     align-items: center;
   }
 
-  .element.clicked {
-    background-color: red;
-    opacity: 0.6;
-  }
-  
   .foto-do-usuario {
     width: 100px;
     height: 100px;
