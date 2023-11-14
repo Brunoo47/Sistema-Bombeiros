@@ -2,3 +2,62 @@
     width: 100vw;
     height: 100vh;
 }
+
+.containerInfo {
+    width: 100vw;
+    height: calc(100% - 70px);
+}
+
+.titleInfo {
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.titleInfo span {
+    width: 100%;
+    text-align: center;
+}
+
+.firstInfo {
+    width: 100vw;
+    display: flex;
+}
+
+.secondInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.thirdInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.fourthInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.containerCompanion {
+    padding: 10px;
+    display: flex;
+    width: 300px;
+    height: auto;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+}
+
+.fifthInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.sixthInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
