@@ -9,10 +9,15 @@ function Entrar() {
       <div className="EntrarPage">
         <img className="logo" src={Logo} alt="logo do sistema" />
         <Link to="/infos">
-          <Button nome={"Entrar"}  style={{width:'262px',
-                height: '62px',
-                margin: '8px',
-                fontSize: '22px'}}/>
+          <Button
+            nome={"Entrar"}
+            style={{
+              width: "262px",
+              height: "62px",
+              margin: "8px",
+              fontSize: "22px",
+            }}
+          />
         </Link>
       </div>
     </>

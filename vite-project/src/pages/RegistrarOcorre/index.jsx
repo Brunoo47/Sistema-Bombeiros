@@ -1,10 +1,23 @@
 import React from "react";
 import Button from "../../components/Button";
-import InputD from "../../components/InputD";
+import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import "./style.css"
+import "./style.css";
 
 function RegistrarOcorre() {
+
+  const showCheck = () => {
+    const pickCheck = document.getElementById("companionCheck");
+    const containerCompanion = document.getElementById("containerCompanion");
+
+    if (pickCheck.checked) {
+      containerCompanion.style.display = "flex";
+    } else {
+      containerCompanion.style.display = "none";
+    }
+
+  }
+
   return (
     <>
       <div className="RegistrarOcorreContainer">
@@ -12,115 +25,113 @@ function RegistrarOcorre() {
           <div className="arrowIcon">
             <AiOutlineArrowLeft size={55} color={"#000"} />
           </div>
-
         </div>
         <div className="containerInfo">
           <div className="titleInfo">
             <span>Paciente</span>
           </div>
           <div className="firstInfo">
-            <label htmlFor="">
-              Nome:
-            </label>
-            <InputD
-              type={"text"}
-              placeholder={"Digite o nome"}
-              style={{ width: "100px", height: "20px", marginBottom: "20px" }}
-            />
-            <label htmlFor="">
-              Idade:
-            </label>
-            <InputD
-              type={"text"}
-              placeholder={"Digite a idade"}
-              style={{ width: "100px", height: "20px", marginBottom: "20px" }}
-            />
-            <label htmlFor="">
-              Sexo:
-            </label>
-            <select name="" id="" placeholder="Selecione uma opção">
-              <option value="">M</option>
-              <option value="">F</option>
-            </select>
-
+            <div className="marginInput">
+              <label htmlFor="">Nome:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
+            <div className="marginInput">
+              <label htmlFor="">Idade:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
+            <div className="marginInput">
+              <label htmlFor="">Sexo:</label>
+              <select name="" id="" placeholder="Selecione uma opção">
+                <option value="">M</option>
+                <option value="">F</option>
+              </select>
+            </div>
           </div>
           <div className="secondInfo">
-            <label htmlFor="">
-              CPF:
-            </label>
-            <InputD
-              type={"text"}
-              placeholder={"Digite o CPF"}
-              style={{ width: "100px", height: "20px", marginBottom: "20px" }}
-            />
+            <div className="marginInput">
+              <label htmlFor="">CPF:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
           </div>
           <div className="thirdInfo">
-            <label htmlFor="">
-              Telefone:
-            </label>
-            <InputD
-              type={"text"}
-              placeholder={"Digite o telefone"}
-              style={{ width: "100px", height: "20px", marginBottom: "20px" }}
-            />
+            <div className="marginInput">
+              <label htmlFor="">Telefone:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
           </div>
           <div className="fourthInfo">
             <div className="titleCompanion">
-              <label htmlFor="">
-                Acompanhante:
-              </label>
-              <input type="checkbox" />
-            </div>
-            <div className="containerCompanion" style={{ display: "none" }}>
-              <div>
-                <label htmlFor="">
-                  Nome:
-                </label>
-                <InputD
-                  type={"text"}
-                  placeholder={"Digite o nome"}
-                  style={{ width: "100px", height: "10px", marginBottom: "20px" }}
-                />
+              <div className="marginInput">
+                <label htmlFor="">Acompanhante:</label>
+                <input type="checkbox" id="companionCheck" onClick={showCheck} />
               </div>
-              <div>
-                <label htmlFor="">
-                  Idade:
-                </label>
-                <InputD
-                  type={"text"}
-                  placeholder={"Digite o nome"}
-                  style={{ width: "100px", height: "10px" }}
-                />
+            </div>
+            <div id="containerCompanion" className="containerCompanion" style={{ display: "none" }}>
+              <div className="marginInput">
+                <label htmlFor="">Nome:</label>
+                <input type="text" className="inputRegistrarOcorre" />
+              </div>
+              <div className="marginInput">
+                <label htmlFor="">Idade:</label>
+                <input type="text" className="inputRegistrarOcorre" />
               </div>
             </div>
           </div>
           <div className="fifthInfo">
-            <label htmlFor="">
-              Local da Ocorrência:
-            </label>
-            <InputD
-              type={"text"}
-              placeholder={"Digite o CPF"}
-              style={{ width: "100px", height: "20px", marginBottom: "20px" }}
-            />
+            <div className="marginInput">
+              <label htmlFor="">Local da Ocorrência:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
           </div>
           <div className="sixthInfo">
-            <Button nome={"Entrar"} style={{
-              width: '262px',
-              height: '62px',
-              margin: '8px',
-              fontSize: '22px'
-            }} />
-            <Button nome={"Entrar"} style={{
-              width: '262px',
-              height: '62px',
-              margin: '8px',
-              fontSize: '22px'
-            }} />
-
+            <Link to="/metodoOcorrencias">
+              <button className="buttonRegistrarOcorre">Tipo de Ocorrência</button>
+            </Link>
+            <Link to="/metodoHistorico1">
+              <button className="buttonRegistrarOcorre">Histórico de Ocorrência</button>
+            </Link>
           </div>
-        </div>
+          <div className="seventhInfo">
+            <span>Equipe de atendimento: </span>
+            <div>
+              <div className="marginInputTeam">
+                <label htmlFor=""> M:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+              </div>
+              <div className="marginInput">
+                <label htmlFor="">S1:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam " />
+              </div>
+              <div className="marginInput">
+                <label htmlFor="">S2:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+              </div>
+              <div className="marginInput">
+                <label htmlFor="">S3:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+              </div>
+              <div className="marginInput">
+                <label htmlFor=""> Demandante:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+              </div>
+              <div className="marginInput">
+                <label htmlFor="">Equipe:</label>
+                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+              </div>
+            </div>
+          </div>
 
+        </div>
+        <div className="fieldButtonRegistrarOcorre">
+          <Button
+            nome={"Registrar ocorrência"}
+            style={{
+              width: "270px",
+              height: "60px",
+              fontSize: "20px",
+            }}
+          />
+        </div>
       </div>
     </>
   );
