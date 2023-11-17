@@ -8,18 +8,21 @@ import feliz from "../../assets/feliz.png";
 import neutro from "../../assets/neutro.png";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function MetodoOcorrencias9() {
   return (
     <>
       <div className="metDTOPage metOcorrenciasPageD">
-      <div className="metOcorreTitle">
+        <div className="metOcorreTitle">
           <div className="arrowIcon">
-            <AiOutlineArrowLeft size={55} color={"#000"} />
-            </div>
-            <MenuButtonO/>
-            </div>
+            <Link to="/RegistrarOcorre">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonO />
+        </div>
         <div className="tarjaV">
           <div className="metTitle metTitleLong">
             <h1>Decisão de transporte e Objetos Recolhidos</h1>

@@ -23,8 +23,11 @@ function RegistrarOcorre() {
       <div className="RegistrarOcorreContainer">
         <div className="metOcorreTitle">
           <div className="arrowIcon">
-            <AiOutlineArrowLeft size={55} color={"#000"} />
+            <Link to="/menu">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
           </div>
+
         </div>
         <div className="containerInfo">
           <div className="titleInfo">
@@ -94,7 +97,7 @@ function RegistrarOcorre() {
           <div className="seventhInfo">
             <span>Equipe de atendimento: </span>
             <div>
-              <div className="marginInputTeam">
+              <div className="marginInput">
                 <label htmlFor=""> M:</label>
                 <input type="text" className="inputRegistrarOcorre configurationTeam" />
               </div>
@@ -120,19 +123,21 @@ function RegistrarOcorre() {
               </div>
             </div>
           </div>
+          <div className="fieldButtonRegistrarOcorre">
+            <Button
+              nome={"Registrar ocorrência"}
+              style={{
+                width: "270px",
+                height: "60px",
+                fontSize: "20px",
+              }}
+            />
+          </div>
+        </div>
 
-        </div>
-        <div className="fieldButtonRegistrarOcorre">
-          <Button
-            nome={"Registrar ocorrência"}
-            style={{
-              width: "270px",
-              height: "60px",
-              fontSize: "20px",
-            }}
-          />
-        </div>
-      </div>
+
+
+      </div >
     </>
   );
 }

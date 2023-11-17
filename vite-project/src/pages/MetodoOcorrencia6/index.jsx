@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import corpo from "../../assets/corpo.png";
 import "./style.css";
 
@@ -8,12 +9,14 @@ function MetodoOcorrencias6() {
   return (
     <>
       <div className="metLTPage">
-      <div className="metOcorreTitle">
+        <div className="metOcorreTitle">
           <div className="arrowIcon">
-            <AiOutlineArrowLeft size={55} color={"#000"} />
-            </div>
-            <MenuButtonO/>
-            </div>
+            <Link to="/RegistrarOcorre">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonO />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Localização dos traumas</h1>

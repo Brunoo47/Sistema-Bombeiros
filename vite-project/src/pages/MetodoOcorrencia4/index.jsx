@@ -1,19 +1,45 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai"
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { SlArrowDown } from "react-icons/sl";
+import { SlArrowUp } from "react-icons/sl";
 import "./style.css";
 
 function MetodoOcorrencias4() {
+
+  const toggleCheck = () => {
+    const backArrow = document.getElementById("backArrow");
+    const upArrow = document.getElementById("upArrow");
+    const containerCompanion = document.getElementById("SISEinvisible");
+
+    // Adiciona um ouvinte de evento para o clique no botão
+    backArrow.addEventListener("click", () => {
+      containerCompanion.style.display = "grid";
+      backArrow.style.display = "none";
+      upArrow.style.display = "flex";
+    });
+
+    // Adiciona um ouvinte de evento para o clique na seta para cima
+    upArrow.addEventListener("click", () => {
+      containerCompanion.style.display = "none";
+      upArrow.style.display = "none";
+      backArrow.style.display = "flex";
+    });
+  };
+
   return (
     <>
       <div className="metSISEPage">
-      <div className="metOcorreTitle">
+        <div className="metOcorreTitle">
           <div className="arrowIcon">
-            <AiOutlineArrowLeft size={55} color={"#000"} />
-            </div>
-            <MenuButtonO/>
-            </div>
+            <Link to="/RegistrarOcorre">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonO />
+        </div>
         <div className="tarjaV">
           <div className="metTitle ">
             <h1>Sinais e Sintomas</h1>
@@ -48,23 +74,25 @@ function MetodoOcorrencias4() {
             titulo="Agitação"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
-          <div className="containerSelect">
+          <div>
             <Checkbox
               titulo="Hemorragia "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
-            <select
-              style={{
-                width: "100px",
-                height: "25px",
-                marginBottom: "10px",
-                marginLeft: "40px",
-              }}
-            >
-              <option value="">Selecione o tipo</option>
-              <option value="opcao1">Interna</option>
-              <option value="opcao2">Externa</option>
-            </select>
+            <div className="containerSelect">
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginBottom: "10px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione o tipo</option>
+                <option value="opcao1">Interna</option>
+                <option value="opcao2">Externa</option>
+              </select>
+            </div>
           </div>
           <Checkbox
             titulo="Amnésia"
@@ -115,6 +143,8 @@ function MetodoOcorrencias4() {
             titulo="Otorréia"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
+        </div>
+        <div className="SISEinvisible" id="SISEinvisible" style={{ display: "none" }}>
           <Checkbox
             titulo="Cefaléia"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -123,145 +153,160 @@ function MetodoOcorrencias4() {
             titulo="Otorragia"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
-        </div>
-        <div className="containerSelect">
-          <Checkbox
-            titulo="Cianose "
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <select
-            style={{
-              width: "100px",
-              height: "25px",
-              marginBottom: "10px",
-              marginLeft: "40px",
-            }}
-          >
-            <option value="">Selecione o local</option>
-            <option value="opcao1">Lábios</option>
-            <option value="opcao2">Extremidade</option>
-          </select>
-        </div>
-        <Checkbox
-          titulo="O. V. A. C. E"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Convulsão"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <div className="containerSelect">
-          <Checkbox
-            titulo="Parada "
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <select
-            style={{
-              width: "100px",
-              height: "25px",
-              marginBottom: "10px",
-              marginLeft: "40px",
-            }}
-          >
-            <option value="">Selecione o tipo</option>
-            <option value="opcao1">Cardíaca</option>
-            <option value="opcao2">Respiratória</option>
-          </select>
-        </div>
-        <Checkbox
-          titulo="Desvio de traquéia"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Priaprismo"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Dor local"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Prurido na pele"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <div className="containerSelect">
-          <Checkbox
-            titulo="EDEMA "
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <select
-            style={{
-              width: "100px",
-              height: "25px",
-              marginBottom: "10px",
-              marginLeft: "40px",
-            }}
-          >
-            <option value="">Selecione o tipo</option>
-            <option value="opcao1">Generalizado</option>
-            <option value="opcao2">Localizado</option>
-          </select>
-        </div>
-        <div className="containerSelect">
-          <Checkbox
-            titulo="Pupilas "
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <select
-            style={{
-              width: "100px",
-              height: "25px",
-              marginBottom: "10px",
-              marginLeft: "40px",
-            }}
-          >
-            <option value="">Selecione o tipo</option>
-            <option value="opcao1">Anisocoria</option>
-            <option value="opcao2">Isocoria</option>
-            <option value="opcao3">Midriase</option>
-            <option value="opcao4">Miose</option>
-          </select>
-        </div>
-        <Checkbox
-          titulo="Enfisema subcutâneo"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Sede"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Taquipnéia"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Sinal de Battle"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Taquicardia"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Sinal de guaxinim"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Tontura"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
-        <Checkbox
-          titulo="Sudorese"
-          style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-        />
+          <div>
+            <Checkbox
+              titulo="Cianose "
+              style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+            />
+            <div className="containerSelect">
 
-        <span className="spanOcorrencia">Há outra ocorrência?</span>
-        <div className="inputs">
-          <InputD
-            type={"text"}
-            placeholder={"Digite o tipo de ocorrência"}
-            style={{ width: "85%", height: "10px", marginBottom: "20px" }}
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginBottom: "10px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione o local</option>
+                <option value="opcao1">Lábios</option>
+                <option value="opcao2">Extremidade</option>
+              </select>
+            </div>
+          </div>
+          <Checkbox
+            titulo="O. V. A. C. E"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
+          <Checkbox
+            titulo="Convulsão"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <div>
+            <Checkbox
+              titulo="Parada "
+              style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+            />
+            <div className="containerSelect">
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginBottom: "10px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione o tipo</option>
+                <option value="opcao1">Cardíaca</option>
+                <option value="opcao2">Respiratória</option>
+              </select>
+            </div>
+          </div>
+          <Checkbox
+            titulo="Desvio de traquéia"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Priaprismo"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Dor local"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Prurido na pele"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <div>
+            <Checkbox
+              titulo="EDEMA "
+              style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+            />
+            <div className="containerSelect">
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginBottom: "10px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione o tipo</option>
+                <option value="opcao1">Generalizado</option>
+                <option value="opcao2">Localizado</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <Checkbox
+              titulo="Pupilas "
+              style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+            />
+            <div className="containerSelect">
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginBottom: "10px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione o tipo</option>
+                <option value="opcao1">Anisocoria</option>
+                <option value="opcao2">Isocoria</option>
+                <option value="opcao3">Midriase</option>
+                <option value="opcao4">Miose</option>
+              </select>
+            </div>
+          </div>
+          <Checkbox
+            titulo="Enfisema subcutâneo"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Sede"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Taquipnéia"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Sinal de Battle"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Taquicardia"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Sinal de guaxinim"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Tontura"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <Checkbox
+            titulo="Sudorese"
+            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+          />
+          <span className="spanOcorrencia">Há outra ocorrência?</span>
+          <div className="inputs">
+            <InputD
+              type={"text"}
+              placeholder={"Digite o tipo de ocorrência"}
+              style={{ width: "85%", height: "10px", marginBottom: "20px" }}
+            />
+          </div>
+        </div>
+
+        <div className="backArrow" id="backArrow" onClick={toggleCheck}>
+          <SlArrowDown size={80} id="arrowBack" />
+        </div>
+        <div className="upArrow" id="upArrow" onClick={toggleCheck} style={{ display: "none" }}>
+          <SlArrowUp size={80} id="arrowUp" />
         </div>
       </div>
     </>

@@ -2,18 +2,21 @@ import React from "react";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function MetodoOcorrencias8() {
   return (
     <>
       <div className="metVitimaPage">
-      <div className="metOcorreTitle">
+        <div className="metOcorreTitle">
           <div className="arrowIcon">
-            <AiOutlineArrowLeft size={55} color={"#000"} />
-            </div>
-            <MenuButtonO/>
-            </div>
+            <Link to="/RegistrarOcorreenu">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonO />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Vitíma</h1>
