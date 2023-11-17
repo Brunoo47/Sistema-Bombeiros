@@ -20,6 +20,11 @@
     justify-content: center;
 }
 
+.containerSISEINVISIBLE {
+    width: calc(100% - 20px);
+    height: auto;
+}
+
 .SISEinvisible {
     height: auto;
     width: calc(100% - 20px);

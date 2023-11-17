@@ -6,6 +6,20 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 function MetodoOcorrencias() {
+
+  const showCheck = () => {
+    const pickChecks = document.getElementsByClassName("checkboxTipoOcorre");
+    const containerCompanions = document.getElementsByClassName("containerSelect");
+
+    for(let i = 0; i < pickChecks.length; i++) {
+        if (pickChecks[i].checked) {
+            containerCompanions[i].style.display = "flex";
+        } else {
+            containerCompanions[i].style.display = "none";
+        }
+    }
+}
+
   return (
     <>
       <div className="metTipoOcorrrenciasPage">
@@ -48,11 +62,14 @@ function MetodoOcorrencias() {
             titulo="Afogamento"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
-          <div className="containerSelect">
-            <Checkbox
+          <div>
+           <Checkbox
               titulo="Queda de altura "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxTipoOcorre"}
+              onClick={showCheck}
             />
+          <div className="containerSelect" style={{display: "none"}}>
             <select
               style={{
                 width: "100px",
@@ -66,6 +83,7 @@ function MetodoOcorrencias() {
               <option value="opcao2">2m</option>
               <option value="opcao3">2m&gt;</option>
             </select>
+          </div>
           </div>
           <Checkbox
             titulo="Atropelamento"

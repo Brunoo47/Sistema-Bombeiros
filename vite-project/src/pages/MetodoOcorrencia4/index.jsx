@@ -12,7 +12,7 @@ function MetodoOcorrencias4() {
   const toggleCheck = () => {
     const backArrow = document.getElementById("backArrow");
     const upArrow = document.getElementById("upArrow");
-    const containerCompanion = document.getElementById("SISEinvisible");
+    const containerCompanion = document.getElementById("containerSISEINVISIBLE");
 
     // Adiciona um ouvinte de evento para o clique no botão
     backArrow.addEventListener("click", () => {
@@ -28,6 +28,19 @@ function MetodoOcorrencias4() {
       backArrow.style.display = "flex";
     });
   };
+
+const showCheck = () => {
+    const pickChecks = document.querySelectorAll(".checkboxSISE");
+    const containerSelects = document.querySelectorAll(".containerSelect");
+
+    pickChecks.forEach((pickCheck, index) => {
+        if (pickCheck.checked) {
+            containerSelects[index].style.display = "flex";
+        } else {
+            containerSelects[index].style.display = "none";
+        }
+    });
+}
 
   return (
     <>
@@ -78,8 +91,10 @@ function MetodoOcorrencias4() {
             <Checkbox
               titulo="Hemorragia "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxSISE"}
+              onClick={showCheck}
             />
-            <div className="containerSelect">
+            <div className="containerSelect" style={{display: "none"}} >
               <select
                 style={{
                   width: "100px",
@@ -144,7 +159,8 @@ function MetodoOcorrencias4() {
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
         </div>
-        <div className="SISEinvisible" id="SISEinvisible" style={{ display: "none" }}>
+      <div className="containerSISEINVISIBLE" id="containerSISEINVISIBLE" style={{ display: "none" }}>
+        <div className="SISEinvisible" id="SISEinvisible" >
           <Checkbox
             titulo="Cefaléia"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -157,9 +173,10 @@ function MetodoOcorrencias4() {
             <Checkbox
               titulo="Cianose "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxSISE"}
+              onClick={showCheck}
             />
-            <div className="containerSelect">
-
+            <div className="containerSelect" style={{display: "none"}}>
               <select
                 style={{
                   width: "100px",
@@ -186,8 +203,10 @@ function MetodoOcorrencias4() {
             <Checkbox
               titulo="Parada "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxSISE"}
+              onClick={showCheck}
             />
-            <div className="containerSelect">
+            <div className="containerSelect" style={{display: "none"}}>
               <select
                 style={{
                   width: "100px",
@@ -222,8 +241,10 @@ function MetodoOcorrencias4() {
             <Checkbox
               titulo="EDEMA "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxSISE"}
+              onClick={showCheck}
             />
-            <div className="containerSelect">
+            <div className="containerSelect" style={{display: "none"}}>
               <select
                 style={{
                   width: "100px",
@@ -242,8 +263,10 @@ function MetodoOcorrencias4() {
             <Checkbox
               titulo="Pupilas "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              className={"checkboxSISE"}
+              onClick={showCheck}
             />
-            <div className="containerSelect">
+            <div className="containerSelect"  style={{display: "none"}} >
               <select
                 style={{
                   width: "100px",
@@ -292,7 +315,8 @@ function MetodoOcorrencias4() {
             titulo="Sudorese"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
-          <span className="spanOcorrencia">Há outra ocorrência?</span>
+        </div>
+        <span className="spanOcorrencia">Há outra ocorrência?</span>
           <div className="inputs">
             <InputD
               type={"text"}
@@ -300,15 +324,14 @@ function MetodoOcorrencias4() {
               style={{ width: "85%", height: "10px", marginBottom: "20px" }}
             />
           </div>
-        </div>
-
-        <div className="backArrow" id="backArrow" onClick={toggleCheck}>
+      </div>
+      <div className="backArrow" id="backArrow" onClick={toggleCheck}>
           <SlArrowDown size={80} id="arrowBack" />
         </div>
         <div className="upArrow" id="upArrow" onClick={toggleCheck} style={{ display: "none" }}>
           <SlArrowUp size={80} id="arrowUp" />
         </div>
-      </div>
+    </div>
     </>
   );
 }

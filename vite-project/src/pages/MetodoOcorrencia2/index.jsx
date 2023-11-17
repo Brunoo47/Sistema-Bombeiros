@@ -8,6 +8,19 @@ import "./style.css";
 
 function MetodoOcorrencias2() {
 
+    const showCheck = () => {
+        const pickChecks = document.getElementsByClassName("checkboxPE");
+        const containerCompanions = document.getElementsByClassName("containerSelect");
+    
+        for(let i = 0; i < pickChecks.length; i++) {
+            if (pickChecks[i].checked) {
+                containerCompanions[i].style.display = "flex";
+            } else {
+                containerCompanions[i].style.display = "none";
+            }
+        }
+    }
+
     return (
         <>
             <div className="metPEPage">
@@ -26,31 +39,39 @@ function MetodoOcorrencias2() {
                 </div>
 
                 <div className="PEContainercampo ">
-                    <Checkbox titulo="Psiquiátrico " style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
-                    <div className="containerSelect">
-                        <Checkbox titulo="Respiratório " style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
+                    <div  className='containerPE'>
+                    <Checkbox titulo="Psiquiátrico " style={{ width: '25px', height: '25px', marginBottom: '10px' }}  />
+                    </div>
+                    <div  className='containerPE'>
+                    <Checkbox titulo="Respiratório " className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
+                    <div className="containerSelect"  style={{display: "none"}}>  
                         <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
                             <option value="">Selecione uma opção</option>
                             <option value="opcao1">DPOC</option>
                             <option value="opcao2">Inalação fumaça</option>
                         </select>
                     </div>
-                    <div className="containerSelect">
-                        <Checkbox titulo="Diabetes " style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
+                    </div>
+                    <div className='containerPE'>
+                    <Checkbox titulo="Diabetes "  className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
+                    <div className="containerSelect" style={{display: "none"}}>
                         <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
                             <option value="">Selecione uma opção</option>
                             <option value="opcao1">Hiperglicemia</option>
                             <option value="opcao2">Hipoglicemia</option>
                         </select>
                     </div>
-                    <div className="containerSelect">
-                        <Checkbox titulo="Obstétrico " style={{ width: '25px', height: '25px', marginBottom: '10px' }} />
+                    </div>
+                    <div  className='containerPE'>
+                    <Checkbox titulo="Obstétrico " className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px', marginBottom: '20px' }} />
+                    <div className="containerSelect" style={{display: "none"}}>
                         <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
                             <option value="">Selecione a altura</option>
                             <option value="opcao1">Parto Emergencial</option>
                             <option value="opcao2">Gestante</option>
                             <option value="opcao3">Hemorr. Excessiva</option>
                         </select>
+                    </div>
                     </div>
                     <span className="spanOcorrencia">Há outra ocorrência?</span>
                     <div className="inputs">
