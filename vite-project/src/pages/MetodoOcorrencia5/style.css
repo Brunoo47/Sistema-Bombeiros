@@ -3,7 +3,6 @@
     height: 100vh;
 }
 
-
 .containerSV {
     width: calc(100% - 30px);
     height: 100%;
@@ -22,26 +21,29 @@
   .titleSV {
     display: flex;
     align-items: center;
+    word-wrap: break-word;
   }
   
   .asideSV {
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
   }
   
   .asideCheckLeft {
-    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .asideCheckRight {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
-  
-  .asideCheckRight {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+
+  .spanSV {
+    font-weight: bold;
   }

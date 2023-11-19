@@ -28,12 +28,13 @@ function MetodoOcorrencias5() {
             <div className="titleSV">
               <h4>Pressão arterial: </h4>
             </div>
-            <div className="asideSV">
+            <div className="asideSV" style={{ justifySelf: "start" }}>
               <InputD
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -43,7 +44,8 @@ function MetodoOcorrencias5() {
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -61,7 +63,8 @@ function MetodoOcorrencias5() {
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -79,7 +82,8 @@ function MetodoOcorrencias5() {
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -97,7 +101,8 @@ function MetodoOcorrencias5() {
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -108,14 +113,15 @@ function MetodoOcorrencias5() {
 
           <div className="fieldSV">
             <div className="titleSV">
-              <h4>HGT </h4>
+              <h4>HGT: </h4>
             </div>
             <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
             </div>
@@ -123,14 +129,15 @@ function MetodoOcorrencias5() {
 
           <div className="fieldSV">
             <div className="titleSV">
-              <h4>Temperatura </h4>
+              <h4>Temperatura: </h4>
             </div>
             <div className="asideSV">
               <InputD
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -148,7 +155,8 @@ function MetodoOcorrencias5() {
                 style={{
                   width: "60px",
                   height: "25px",
-                  borderRadius: "50px",
+                  borderRadius: "20px",
+                  border: "1px solid #000"
                 }}
               />
               <span>
@@ -163,41 +171,24 @@ function MetodoOcorrencias5() {
             </div>
             <div className="asideSV">
               <div className="asideCheckLeft">
-                <Checkbox
-                  titulo="&lt;2m"
-                  style={{
-                    width: "35px",
-                    height: "35px",
-                    marginBottom: "2px",
-                  }}
-                />
-                <Checkbox
-                  titulo="&gt;2m"
-                  style={{
-                    width: "35px",
-                    height: "35px",
-                    marginBottom: "2px",
-                  }}
-                />
+                <div className="containerCheckBox">
+                  <input type="checkbox" className="checkBoxSV" />
+                  <span className="spanSV">&gt;2 seg</span>
+                </div>
+                <div className="containerCheckBox">
+                  <input type="checkbox" className="checkBoxSV" />
+                  <span className="spanSV">&lt;2 seg</span>
+                </div>
               </div>
-
               <div className="asideCheckRight">
-                <Checkbox
-                  titulo="Normal"
-                  style={{
-                    width: "35px",
-                    height: "35px",
-                    marginBottom: "2px",
-                  }}
-                />
-                <Checkbox
-                  titulo="Anormal"
-                  style={{
-                    width: "35px",
-                    height: "35px",
-                    marginBottom: "2px",
-                  }}
-                />
+                <div className="containerCheckBox">
+                  <input type="checkbox" className="checkBoxSV" />
+                  <span className="spanSV">Normal</span>
+                </div>
+                <div className="containerCheckBox">
+                  <input type="checkbox" className="checkBoxSV" />
+                  <span className="spanSV">Anormal</span>
+                </div>
               </div>
             </div>
           </div>

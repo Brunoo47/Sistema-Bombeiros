@@ -3,14 +3,8 @@
     height: 100vh;
 }
 
-.metVitimaTitle {
-    width: 100%;
-    margin-bottom: 20px;
-    color: #fff;
-    display: flex;
-}
   
-  /* Página Vitíma */
+  /* Pagina Vitíma */
   
   .containerVitima {
     width: 100%;
@@ -29,5 +23,9 @@
   .checkboxVitimas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vitimaTitle {
+    font-size: 20px;
   }
   

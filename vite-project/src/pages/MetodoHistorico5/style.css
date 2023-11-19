@@ -22,3 +22,14 @@
   font-weight: bold;
   width: 100%;
 }
+
+.containerCheckBox {
+  display: flex;
+  width: auto;
+}
+
+.checkBoxSV {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 10px 0;
+}

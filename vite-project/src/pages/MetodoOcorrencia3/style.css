@@ -1,10 +1,10 @@
 .metGlassgowPage {
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
 }
 
 .containerGlassgow {
-    height: 100%;
+    height: auto;
     width: calc(100% - 10px);
     margin-top: 30px;
     margin-left: 10px;
@@ -14,7 +14,7 @@
 
   .containerFieldGlassGow {
     height: 100px;
-    width: 500px;
+    width: auto;
     display: flex;
     align-items: center;
     margin-bottom: 70px;

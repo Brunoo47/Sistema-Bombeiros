@@ -43,8 +43,15 @@ function MetodoOcorrencias6() {
                 }}
               >
                 <option value="">Selecione uma opção</option>
-                <option value="opcao1">DPOC</option>
-                <option value="opcao2">Inalação fumaça</option>
+                <option value="opcao1">Cabeça</option>
+                <option value="opcao1">Pescoço</option>
+                <option value="opcao2">Tronco Anterior</option>
+                <option value="opcao2">Tronco Posterior</option>
+                <option value="opcao2">Genitália</option>
+                <option value="opcao2">Membros Inferior Direita</option>
+                <option value="opcao2">Membros Inferior Esquerda</option>
+                <option value="opcao2">Membros Superior Direita</option>
+                <option value="opcao2">Membros Superior Esquerda</option>
               </select>
             </div>
           </div>
@@ -60,8 +67,10 @@ function MetodoOcorrencias6() {
                 }}
               >
                 <option value="">Selecione uma opção</option>
-                <option value="opcao1">DPOC</option>
-                <option value="opcao2">Inalação fumaça</option>
+                <option value="opcao1">Esquerdo</option>
+                <option value="opcao2">Direito</option>
+                <option value="opcao2">Mais de um</option>
+                <option value="opcao2">Todos</option>
               </select>
             </div>
           </div>
@@ -77,8 +86,11 @@ function MetodoOcorrencias6() {
                 }}
               >
                 <option value="">Selecione uma opção</option>
-                <option value="opcao1">DPOC</option>
-                <option value="opcao2">Inalação fumaça</option>
+                <option value="opcao1">Frontal</option>
+                <option value="opcao2">Lateral</option>
+                <option value="opcao2">Posterior</option>
+                <option value="opcao2">Mais de um</option>
+                <option value="opcao2">Todos</option>
               </select>
             </div>
           </div>
@@ -94,8 +106,15 @@ function MetodoOcorrencias6() {
                 }}
               >
                 <option value="">Selecione uma opção</option>
-                <option value="opcao1">DPOC</option>
-                <option value="opcao2">Inalação fumaça</option>
+                <option value="opcao2">Ferimentos</option>
+                <option value="opcao2">Luxações</option>
+                <option value="opcao2">Entorses</option>
+                <option value="opcao2">Ferimentos diversos</option>
+                <option value="opcao2">Hemorragias</option>
+                <option value="opcao2">Esviceração</option>
+                <option value="opcao2">F.A.B</option>
+                <option value="opcao2">F.A.F</option>
+                <option value="opcao2">Amputação</option>
               </select>
             </div>
           </div>

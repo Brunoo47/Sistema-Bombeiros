@@ -50,4 +50,6 @@ root.render(
       <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
     </Routes>
   </BrowserRouter>
+
+
 );

@@ -11,14 +11,14 @@ function MetodoOcorrencias() {
     const pickChecks = document.getElementsByClassName("checkboxTipoOcorre");
     const containerCompanions = document.getElementsByClassName("containerSelect");
 
-    for(let i = 0; i < pickChecks.length; i++) {
-        if (pickChecks[i].checked) {
-            containerCompanions[i].style.display = "flex";
-        } else {
-            containerCompanions[i].style.display = "none";
-        }
+    for (let i = 0; i < pickChecks.length; i++) {
+      if (pickChecks[i].checked) {
+        containerCompanions[i].style.display = "flex";
+      } else {
+        containerCompanions[i].style.display = "none";
+      }
     }
-}
+  }
 
   return (
     <>
@@ -40,113 +40,142 @@ function MetodoOcorrencias() {
           <InputD
             type={"text"}
             placeholder={"Digite o tipo de ocorrência"}
-            style={{ width: "85%", height: "10px", marginBottom: "20px" }}
+            style={{ width: "85%", height: "3px" }}
           />
         </div>
 
         <div className="tipoOcorrenciaContainercampo">
-          <Checkbox
-            titulo="Causado por animais"
-            style={{
-              width: "25px",
-              height: "25px",
-              marginBottom: "10px",
-              marginTop: "10px",
-            }}
-          />
-          <Checkbox
-            titulo="Desmoronamento/Deslizamento"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Afogamento"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
           <div>
-           <Checkbox
+            <Checkbox
+              titulo="Causado por animais"
+              style={{
+                width: "25px",
+                height: "25px",
+              }}
+            />
+          </div>
+          <div>
+            <Checkbox
+              titulo="Desmoronamento/Deslizamento"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div>
+          <div>
+            <Checkbox
+              titulo="Afogamento"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div>
+          <div>
+            <Checkbox
               titulo="Queda de altura "
-              style={{ width: "25px", height: "25px", marginBottom: "10px" }}
+              style={{ width: "25px", height: "25px", }}
               className={"checkboxTipoOcorre"}
               onClick={showCheck}
             />
-          <div className="containerSelect" style={{display: "none"}}>
-            <select
-              style={{
-                width: "100px",
-                height: "25px",
-                marginBottom: "10px",
-                marginLeft: "40px",
-              }}
-            >
-              <option value="">Selecione a altura</option>
-              <option value="opcao1">&lt;2m</option>
-              <option value="opcao2">2m</option>
-              <option value="opcao3">2m&gt;</option>
-            </select>
+            <div className="containerSelect" style={{ display: "none" }}>
+              <select
+                style={{
+                  width: "100px",
+                  height: "25px",
+                  marginLeft: "40px",
+                }}
+              >
+                <option value="">Selecione a altura</option>
+                <option value="opcao1">&lt;2m</option>
+                <option value="opcao2">2m</option>
+                <option value="opcao3">2m&gt;</option>
+              </select>
+            </div>
           </div>
+          <div>
+            <Checkbox
+              titulo="Atropelamento"
+              style={{ width: "25px", height: "25px", }}
+            />
           </div>
-          <Checkbox
-            titulo="Atropelamento"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Desabamento"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Esportivo"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Queda de bicicleta"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Com meio de transporte"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Emergência médica"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Tentativa suicídio"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Agressão"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Choque elétrico"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Doméstico"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Intoxicação"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Queda de moto"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-          <Checkbox
-            titulo="Transferência"
-            style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-          />
-        </div>
+          <div>
+            <Checkbox
+              titulo="Desabamento"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div>
+          <div>
+            <Checkbox
+              titulo="Esportivo"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div>
+          <div>
+            <Checkbox
+              titulo="Queda de bicicleta"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Com meio de transporte"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Emergência médica"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Tentativa suicídio"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Agressão"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Choque elétrico"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Doméstico"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Intoxicação"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Queda de moto"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+          <div>
+            <Checkbox
+              titulo="Transferência"
+              style={{ width: "25px", height: "25px", }}
+            />
+          </div >
+        </div >
         <span className="spanOcorrencia">Há outra ocorrência?</span>
         <div className="inputs">
           <InputD
             type={"text"}
             placeholder={"Digite o tipo de ocorrência"}
-            style={{ width: "85%", height: "10px", marginBottom: "20px" }}
+            style={{ width: "85%", height: "10px" }}
           />
         </div>
-      </div>
+      </div >
     </>
   );
 }
