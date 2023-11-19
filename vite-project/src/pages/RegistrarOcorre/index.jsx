@@ -42,18 +42,18 @@ function RegistrarOcorre() {
               <label htmlFor="">Idade:</label>
               <input type="text" className="inputRegistrarOcorre" />
             </div>
+          </div>
+          <div className="secondInfo">
+            <div className="marginInput">
+              <label htmlFor="">CPF:</label>
+              <input type="text" className="inputRegistrarOcorre" />
+            </div>
             <div className="marginInput">
               <label htmlFor="">Sexo:</label>
               <select name="" id="" placeholder="Selecione uma opção">
                 <option value="">M</option>
                 <option value="">F</option>
               </select>
-            </div>
-          </div>
-          <div className="secondInfo">
-            <div className="marginInput">
-              <label htmlFor="">CPF:</label>
-              <input type="text" className="inputRegistrarOcorre" />
             </div>
           </div>
           <div className="thirdInfo">

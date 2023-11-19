@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   
   .containerDecisaoTransporte {
@@ -40,4 +41,9 @@
   
   .metTitleLong {
     text-align: center;
+  }
+
+  .buttonDTO {
+    position: absolute;
+    bottom: 0;
   }

@@ -1,7 +1,7 @@
 const InputText = (props) => {
   return (
     <>
-      <input type={props.type} placeholder={props.placeholder} />
+      <input type={props.type} className={props.className} placeholder={props.placeholder} />
     </>
   );
 };

@@ -24,7 +24,7 @@
   width: 100vw;
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .secondInfo {
@@ -97,11 +97,16 @@
 }
   
 .inputRegistrarOcorre{
-  width: 75px;
+  width: 90px;
   height: 10px;
   border: none;
   border-bottom: 1px solid #000;
   margin-bottom: 20px;
+  padding: 10px;
+}
+
+.marginInput {
+  margin-right: 10px;
 }
 
 .marginInput label {

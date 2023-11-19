@@ -69,14 +69,16 @@ function MetodoOcorrencias9() {
               />
             </div>
           </div>
-          <Button
-            nome={"Finalizar"}
-            style={{
-              width: "270px",
-              height: "60px",
-              fontSize: "20px",
-            }}
-          />
+          <div className="buttonDTO">
+            <Button
+              nome={"Finalizar"}
+              style={{
+                width: "320px",
+                height: "60px",
+                fontSize: "20px",
+              }}
+            />
+          </div>
         </div>
       </div>
     </>
