@@ -41,10 +41,10 @@ function MetodoHistorico2() {
                     marginLeft: "40px",
                   }}
                 >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
+                  <option value="">Tamanho</option>
+                  <option value="opcao1">6</option>
+                  <option value="opcao2">12</option>
+                  <option value="opcao3">20</option>
                 </select>
               </div>
               <InputD
@@ -92,10 +92,10 @@ function MetodoHistorico2() {
                     marginLeft: "40px",
                   }}
                 >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
+                  <option value="">Tamanho</option>
+                  <option value="opcao1">H</option>
+                  <option value="opcao2">P</option>
+                  <option value="opcao3">G</option>
                 </select>
               </div>
               <InputD
@@ -109,7 +109,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Luvas desc. (pares)"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -127,7 +127,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Máscara desc."
                 style={{
                   width: "25px",
                   height: "25px",
@@ -145,7 +145,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Manta Aluminizada"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -163,7 +163,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Pás do DEA"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -181,7 +181,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Sonda Aspiração "
                 style={{
                   width: "25px",
                   height: "25px",
@@ -199,7 +199,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Soro Fisiológico"
                 style={{
                   width: "25px",
                   height: "25px",
@@ -219,7 +219,7 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <div className="containerSelect">
                 <Checkbox
-                  titulo="Kit's "
+                  titulo="Talas PAP."
                   style={{
                     width: "25px",
                     height: "25px",
@@ -234,10 +234,9 @@ function MetodoHistorico2() {
                     marginLeft: "40px",
                   }}
                 >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
+                  <option value="">Tamanho</option>
+                  <option value="opcao1">P</option>
+                  <option value="opcao2">G</option>
                 </select>
               </div>
               <InputD
@@ -288,36 +287,24 @@ function MetodoHistorico2() {
           <div className="fieldLeftMateriais">
             <div className="titleFieldMateriais">
               <div>
-                <h5>Pau</h5>
+                <h5>Material</h5>
               </div>
               <div>
                 <h5>Quantidade</h5>
               </div>
             </div>
             <div className="fieldMateriais">
-              <div className="containerSelect">
-                <Checkbox
-                  titulo="Ataduras "
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    marginBottom: "10px",
-                  }}
-                />
-                <select
-                  style={{
-                    width: "100px",
-                    height: "25px",
-                    marginBottom: "10px",
-                    marginLeft: "40px",
-                  }}
-                >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
-                </select>
-              </div>
+
+            </div>
+            <div className="fieldMateriais">
+              <Checkbox
+                titulo="Base Estabiliza."
+                style={{
+                  width: "25px",
+                  height: "25px",
+                  marginBottom: "10px",
+                }}
+              />
               <InputD
                 style={{
                   width: "110px",
@@ -329,7 +316,7 @@ function MetodoHistorico2() {
             </div>
             <div className="fieldMateriais">
               <Checkbox
-                titulo="Cateter TP. Óculos"
+                titulo="Coxins Estabiliza."
                 style={{
                   width: "25px",
                   height: "25px",
@@ -348,7 +335,7 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <div className="containerSelect">
                 <Checkbox
-                  titulo="Kit's "
+                  titulo="KED "
                   style={{
                     width: "25px",
                     height: "25px",
@@ -363,120 +350,11 @@ function MetodoHistorico2() {
                     marginLeft: "40px",
                   }}
                 >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
+                  <option value="">Tamanho</option>
+                  <option value="opcao1">ADUL.</option>
+                  <option value="opcao2">INFA.</option>
                 </select>
               </div>
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
-              <InputD
-                style={{
-                  width: "110px",
-                  height: "20px",
-                  alignSelf: "center",
-                  borderRadius: "50px",
-                }}
-              />
-            </div>
-            <div className="fieldMateriais">
-              <Checkbox
-                titulo="Cateter TP. Óculos"
-                style={{
-                  width: "25px",
-                  height: "25px",
-                  marginBottom: "10px",
-                }}
-              />
               <InputD
                 style={{
                   width: "110px",
@@ -490,7 +368,7 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <div className="containerSelect">
                 <Checkbox
-                  titulo="Kit's "
+                  titulo="T. T. F. "
                   style={{
                     width: "25px",
                     height: "25px",
@@ -505,10 +383,9 @@ function MetodoHistorico2() {
                     marginLeft: "40px",
                   }}
                 >
-                  <option value="">Selecione a altura</option>
-                  <option value="opcao1">&lt;2m</option>
-                  <option value="opcao2">2m</option>
-                  <option value="opcao3">2m&gt;</option>
+                  <option value="">Tamanho</option>
+                  <option value="opcao1">Adul.</option>
+                  <option value="opcao2">Infa.</option>
                 </select>
               </div>
               <InputD
@@ -520,7 +397,60 @@ function MetodoHistorico2() {
                 }}
               />
             </div>
-
+            <div className="fieldMateriais">
+              <Checkbox
+                titulo="Tirante aranha"
+                style={{
+                  width: "25px",
+                  height: "25px",
+                  marginBottom: "10px",
+                }}
+              />
+              <InputD
+                style={{
+                  width: "110px",
+                  height: "20px",
+                  alignSelf: "center",
+                  borderRadius: "50px",
+                }}
+              />
+            </div>
+            <div className="fieldMateriais">
+              <Checkbox
+                titulo="Tirante de cabeça"
+                style={{
+                  width: "25px",
+                  height: "25px",
+                  marginBottom: "10px",
+                }}
+              />
+              <InputD
+                style={{
+                  width: "110px",
+                  height: "20px",
+                  alignSelf: "center",
+                  borderRadius: "50px",
+                }}
+              />
+            </div>
+            <div className="fieldMateriais">
+              <Checkbox
+                titulo="Cânula"
+                style={{
+                  width: "25px",
+                  height: "25px",
+                  marginBottom: "10px",
+                }}
+              />
+              <InputD
+                style={{
+                  width: "110px",
+                  height: "20px",
+                  alignSelf: "center",
+                  borderRadius: "50px",
+                }}
+              />
+            </div>
             <div className="fieldMateriais">
               <input
                 type="checkbox"
