@@ -1,13 +1,22 @@
-import React, { useState } from "react";
-import InputD from "../../components/InputD";
+import React from "react";
 import Checkbox from "../../components/checkbox";
-import corpo from "../../assets/corpo.png";
+import MenuButtonO from "../../components/MenuButtonO";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 function MetodoOcorrencias8() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
-        <div className="metOcorreTitle"></div>
+      <div className="metVitimaPage">
+        <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <Link to="/RegistrarOcorreenu">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonO />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Vitíma</h1>

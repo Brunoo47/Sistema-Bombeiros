@@ -2,6 +2,7 @@
   font-family: "Yaldevi", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .botaoPrincipal {
@@ -17,42 +18,6 @@
   width: 75%;
 }
 
-.EntrarPage {
-  height: 90vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.MenuPage {
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.MenuPageHeader img {
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-}
-
-.MenuPageHeader {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.InformacoesPage {
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .inputs {
   display: flex;
   align-items: center;
@@ -60,19 +25,18 @@
   flex-direction: column;
   margin: 1rem;
 }
+
 .inputs input {
   border: 1px solid #000;
-  padding: 10px;
-  width: 260px;
-  height: 40px;
-  border-radius: 200px;
-  margin-bottom: 3.2rem;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 14px;
+  width: 300px;
+  height: 20px;
+  border-radius: 20px;
 }
 
 ::placeholder {
-  text-align: center;
-  font-size: 14pt;
+  text-align: start;
+  font-size: 15px;
 }
 
 h2 {
@@ -89,176 +53,12 @@ h2 {
   width: 25%;
 }
 
-.footer {
-  margin-top: 11.5vh;
-  width: 100%;
-  height: 80px;
-  background: #720000;
-}
-
-.cabecalho {
-  width: 400px;
-  height: 220px;
-  background-color: #8a0000;
-}
-
-.align {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .menuTitleP {
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
 
-.buttons-ribbon {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.element {
-  width: 100px;
-  height: 80px;
-  border: 1px solid #000;
-  border-radius: 12px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
-.foto-do-usuario {
-  width: 100px;
-  height: 100px;
-  background-color: #000;
-  border-radius: 50%;
-  border: 3px solid #fff;
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.nome-do-usuario {
-  color: #fff;
-  padding: 8px;
-}
-
-.cardMenu {
-  align-items: center;
-  width: 300px;
-  height: 200px;
-  margin-left: 1rem;
-  margin-bottom: 4.5rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 40px;
-  background: #efefef;
-}
-
-.cardMenuBottom {
-  height: 230px;
-}
-
-.infosMenu ul {
-  margin-right: 2rem;
-}
-
-.infosMenu li {
-  list-style: none;
-}
-
-.avatarCardMenu img {
-  padding: 10px;
-  width: 100px;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Página "Ocorrências */
-
-.mainOcorrencia h1 {
-  font-size: 25px;
-}
-
-.menuOcorrencias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-}
-
-.OcorrenciaPage {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.cardOcorrencias {
-  width: 360px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 40px;
-  background: #efefef;
-  font-size: 10px;
-  cursor: pointer;
-}
-
-.cardOcorrenciasTop {
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-}
-
-.cardOcorrenciasBottom {
-  margin-bottom: 10rem;
-}
-
-.cardOcorrencias h1 {
-  color: #7a7a7a;
-}
-
-.icone {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 1rem;
-}
-
-.mainOcorrencia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Página Tipo de Ocorrência */
-
-.metOcorrenciasPage {
-  height: 100vh;
-  width: 100vw;
-}
-
-.metOcorronciasPageD {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Layout Tarja  */
 
 .tarjaV {
   width: 100%;
@@ -271,14 +71,14 @@ h2 {
 
 .metOcorreTitle {
   width: 100%;
-  margin-bottom: 20px;
+  height: 70px;
   color: #fff;
   display: flex;
+  justify-content: space-between;
 }
 
-.arrow {
-  height: 40px;
-  width: 40px;
+.arrowIcon {
+  height: 100%;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -291,23 +91,19 @@ h2 {
   font-size: 13px;
 }
 
-.containercampo {
-  height: calc(100% - 224.19px);
-  width: calc(100% - 20px);
-  margin-left: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 15px;
-}
+/* Componente checkbox */
 
 .campo {
   display: flex;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+  word-wrap: break-word;
 }
 
 .campo h4 {
   width: 130px;
-  height: 30px;
-  margin-bottom: 20px;
+  height: auto;
   word-wrap: break-word;
   margin-left: 10px;
   font-size: 15px;
@@ -320,6 +116,8 @@ h2 {
 
 .spanOcorrencia {
   margin-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .containerSelect {
@@ -386,49 +184,7 @@ nav {
   height: 20px;
 }
 
-/* Página Avaliação Glassgow */
-
-.containerGlassgow {
-  margin-top: 30px;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.containerFieldGlassGow {
-  height: 100px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 70px;
-}
-
-.titleGlassGow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 150px;
-}
-
-.titleGlassGow h4 {
-  margin-bottom: 15px;
-}
-
-.campoGlassGow {
-  display: flex;
-  height: 100px;
-}
-
-.campoGlassGow h4 {
-  display: flex;
-  justify-content: flex-start;
-  width: 150px;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
+/* Visual CheckboxG */
 .checkboxG {
   display: flex;
   flex-direction: column;
@@ -436,304 +192,30 @@ nav {
   height: 100px;
 }
 
-/* Página sinais vitas */
-
-.containerSS {
-  width: calc(100% - 30px);
-  height: 100%;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
-.fieldSS {
-  width: 90%;
-  height: 50px;
-  display: flex;
-  gap: 5px;
-  margin-bottom: 20px;
-}
-
-.titleSS {
-  display: flex;
-  align-items: center;
-}
-
-.asideSS {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.asideCheckLeft {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.asideCheckRight {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Página Localização dos traumas */
-
-.containerLT {
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.containerImagemCorpo {
-  width: 200px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-}
-
-.containerImagemCorpo img {
-  height: 300px;
-}
-
-.titleLT {
-  width: 250px;
-  font-weight: bold;
-  font-size: 14px;
-  word-wrap: break-word;
-  text-align: center;
-}
-
-.containerSelectLT,
-.containerSelectQueimaduras {
-  display: flex;
-  gap: 20px;
-  margin-top: 25px;
-}
-
-.titleSelect {
-  width: 50px;
-}
-
-.optionLT,
-.optionQueimaduras {
-  width: 100px;
-}
-
-/* Páginas queimaduras */
-
-.containerQueimaduras {
-  width: calc(100% - 30px);
-  height: 100vh;
-  margin-top: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.containerSelectQueimaduras {
-  display: flex;
-  justify-content: center;
-}
-
-.titleQueimaduras {
-  width: 350px;
-  text-align: center;
-}
-
-.titleQueimaduras h2 {
-  margin: 0;
-  font-size: 25px;
-}
-
-/* Página Vitíma */
-
-.containerVitima {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-direction: column;
-  margin-top: 40px;
-}
-
-.containerFDC {
-  width: 300px;
-}
-
-.checkboxVitimas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.campo2 {
-  height: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  word-wrap: break-word;
-}
-
-/* Página Decisão de Transporte e Objetos recolhidos */
-
-.containerDTO {
-  width: 100vw;
-  height: 100vh;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.containerDecisaoTransporte {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-left: 60px;
-}
-
-.spanOjetos {
-  margin-top: 40px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.metTitleLong {
-  text-align: center;
-}
-
-/* Página Histórico (Materias) */
-
-.containerMateriais {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.selectMateriais {
-  width: 300px;
-  height: 30px;
-}
-
-.selectMateriais select {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.containerFieldMateriais {
-  width: 300px;
-  margin-top: 40px;
-}
-
-.fieldMateriais {
-  display: flex;
-}
-
-.titleFieldMateriais {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-align: center;
-  font-size: 20px;
-}
-
-/* Página Anamnese de Emergência Médica */
-
-.containerAnamneseEM {
-  width: calc(100% - 20px);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.containerAnamneseEM span {
-  margin-bottom: 10px;
-}
-
-.elementAnamnese1 {
-  width: 100%;
-  display: flex;
-  margin-top: 30px;
-  margin-left: 20px;
-}
-
-.fieldAnamneseRight,
-.fieldAnamneseG,
-.fieldACO {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.fieldAnamneseLeft {
-  width: 50%;
-}
-
-.fieldAnamneseLeft span {
-  width: 100%;
-}
-
-.textAnamnese {
-  height: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-/* Página Anamnese Gestacional */
-
-.containerAnamneseG,
-.containerACO {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-  margin-top: 30px;
-}
-
-.elementAnamneseG,
-.elementACO {
-  display: flex;
-  width: calc(100% - 20px);
-}
-
-.titleAnamneseG,
-.titleACO {
-  font-weight: bold;
-  width: 100%;
-}
-
-.fieldAnamneseGVertical {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.fieldAnamneseGInput {
-  display: flex;
-}
-
 .spanHistorico {
   margin-top: 30px;
   font-weight: bold;
   width: 300px;
   font-size: 20px;
+}
+
+/* Layout página menu */
+
+.containerMenuButton {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.buttonMenu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.active {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 1;
 }

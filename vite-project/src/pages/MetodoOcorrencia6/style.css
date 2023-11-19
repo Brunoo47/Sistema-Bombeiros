@@ -1,0 +1,51 @@
+.metLTPage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerLT {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .containerImagemCorpo {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .containerImagemCorpo img {
+    height: 300px;
+  }
+  
+  .titleLT {
+    width: 250px;
+    font-weight: bold;
+    font-size: 14px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  .containerSelectLT,
+  .containerSelectQueimaduras {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+  }
+  
+  .titleSelect {
+    width: 50px;
+  }
+  
+  .optionLT,
+  .optionQueimaduras {
+    width: 100px;
+  }

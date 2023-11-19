@@ -1,12 +1,11 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
-import InputText from "../../components/InputText";
-import arrowBack from "../../assets/seta-esquerda.png";
+import "./style.css";
 
 function MetodoHistorico1() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
+      <div className="metPeHistoricoPage">
         <div className="metOcorreTitle"></div>
         <div className="tarjaV">
           <div className="metTitle ">
@@ -21,7 +20,7 @@ function MetodoHistorico1() {
           />
         </div>
 
-        <div className="containercampo">
+        <div className="PeContainerCampo">
           <Checkbox
             titulo="Aspiração"
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}

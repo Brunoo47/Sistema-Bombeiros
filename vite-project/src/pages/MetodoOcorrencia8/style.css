@@ -1,0 +1,29 @@
+.metVitimaPage {
+    width: 100vw;
+}
+
+  
+  /* Pagina Vitíma */
+  
+  .containerVitima {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .containerFDC {
+    width: 300px;
+  }
+  
+  .checkboxVitimas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vitimaTitle {
+    font-size: 20px;
+  }
+  

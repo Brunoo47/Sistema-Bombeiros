@@ -1,0 +1,14 @@
+.metPeHistoricoPage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.PeContainerCampo {
+  height: 100%;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+}

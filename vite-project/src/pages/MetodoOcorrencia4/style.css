@@ -1,0 +1,44 @@
+.metSISEPage {
+    height: auto;
+    width: 100vw;
+}
+
+.SISEContainerCampo {
+    height: calc(100% - 224.19px);
+    width: calc(100% - 20px);
+    margin-left: 20px;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+}
+
+.backArrow {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSISEINVISIBLE {
+    width: calc(100% - 20px);
+    height: auto;
+}
+
+.SISEinvisible {
+    height: auto;
+    width: calc(100% - 20px);
+    display: grid;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+}
+
+.upArrow {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

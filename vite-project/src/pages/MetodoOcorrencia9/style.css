@@ -1,0 +1,49 @@
+.metDTOPage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.metOcorrenciasPageD {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerDTO {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .containerDecisaoTransporte {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 60px;
+  }
+
+  .containerObj {
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+  }
+  
+  .spanOjetos {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: start;
+  }
+  
+  .metTitleLong {
+    text-align: center;
+  }
+
+  .buttonDTO {
+    position: absolute;
+    bottom: 0;
+  }

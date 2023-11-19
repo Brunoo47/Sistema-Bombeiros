@@ -1,0 +1,58 @@
+.mainOcorrencia h1 {
+  font-size: 25px;
+}
+
+.OcorrenciaPage {
+  max-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cardOcorrencias {
+  width: 360px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: #efefef;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.cardOcorrenciasTop {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.cardOcorrenciasBottom {
+  margin-bottom: 10rem;
+}
+
+.cardOcorrencias h1 {
+  color: #7a7a7a;
+}
+
+.icone {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+
+.mainOcorrencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkRegistrar {
+  text-decoration: none;
+}
+
+.fieldButtonRegistrarOcorre {
+  display: flex;
+  justify-content: center;
+}

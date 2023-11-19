@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import InputD from "../../components/InputD";
-import Checkbox from "../../components/checkbox";
+import "./style.css";
 
 function MetodoHistorico3() {
   return (
     <>
-      <div className="metOcorrrenciasPage">
+      <div className="metAnHistoricoPage">
         <div className="metOcorreTitle"></div>
         <div className="tarjaV">
           <div className="metTitle">
@@ -45,7 +45,11 @@ function MetodoHistorico3() {
             <div className="fieldAnamneseRight">
               <InputD
                 placeHolder={"Digite aqui.."}
-                style={{ width: "100%", height: "20px", borderRadius: "20px" }}
+                style={{
+                  width: "100%",
+                  height: "20px",
+                  borderRadius: "20px",
+                }}
               />
             </div>
           </div>

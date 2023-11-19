@@ -1,6 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Logo from "../../assets/logo.png";
 import Avatar from "../../assets/icon.png";
+import "./style.css";
 
 function Menu() {
   return (

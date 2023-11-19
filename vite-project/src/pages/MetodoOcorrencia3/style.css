@@ -1,0 +1,47 @@
+.metGlassgowPage {
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.containerGlassgow {
+    height: auto;
+    width: calc(100% - 10px);
+    margin-top: 30px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .containerFieldGlassGow {
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+  
+  .titleGlassGow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 150px;
+  }
+  
+  .titleGlassGow h4 {
+    margin-bottom: 15px;
+  }
+  
+  .campoGlassGow {
+    display: flex;
+    height: 100px;
+  }
+  
+  .campoGlassGow h4 {
+    display: flex;
+    justify-content: flex-start;
+    width: 150px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
