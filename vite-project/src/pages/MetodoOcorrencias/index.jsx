@@ -1,8 +1,7 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai"
-import { Link } from "react-router-dom";
+import Arrow from "../../components/arrow"
 import "./style.css";
 
 function MetodoOcorrencias() {
@@ -24,12 +23,8 @@ function MetodoOcorrencias() {
     <>
       <div className="metTipoOcorrrenciasPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
-          <MenuButtonO />
+        <Arrow/>
+        <MenuButtonO />
         </div>
         <div className="tarjaV">
           <div className="metTitle">
@@ -178,6 +173,6 @@ function MetodoOcorrencias() {
       </div >
     </>
   );
-}
+         }
 
 export default MetodoOcorrencias;

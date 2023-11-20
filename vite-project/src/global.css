@@ -268,3 +268,73 @@ nav {
 .iconX {
   z-index: 1;
 }
+
+/* Aviso de saída da tela */
+
+.backGroundWarning {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.containerWarning {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255); /* Adicione um plano de fundo de sua escolha */
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  color: #fff; /* Adicione a cor do texto desejada */
+  pointer-events: auto; /* Permite que este elemento seja clicado */
+  z-index: 9999;
+}
+
+.titleWarning {
+  height: 80px;
+  width: 100%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.warningButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonYes {
+  background-color: green;
+  color: #FFF;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid green;
+}
+
+.buttonNo {
+  background-color: red;
+  color: #FFF;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+
+.backGroundWarning {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0; 
+  right: 0;
+  bottom: 0;
+  left: 0
+}
+
