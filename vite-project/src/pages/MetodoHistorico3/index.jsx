@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import InputD from "../../components/InputD";
+import MenuButtonH from "../../components/MenuButtonH";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function MetodoHistorico3() {
   return (
     <>
       <div className="metAnHistoricoPage">
-        <div className="metOcorreTitle"></div>
+        <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <Link to="/RegistrarOcorre">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonH />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Anamnese da Emergência Médica</h1>
@@ -15,7 +25,7 @@ function MetodoHistorico3() {
         <div className="containerAnamneseEM">
           <span>O que aconteceu?(Sinais e Sintomas)</span>
           <InputD
-            style={{ width: "300px", height: "30px", borderRadius: "30px" }}
+            style={{ width: "300px", height: "30px", borderRadius: "20px", border: "1px solid #000", padding: "10px" }}
           />
           <div className="elementAnamnese1">
             <div className="fieldAnamneseLeft">
@@ -23,14 +33,16 @@ function MetodoHistorico3() {
             </div>
             <div className="fieldAnamneseRight">
               <input
-                type="checkbox"
+                type="radio"
+                name="sim"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="sim"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -47,8 +59,8 @@ function MetodoHistorico3() {
                 placeHolder={"Digite aqui.."}
                 style={{
                   width: "100%",
-                  height: "20px",
-                  borderRadius: "20px",
+                  height: "30px",
+                  borderRadius: "20px", border: "1px solid #000", padding: "10px"
                 }}
               />
             </div>
@@ -59,14 +71,16 @@ function MetodoHistorico3() {
             </div>
             <div className="fieldAnamneseRight">
               <input
-                type="checkbox"
+                type="radio"
+                name="problemaS"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="problemaS"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -80,14 +94,16 @@ function MetodoHistorico3() {
             </div>
             <div className="fieldAnamneseRight">
               <input
-                type="checkbox"
+                type="radio"
+                name="alergico"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="alergico"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -101,14 +117,16 @@ function MetodoHistorico3() {
             </div>
             <div className="fieldAnamneseRight">
               <input
-                type="checkbox"
+                type="radio"
+                name="ingeriuAL"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="ingeriuAL"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">

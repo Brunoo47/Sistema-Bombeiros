@@ -1,25 +1,29 @@
 .metQPage {
-    width: 100vw;
+  width: 100vw;
 }
 
 .containerQueimaduras {
-    width: calc(100% - 30px);
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  
-  .containerSelectQueimaduras {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .titleQueimaduras {
-    width: 350px;
-    text-align: center;
-  }
-  
-  .titleQueimaduras h2 {
-    margin: 0;
-    font-size: 25px;
-  }
+  width: calc(100% - 30px);
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.containerSelectQueimaduras {
+  display: flex;
+  justify-content: center;
+}
+
+.titleQueimaduras {
+  width: 350px;
+  text-align: center;
+}
+
+.titleQueimaduras h2 {
+  margin: 0;
+  font-size: 25px;
+}

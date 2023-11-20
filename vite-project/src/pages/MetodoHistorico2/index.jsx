@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import InputD from "../../components/InputD";
+import MenuButtonH from "../../components/MenuButtonH";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Checkbox from "../../components/checkbox";
 import "./style.css";
 
@@ -560,7 +563,14 @@ function MetodoHistorico2() {
   return (
     <>
       <div className="metMatHistoricoPage">
-        <div className="metOcorreTitle"></div>
+        <div className="metOcorreTitle">
+          <div className="arrowIcon">
+            <Link to="/RegistrarOcorre">
+              <AiOutlineArrowLeft size={55} color={"#000"} />
+            </Link>
+          </div>
+          <MenuButtonH />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Materiais</h1>
