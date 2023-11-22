@@ -271,12 +271,6 @@ nav {
 
 /* Aviso de saída da tela */
 
-.backGroundWarning {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .containerWarning {
   position: fixed;
   display: flex;
@@ -291,7 +285,7 @@ nav {
   border-radius: 10px;
   color: #fff; /* Adicione a cor do texto desejada */
   pointer-events: auto; /* Permite que este elemento seja clicado */
-  z-index: 9999;
+  z-index: 2;
 }
 
 .titleWarning {
@@ -328,13 +322,10 @@ nav {
 }
 
 .backGroundWarning {
-  width: 100vw;
-  min-height: 100vh;
-  position: absolute;
-  z-index: 1;
-  top: 0; 
-  right: 0;
-  bottom: 0;
-  left: 0
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
 }
 

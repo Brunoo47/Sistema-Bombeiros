@@ -3,8 +3,7 @@ import olho from "../../assets/olho-aberto.png";
 import balao from "../../assets/balao-fala.png";
 import andar from "../../assets/andando.png";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Arrow from "../../components/arrow"
 import CheckboxG from "../../components/checkboxG";
 import "./style.css";
 
@@ -13,11 +12,7 @@ function MetodoOcorrencias3() {
     <>
       <div className="metGlassgowPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonO />
         </div>
         <div className="tarjaV">

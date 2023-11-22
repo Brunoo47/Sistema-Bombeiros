@@ -1,8 +1,7 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonH from "../../components/MenuButtonH";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Arrow from "../../components/arrow"
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
 import "./style.css";
@@ -46,11 +45,7 @@ function MetodoHistorico1() {
     <>
       <div className="metPeHistoricoPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonH />
         </div>
         <div className="tarjaV">

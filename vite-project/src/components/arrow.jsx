@@ -10,7 +10,7 @@ const arrow = () => {
         if(arrow.click) {
             warning.style.display = "flex";
         } 
- 
+            
     }
 
     const goBack = () => {
@@ -28,7 +28,7 @@ const arrow = () => {
               <AiOutlineArrowLeft size={55} color={"#000"} />
             </div>
             <div className="backGroundWarning" style={{display: "none"}}>
-            <div className="containerWarning"   >
+            <div className="containerWarning" >
                 <div className="titleWarning">
                     <h4>Tem certeza que deseja voltar?</h4>
                 </div>

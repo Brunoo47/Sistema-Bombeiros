@@ -9,6 +9,7 @@ function MetodoOcorrencias() {
   const showCheck = () => {
     const pickChecks = document.getElementsByClassName("checkboxTipoOcorre");
     const containerCompanions = document.getElementsByClassName("containerSelect");
+    
 
     for (let i = 0; i < pickChecks.length; i++) {
       if (pickChecks[i].checked) {
@@ -23,7 +24,7 @@ function MetodoOcorrencias() {
     <>
       <div className="metTipoOcorrrenciasPage">
         <div className="metOcorreTitle">
-        <Arrow/>
+        <Arrow />
         <MenuButtonO />
         </div>
         <div className="tarjaV">

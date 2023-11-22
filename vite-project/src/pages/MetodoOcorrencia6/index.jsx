@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Arrow from "../../components/arrow"
 import corpo from "../../assets/corpo.png";
 import "./style.css";
 
@@ -10,11 +9,7 @@ function MetodoOcorrencias6() {
     <>
       <div className="metLTPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonO />
         </div>
         <div className="tarjaV">

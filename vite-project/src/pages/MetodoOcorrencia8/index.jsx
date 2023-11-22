@@ -2,6 +2,7 @@ import React from "react";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import Arrow from "../../components/arrow"
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -10,11 +11,7 @@ function MetodoOcorrencias8() {
     <>
       <div className="metVitimaPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorreenu">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonO />
         </div>
         <div className="tarjaV">
