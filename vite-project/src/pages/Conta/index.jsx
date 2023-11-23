@@ -67,18 +67,16 @@ function Conta() {
 
   }
 
-  return (
+  return ( 
     <>
       <div className="containerConta">
         <div className="cabecalho">
           <span>
             <div className="logout">
-              <Link to="/">
                 <Button
                   nome={"logout"}
                   style={{ width: "150px", height: "40px", margin: "10px" }}
                 />
-              </Link>
             </div>
           </span>
           <div className="center">

@@ -19,7 +19,7 @@ function Menu() {
             <ul>
               <li>Nome:</li>
               <li>Idade:</li>
-              <li>Batalhão</li>
+              <li>Batalhão:</li>
               <li>Status:</li>
             </ul>
           </div>
