@@ -101,7 +101,8 @@ function Conta() {
             <div className="inputs">
               {mainPage}
             </div>
-            <div className="alterar-dados-btn">
+          </div>
+          <div className="alterarDadosBtn">
               <Button
                 nome={"Alterar Dados"}
                 style={{
@@ -110,7 +111,6 @@ function Conta() {
                 }}
               />
             </div>
-          </div>
           <Navbar />
         </div>
       </div>

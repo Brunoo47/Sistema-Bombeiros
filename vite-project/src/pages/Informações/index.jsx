@@ -16,8 +16,8 @@ function Informacoes() {
           <h2>Informações</h2>
         </div>
         <div className="inputs align-input">
-          <InputText type={"text"} placeholder={"Numero de registro"} />
-          <InputText type={"password"} placeholder={"Senha"} />
+          <InputText type={"text"} placeholder={"Numero de registro"} className={"infoInput"}/>
+          <InputText type={"password"} placeholder={"Senha"} className={"infoInput"}/>
           <Link to={"/menu"}>
             <Button nome={"Logar"} 
               style={{
