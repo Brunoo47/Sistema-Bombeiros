@@ -1,84 +1,47 @@
 import Button from "../../components/Button";
 import InputText from "../../components/InputText";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { FaUserCog } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { GrHomeRounded } from "react-icons/gr";
-import { GiPadlock } from "react-icons/gi";
 import Navbar from "../../components/Navbar";
-import "./style.css";
+import axios from "axios";
+import { Component } from "react";
 
+class Conta extends Component {
+  state = {
+    nome: "",
+    cpf: "",
+    rg: "",
+    idUsuario: "1",
+    data_nascimento: "2000-11-10",
+  };
 
-function Conta() {
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
-  const pageGeral = () => {
+  post = () => {
+    axios
+      .post("http://localhost:8000/registroUsuario/", this.state)
+      .then(() => {
+        alert("Dados alterados com sucesso");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  render() {
     return (
       <>
-        <label className="formText">Nome</label>
-        <InputText className={"formInput"} />
-        <label className="formText"> CPF</label>
-        <InputText className={"formInput"} />
-        <label className="formText">RG</label>
-        <InputText className={"formInput"} />
-      </>
-    );
-  }
-
-  const pageContato = () => {
-    return (
-      <>
-        <label className="formText">Telefone</label>
-        <InputText className={"formInput"} />
-        <label className="formText">Email</label>
-        <InputText className={"formInput"} />
-
-      </>
-    );
-  }
-
-  const pageEndereço = () => {
-    return (
-      <>
-        <label className="formText">Rua</label>
-        <InputText className={"formInput"} />
-        <label className="formText">Cidade</label>
-        <InputText className={"formInput"} />
-
-      </>
-    );
-  }
-
-  const pageSenha = () => {
-    return (
-      <>
-        <label className="formText">Senha</label>
-        <InputText className={"formInput"} />
-        <label className="formText">Nova senha</label>
-        <InputText className={"formInput"} />
-      </>
-    );
-  }
-
-  const [mainPage, setMainPage] = useState(pageGeral);
-
-  const renderPage = (pageFunction) => {
-    return mainPage => setMainPage(pageFunction);
-
-  }
-
-  return (
-    <>
-      <div className="containerConta">
         <div className="cabecalho">
           <span>
             <div className="logout">
-              <Link to="/">
-                <Button
-                  nome={"logout"}
-                  style={{ width: "150px", height: "40px", margin: "10px" }}
-                />
-              </Link>
+              <Button
+                nome={"logout"}
+                style={{ width: "262px", height: "62px", margin: "5px" }}
+              />
             </div>
           </span>
           <div className="center">
@@ -88,34 +51,52 @@ function Conta() {
             </div>
           </div>
         </div>
-        <div className="containerInput">
-          <div className="ribbon">
-            <div className="buttons-ribbon">
-              <div className="element" onClick={renderPage(pageGeral)}><FaUserCog size="2rem" color="#000" />Gerais</div>
-              <div className="element" onClick={renderPage(pageContato)}><HiOutlineMail size="2rem" color="#000" />Contato</div>
-              <div className="element" onClick={renderPage(pageEndereço)}><GrHomeRounded size="2rem" color="#000" />Endereço</div>
-              <div className="element" onClick={renderPage(pageSenha)}><GiPadlock size="2rem" color="#000" />Senha</div>
-            </div>
+        <div className="ribbon">
+          <div className="buttons-ribbon">
+            <div className="element">Gerais</div>
+            <div className="element">Contato</div>
+            <div className="element">Endereço</div>
+            <div className="element">Senha</div>
           </div>
-          <div className="align">
-            <div className="inputs">
-              {mainPage}
-            </div>
-            <div className="alterar-dados-btn">
-              <Button
-                nome={"Alterar Dados"}
-                style={{
-                  width: "270px",
-                  height: "60px",
-                }}
-              />
-            </div>
-          </div>
-          <Navbar />
         </div>
-      </div>
-    </>
-  );
+        <div className="align">
+          <div className="inputs">
+            <label>Nome</label>
+            <InputText
+              type="text"
+              name="nome"
+              value={this.state.nome}
+              onChange={this.handleChange}
+            />
+            <label> CPF</label>
+            <InputText
+              type="text"
+              name="cpf"
+              value={this.state.cpf}
+              onChange={this.handleChange}
+            />
+            <label>RG</label>
+            <InputText
+              type="text"
+              name="rg"
+              value={this.state.rg}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div className="alterar-dados-btn"></div>
+          <Button
+            onClick={this.post}
+            nome={"Alterar Dados"}
+            style={{
+              width: "270px",
+              height: "60px",
+            }}
+          />
+        </div>
+        <Navbar />
+      </>
+    );
+  }
 }
 
 export default Conta;

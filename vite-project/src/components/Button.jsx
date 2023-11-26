@@ -1,7 +1,11 @@
 const BotãoPrincipal = (props) => {
   return (
     <>
-      <button className="botaoPrincipal" style={props.style}>
+      <button
+        className="botaoPrincipal"
+        onClick={props.onClick}
+        style={props.style}
+      >
         {props.nome}
       </button>
     </>
