@@ -15,6 +15,9 @@ function MetodoHistorico3() {
         <div className="containerAnamneseEM">
           <span>O que aconteceu?(Sinais e Sintomas)</span>
           <InputD
+          name="Cânula"
+          value={this.state.Canula}
+          onChange={this.handleChange}
             style={{ width: "300px", height: "30px", borderRadius: "30px" }}
           />
           <div className="elementAnamnese1">
@@ -44,6 +47,10 @@ function MetodoHistorico3() {
             </div>
             <div className="fieldAnamneseRight">
               <InputD
+               type="Text"
+               name="tempOcorrencia"
+               value={this.state.tempOcorrencia}
+               onChange={this.handleChange}
                 placeHolder={"Digite aqui.."}
                 style={{
                   width: "100%",

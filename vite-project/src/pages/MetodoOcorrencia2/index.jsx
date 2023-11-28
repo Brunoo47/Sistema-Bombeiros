@@ -40,10 +40,21 @@ function MetodoOcorrencias2() {
 
                 <div className="PEContainercampo ">
                     <div className='containerPE'>
-                        <Checkbox titulo="Psiquiátrico " style={{ width: '25px', height: '25px' }} />
+                        <Checkbox titulo="Psiquiátrico " 
+                        name="psiquiatrico"
+                        value={this.state.psiquiatrico}
+                        onChange={this.handleChange}
+                        style={{ width: '25px', height: '25px' }} />
+                        
                     </div>
                     <div className='containerPE'>
-                        <Checkbox titulo="Respiratório " className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px' }} />
+                        <Checkbox titulo="Respiratório " 
+                        name="respiratorio"
+                        value={this.state.respiratorio}
+                        onChange={this.handleChange}
+                        className="checkboxPE" 
+                        onClick={showCheck} 
+                        style={{ width: '25px', height: '25px' }} />
                         <div className="containerSelect" style={{ display: "none" }}>
                             <select style={{ width: '100px', height: '25px', marginLeft: "40px" }}>
                                 <option value="">Selecione uma opção</option>
@@ -53,7 +64,13 @@ function MetodoOcorrencias2() {
                         </div>
                     </div>
                     <div className='containerPE'>
-                        <Checkbox titulo="Diabetes " className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px' }} />
+                        <Checkbox titulo="Diabetes "
+                         name="diabetes"
+                         value={this.state.diabetes}
+                         onChange={this.handleChange}
+                         className="checkboxPE" 
+                         onClick={showCheck} 
+                         style={{ width: '25px', height: '25px' }} />
                         <div className="containerSelect" style={{ display: "none" }}>
                             <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
                                 <option value="">Selecione uma opção</option>
@@ -63,7 +80,13 @@ function MetodoOcorrencias2() {
                         </div>
                     </div>
                     <div className='containerPE' style={{ marginBottom: "30px" }}>
-                        <Checkbox titulo="Obstétrico " className="checkboxPE" onClick={showCheck} style={{ width: '25px', height: '25px' }} />
+                        <Checkbox titulo="Obstétrico "
+                          name=" obstetrico"
+                          value={this.state. obstetrico}
+                          onChange={this.handleChange}
+                         className="checkboxPE" 
+                         onClick={showCheck} 
+                         style={{ width: '25px', height: '25px' }} />
                         <div className="containerSelect" style={{ display: "none" }}>
                             <select style={{ width: '100px', height: '25px', marginBottom: '10px', marginLeft: "40px" }}>
                                 <option value="">Selecione a altura</option>
@@ -75,7 +98,12 @@ function MetodoOcorrencias2() {
                     </div>
                     <span className="spanOcorrencia">Há outra ocorrência?</span>
                     <div className="inputs">
-                        <InputD type={"text"} placeholder={"Digite o tipo de ocorrência"} style={{ width: '85%', height: '10px', marginBottom: '20px' }} />
+                        <InputD type={"text"}
+                        name="ha outra ocorrencia"
+                        value={this.state.ha_outra_ocorrencia3}
+                        onChange={this.handleChange}
+                        placeholder={"Digite o tipo de ocorrência"} 
+                        style={{ width: '85%', height: '10px', marginBottom: '20px' }} />
                     </div>
                 </div>
 

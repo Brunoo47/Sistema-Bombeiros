@@ -22,6 +22,9 @@ function MetodoHistorico5() {
 
             <div className="fieldACO">
               <input
+                name="disturbioComportamento"
+                value={this.state.disturbioComportamento}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -44,6 +47,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name="capaceteEncontrado"
+                value={this.state.capaceteEncontrado}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -66,6 +72,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name="cintoEncontrado"
+                value={this.state.cintoEncontrado}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -88,6 +97,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name="paraBrisasAvariado"
+                value={this.state.paraBrisasAvariado}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -110,6 +122,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name="caminhandoCena"
+                value={this.state.caminhandoCena}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -132,6 +147,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name="painelAvariado"
+                value={this.state.painelAvariado}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -154,6 +172,9 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
+                name=" volanteTorcido"
+                value={this.state.volanteTorcido}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -172,6 +193,9 @@ function MetodoHistorico5() {
           <span className="spanHistorico">Objetos Recolhidos</span>
           <div className="inputs">
             <InputD
+              name="objetos_recolhidos"
+              value={this.state.objetos_recolhidos}
+              onChange={this.handleChange}
               type={"text"}
               placeholder={"Digite aqui os objetos recolhidos"}
               style={{ width: "300px", height: "10px", fontSize: "10px" }}

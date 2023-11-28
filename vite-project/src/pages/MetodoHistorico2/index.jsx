@@ -26,7 +26,11 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <div className="containerSelect">
                 <Checkbox
-                  titulo="Ataduras "
+                  titulo="Ataduras"
+                  type="Checkbox"
+                  name="Ataduras"
+                  value={this.state.Ataduras}
+                  onChange={this.handleChange}
                   style={{
                     width: "25px",
                     height: "25px",
@@ -59,6 +63,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Cateter TP. Óculos"
+                type="Checkbox"
+                name="Ataduras"
+                value={this.state.Ataduras}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -78,6 +86,10 @@ function MetodoHistorico2() {
               <div className="containerSelect">
                 <Checkbox
                   titulo="Kit's "
+                  type="Checkbox"
+                  name="Kit's"
+                  value={this.state.Kits}
+                  onChange={this.handleChange}
                   style={{
                     width: "25px",
                     height: "25px",
@@ -110,6 +122,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Luvas desc. (pares)"
+                type="Checkbox"
+                name="Luvas desc. (pares)"
+                value={this.state.LuvasDescPares}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -128,6 +144,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Máscara desc."
+                type="Checkbox"
+                name="Máscara desc."
+                value={this.state.MascaraDesc}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -146,6 +166,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Manta Aluminizada"
+                type="Checkbox"
+                name="Manta Aluminizada"
+                value={this.state.MantaAluminizada}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -164,6 +188,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Pás do DEA"
+                type="Checkbox"
+                name="Pás do DEA"
+                value={this.state.PasDEA}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -182,6 +210,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Sonda Aspiração "
+                type="Checkbox"
+                name="Sonda Aspiração"
+                value={this.state.SondaAspiracao}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -200,6 +232,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Soro Fisiológico"
+                type="Checkbox"
+                name="Soro Fisiológico"
+                value={this.state.SoroFisiologico}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -220,6 +256,10 @@ function MetodoHistorico2() {
               <div className="containerSelect">
                 <Checkbox
                   titulo="Talas PAP."
+                  type="Checkbox"
+                  name="Talas PAP."
+                  value={this.state. TalasPAP}
+                  onChange={this.handleChange}
                   style={{
                     width: "25px",
                     height: "25px",
@@ -297,6 +337,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Base Estabiliza."
+                type="Checkbox"
+                name="Base Estabiliza."
+                value={this.state.BaseEstabiliza}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -315,6 +359,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Coxins Estabiliza."
+                type="Checkbox"
+                name="Coxins Estabiliza."
+                value={this.state.CoxinsEstabiliza}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -334,6 +382,10 @@ function MetodoHistorico2() {
               <div className="containerSelect">
                 <Checkbox
                   titulo="KED "
+                  type="Checkbox"
+                name="KED"
+                value={this.state.KED}
+                onChange={this.handleChange}
                   style={{
                     width: "25px",
                     height: "25px",
@@ -366,7 +418,11 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <div className="containerSelect">
                 <Checkbox
-                  titulo="T. T. F. "
+                  titulo="T. T. F."
+                  type="Checkbox"
+                  name="T. T. F."
+                  value={this.state.TTF}
+                  onChange={this.handleChange}
                   style={{
                     width: "25px",
                     height: "25px",
@@ -398,6 +454,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Tirante aranha"
+                type="Checkbox"
+                name="Tirante aranha"
+                value={this.state.Tirantearanha}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -416,6 +476,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Tirante de cabeça"
+                type="Checkbox"
+                name="Tirante de cabeça"
+                value={this.state.Tirantecabeca}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",
@@ -434,6 +498,10 @@ function MetodoHistorico2() {
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Cânula"
+                type="Checkbox"
+                name="Cânula"
+                value={this.state.Canula}
+                onChange={this.handleChange}
                 style={{
                   width: "25px",
                   height: "25px",

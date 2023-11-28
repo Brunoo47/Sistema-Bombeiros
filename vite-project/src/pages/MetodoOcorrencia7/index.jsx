@@ -30,6 +30,9 @@ function MetodoOcorrencias7() {
               <h4>Local: </h4>
             </div>
             <select
+             name="local"
+             value={this.state.local}
+             onChange={this.handleChange}
               style={{
                 width: "100px",
               }}
@@ -51,6 +54,9 @@ function MetodoOcorrencias7() {
               <h4>Grau: </h4>
             </div>
             <select
+            name="grau"
+            value={this.state.grau}
+            onChange={this.handleChange}
               style={{
                 width: "100px",
               }}

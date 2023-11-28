@@ -30,36 +30,33 @@ class MetodoHistorico1 extends Component {
         ChaveRautek: "",
         UsoColar: "",
         LocalColar: "",
-        CanulaGuedel: "",
-        UsoKED: "",
-        DesobstrucaoVA: "",
-        UsoTTF: "",
-        EmpregoDEA: "",
-        VentilacaoSuporte: "",
-        GerenciamentoRiscos: "",
-        Oxigenioterapia: "",
+        canula_de_guedel: "",
+        uso_ked: "",
+        desobstrucao_de_va: "",
+        uso_ttf: "",
+        emprego_de_dea: "",
+        ventilacao_de_suporte: "",
+        gerenciamento_de_riscos: "",
+        oxigenioterapia: "",
         LimpezaCurativos: "",
         Reanimador1: "",
         Curativos1: "",
         Reanimador2: "",
         Compressivo: "",
         MeiosAuxiliares: "",
-        LocalMeiosAuxiliares: "",
-        Encravamento: "",
-        Ocular: "",
-        Queimadura: "",
-        Simples: "",
+        encravamento: "",
+        ocular: "",
+        queimadura: "",
+        simples: "",
         TresPontas: "",
         Imobilizacoes: "",
-        LocalImobilizacoes: "",
         MacaSobreRodas: "",
         MacaRigida: "",
         Ponte: "",
         RetiradoCapacete: "",
         RCP: "",
         Rolamento90: "",
-        OutraOcorrencia: "",
-        TipoOcorrencia: ""
+        ha_outra_ocorrencia1: "",
     };
 
 }
@@ -76,12 +73,12 @@ class MetodoHistorico2 extends Component {
         SondaAspiracao: "",
         SoroFisiologico: "",
         TalasPAP: "",
-        OutroMaterial1: "",
-        OutroMaterial2: "",
-        OutroMaterial3: "",
-        OutroMaterial4: "",
-        OutroMaterial5: "",
-        OutroMaterial6: "",
+        BaseEstabiliza: "",
+        CoxinsEstabiliza: "",
+        KED: "",
+        TTF: "",
+        Tirantearanha: "",
+        Canula: "",
     };
 
 }
@@ -108,6 +105,10 @@ class MetodoHistorico4 extends Component {
         quantidadeFilhos: "",
         inicioContracoes: "",
         duracaoIntervalo: "",
+        pressão_evacuar:"",
+        rupturaBolsa:"",
+        inspecaoVisual:"",
+        partoRealizado:"",
     };
 
 }
@@ -121,13 +122,14 @@ class MetodoHistorico5 extends Component {
         caminhandoCena: "",
         painelAvariado: "",
         volanteTorcido: "",
-
+        objetos_recolhidos:"",
     };
 
 }
 
 class MetodoOcorrencia extends Component {
     state = {
+        tipo_ocorrencia:"",
         CausadoPorAnimais: '',
         DesmoronamentoDeslizamento: '',
         Afogamento: '',
@@ -145,6 +147,7 @@ class MetodoOcorrencia extends Component {
         Intoxicacao: '',
         QuedaDeMoto: '',
         Transferencia: '',
+        ha_outra_ocorrencia2:"",
     };
 
 }
@@ -155,6 +158,7 @@ class MetodoOcorrencia2 extends Component {
         respiratorio: "",
         diabetes: "",
         obstetrico: "",
+        ha_outra_ocorrencia3:"",
     };
 
 }
@@ -171,7 +175,7 @@ class MetodoOcorrencia3 extends Component {
 
 class MetodoOcorrencia4 extends Component {
     state = {
-        ha_outra_ocorrencia: "",
+        digite_sintoma: "",
         AbdomenSensivelRigido: "",
         EstaseJugular: "",
         AfundamentoCranio: "",
@@ -219,59 +223,6 @@ class MetodoOcorrencia4 extends Component {
     };
 
 }
-
-
-class MetodoOcorrencia4 extends Component {
-    state = {
-        ha_outra_ocorrencia: "",
-        AbdomenSensivelRigido: "",
-        EstaseJugular: "",
-        AfundamentoCranio: "",
-        FacePalida: "",
-        Agitacao: "",
-        Hemorragia: "",
-        HemorragiaTipo: "",
-        Amnesia: "",
-        Hipertensao: "",
-        Apneia: "",
-        Hiponeia: "",
-        AnginaPeito: "",
-        NauseasVomitos: "",
-        Bradicardia: "",
-        Nasorragia: "",
-        Bradipneia: "",
-        Obito: "",
-        BroncoAspirando: "",
-        Otorreia: "",
-        Cefaleia: "",
-        Otorragia: "",
-        Cianose: "",
-        CianoseLocal: "",
-        O_V_A_C_E: "",
-        Convulsao: "",
-        Parada: "",
-        ParadaTipo: "",
-        DesvioTraqueia: "",
-        Priaprismo: "",
-        DorLocal: "",
-        PruridoPele: "",
-        Edema: "",
-        EdemaTipo: "",
-        Pupilas: "",
-        PupilasTipo: "",
-        EnfisemaSubcutaneo: "",
-        Sede: "",
-        Taquipneia: "",
-        SinalBattle: "",
-        Taquicardia: "",
-        SinalGuaxinim: "",
-        Tontura: "",
-        Sudorese: "",
-        OutraOcorrencia: "",
-    };
-
-}
-
 
 class MetodoOcorrencia5 extends Component {
     state = {
@@ -281,6 +232,8 @@ class MetodoOcorrencia5 extends Component {
         saturacao: "",
         hgt: "",
         temperatura: "",
+        saturacao:"",
+        perfissao:"",
     };
 
 }
@@ -324,15 +277,16 @@ class MetodoOcorrencia8 extends Component {
 
 }
 
-class MetodoOcorrencia8 extends Component {
+class MetodoOcorrencia9 extends Component {
     state = {
-        Critico: false,
-        Instavel: false,
-        Potencialmente_instavel: false,
-        Estavel: false,
+        Critico: "",
+        Instavel: "",
+        Potencialmente_instavel: "",
+        Estavel: "",
+        objetos_recolhidos2:"",
     };
 
 }
 
 
-
+export default class1;

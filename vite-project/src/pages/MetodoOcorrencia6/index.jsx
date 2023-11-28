@@ -38,6 +38,9 @@ function MetodoOcorrencias6() {
             </div>
             <div className="optionLT">
               <select
+               name="local"
+               value={this.state.local}
+               onChange={this.handleChange}
                 style={{
                   width: "100px",
                 }}
@@ -62,6 +65,9 @@ function MetodoOcorrencias6() {
             </div>
             <div className="optionLT">
               <select
+              name="lado"
+              value={this.state.lado}
+              onChange={this.handleChange}
                 style={{
                   width: "100px",
                 }}
@@ -81,6 +87,9 @@ function MetodoOcorrencias6() {
             </div>
             <div className="optionLT">
               <select
+              name="face"
+              value={this.state.face}
+              onChange={this.handleChange}
                 style={{
                   width: "100px",
                 }}
@@ -101,6 +110,9 @@ function MetodoOcorrencias6() {
             </div>
             <div className="optionLT">
               <select
+               name="tipo"
+               value={this.state.tipo}
+               onChange={this.handleChange}
                 style={{
                   width: "100px",
                 }}

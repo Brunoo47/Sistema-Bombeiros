@@ -20,6 +20,10 @@ function MetodoHistorico4() {
             </div>
             <div className="fieldAnamneseG">
               <InputD
+                type="Text"
+                name="periodoGestacao"
+                value={this.state.periodoGestacao}
+                onChange={this.handleChange}
                 style={{ width: "120px", height: "20px", borderRadius: "20px" }}
               />
             </div>
@@ -37,6 +41,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+                name="fezPreNatal"
+                value={this.state.fezPreNatal}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -51,6 +58,10 @@ function MetodoHistorico4() {
             </div>
             <div className="fieldAnamneseG">
               <InputD
+                name="nomeMedico"
+                value={this.state.nomeMedico}
+                onChange={this.handleChange}
+                placeHolder={"Digite aqui.."}
                 style={{ width: "120px", height: "20px", borderRadius: "20px" }}
               />
             </div>
@@ -68,6 +79,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+                name="complicacoes"
+                value={this.state.complicacoes}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -89,6 +103,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+                name="primeiroFilho"
+                value={this.state.primeiroFilho}
+                onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -103,6 +120,10 @@ function MetodoHistorico4() {
             </div>
             <div className="fieldAnamneseG">
               <InputD
+                name="quantidadeFilhos"
+                value={this.state.quantidadeFilhos}
+                onChange={this.handleChange}
+                type="text"
                 style={{ width: "120px", height: "20px", borderRadius: "20px" }}
               />
             </div>
@@ -113,6 +134,10 @@ function MetodoHistorico4() {
             </div>
             <div className="fieldAnamneseG">
               <InputD
+                name="inicioContracoes"
+                value={this.state.inicioContracoes}
+                onChange={this.handleChange}
+                type="text"
                 style={{ width: "120px", height: "20px", borderRadius: "20px" }}
               />
             </div>
@@ -132,7 +157,12 @@ function MetodoHistorico4() {
                 <div className="textAnamnese">
                   <span>Intervalo</span>
                 </div>
-                <input type="text" style={{ width: "40px", height: "30px" }} />
+                <input
+                  name="duracaoIntervalo"
+                  value={this.state.duracaoIntervalo}
+                  onChange={this.handleChange}
+                  type="text"
+                  style={{ width: "40px", height: "30px" }} />
               </div>
             </div>
           </div>
@@ -140,10 +170,13 @@ function MetodoHistorico4() {
             <div className="titleAnamneseG">
               <span>
                 Sente alguma pressão na região do quadril ou vontade de evacuar?
-              </span>
+              </span> 
             </div>
             <div className="fieldAnamneseG">
               <input
+              name="pressão evacuar"
+              value={this.state.pressao_evacuar}
+              onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -172,6 +205,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+             name="rupturaBolsa"
+             value={this.state.rupturaBolsa}
+             onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -193,6 +229,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+               name="inspecaoVisual"
+               value={this.state.inspecaoVisual}
+               onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />
@@ -214,6 +253,9 @@ function MetodoHistorico4() {
                 <span>Sim</span>
               </div>
               <input
+              name="partoRealizado"
+              value={this.state.partoRealizado}
+              onChange={this.handleChange}
                 type="checkbox"
                 style={{ width: "25px", height: "30px" }}
               />

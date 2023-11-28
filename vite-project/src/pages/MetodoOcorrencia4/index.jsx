@@ -61,6 +61,9 @@ function MetodoOcorrencias4() {
         <div className="inputs">
           <InputD
             type={"text"}
+            name="Sinais e Sintomas"
+            value={this.state.digite_sintoma}
+            onChange={this.handleChange}
             placeholder={"Digite o tipo de sintoma"}
             style={{ width: "85%", height: "10px" }}
           />
@@ -69,27 +72,45 @@ function MetodoOcorrencias4() {
         <div className="SISEContainerCampo">
           <Checkbox
             titulo="Abdomên sensível ou rígido"
+            name="Abdomên sensível ou rígido"
+            value={this.state.AbdomenSensivelRigido}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Éstase jugular"
+            name="Éstase jugular"
+            value={this.state.EstaseJugular}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Afundamento de crânio"
+            name="Afundamento de crânio"
+            value={this.state.AfundamentoCranio}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Face pálida "
+            name="Face pálida "
+            value={this.state.FacePalida}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Agitação"
+            name="Agitação"
+            value={this.state.Agitacao}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <div>
             <Checkbox
               titulo="Hemorragia "
+              name="Hemorragia"
+              value={this.state.Hemorragia}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
               className={"checkboxSISE"}
               onClick={showCheck}
@@ -110,52 +131,88 @@ function MetodoOcorrencias4() {
             </div>
           </div>
           <Checkbox
+          name="Amnesia"
+          value={this.state.Amnesia}
+          onChange={this.handleChange}
             titulo="Amnésia"
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Hipertensão"
+            name="Hipertensao"
+            value={this.state.Hipertensao}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Apnéia"
+            name="Apneia"
+            value={this.state.Apneia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Hiponéia"
+            name="Hiponeia"
+            value={this.state.Hiponeia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Angina de peito"
+            name="Angina de Peito"
+            value={this.state.AnginaPeito}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Náuseas e vômitos"
+            name="Nauseas e Vômitos"
+            value={this.state.NauseasVomitos}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Bradicardia"
+            name="Bradicardia"
+            value={this.state.Bradicardia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Nasorragia"
+            name="Nasorragia"
+            value={this.state.Nasorragia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Bradipnéia"
+            name="Bradipneia"
+            value={this.state.Bradipneia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Óbito"
+            name="Obito"
+            value={this.state.Obito}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
           <Checkbox
             titulo="Bronco-aspirando"
+            name="BroncoAspirando"
+            value={this.state.BroncoAspirando}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
 
           <Checkbox
             titulo="Otorréia"
+            name="Otorreia"
+            value={this.state.Otorreia}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px" }}
           />
         </div>
@@ -163,15 +220,24 @@ function MetodoOcorrencias4() {
           <div className="SISEinvisible" id="SISEinvisible" >
             <Checkbox
               titulo="Cefaléia"
+              name="Cefaleia"
+            value={this.state.Cefaleia}
+            onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Otorragia"
+              name="Otorragia"
+              value={this.state.Otorragia}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <div>
               <Checkbox
                 titulo="Cianose "
+                name="Cianose"
+              value={this.state.Cianose}
+              onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
                 className={"checkboxSISE"}
                 onClick={showCheck}
@@ -193,15 +259,24 @@ function MetodoOcorrencias4() {
             </div>
             <Checkbox
               titulo="O. V. A. C. E"
+              name="O_V_A_C_E"
+              value={this.state.O_V_A_C_E}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Convulsão"
+              name="Convulsao"
+              value={this.state.Convulsao}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <div>
               <Checkbox
                 titulo="Parada "
+                name="Parada"
+                value={this.state.Parada}
+                onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
                 className={"checkboxSISE"}
                 onClick={showCheck}
@@ -223,23 +298,38 @@ function MetodoOcorrencias4() {
             </div>
             <Checkbox
               titulo="Desvio de traquéia"
+              name="DesvioTraqueia"
+              value={this.state.DesvioTraqueia}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Priaprismo"
+              name="Priaprismo"
+              value={this.state.Priaprismo}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Dor local"
+              name="DorLocal"
+              value={this.state.DorLocal}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Prurido na pele"
+              name="PruridoPele"
+              value={this.state.PruridoPele}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <div>
               <Checkbox
                 titulo="EDEMA "
+                name="Edema"
+              value={this.state.Edema}
+              onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
                 className={"checkboxSISE"}
                 onClick={showCheck}
@@ -252,6 +342,9 @@ function MetodoOcorrencias4() {
                     marginBottom: "10px",
                     marginLeft: "40px",
                   }}
+                  name="EdemaTipo"
+                  value={this.state.EdemaTipo}
+                  onChange={this.handleChange}
                 >
                   <option value="">Selecione o tipo</option>
                   <option value="opcao1">Generalizado</option>
@@ -262,12 +355,18 @@ function MetodoOcorrencias4() {
             <div>
               <Checkbox
                 titulo="Pupilas "
+                name="Pupilas"
+                value={this.state.Pupilas}
+                onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
                 className={"checkboxSISE"}
                 onClick={showCheck}
               />
               <div className="containerSelect" style={{ display: "none" }} >
                 <select
+                name="PupilasTipo"
+                value={this.state.PupilasTipo}
+                onChange={this.handleChange}
                   style={{
                     width: "100px",
                     height: "25px",
@@ -285,40 +384,67 @@ function MetodoOcorrencias4() {
             </div>
             <Checkbox
               titulo="Enfisema subcutâneo"
+              name="EnfisemaSubcutaneo"
+              value={this.state.EnfisemaSubcutaneo}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Sede"
+              name="Sede"
+              value={this.state.Sede}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Taquipnéia"
+              name="Taquipneia"
+              value={this.state.Taquipneia}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Sinal de Battle"
+              name="SinalBattle"
+              value={this.state.SinalBattle}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Taquicardia"
+              name="Taquicardia"
+              value={this.state.Taquicardia}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Sinal de guaxinim"
+              name="SinalGuaxinim"
+              value={this.state.SinalGuaxinim}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Tontura"
+              name="Tontura"
+              value={this.state.Tontura}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Sudorese"
+              name="Sudorese"
+              value={this.state.Sudorese}
+              onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
           </div>
           <span className="spanOcorrencia">Há outra ocorrência?</span>
           <div className="inputs">
             <InputD
+             name="Outra ocorrencia?"
+             value={this.state.OutraOcorrencia}
+             onChange={this.handleChange}
               type={"text"}
               placeholder={"Digite o tipo de ocorrência"}
               style={{ width: "85%", height: "10px", marginBottom: "20px" }}

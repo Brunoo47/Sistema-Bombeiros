@@ -35,6 +35,9 @@ function MetodoOcorrencias3() {
             <div className="checkboxG">
               <CheckboxG
                 titulo="Nenhuma"
+                name="nenhuma"
+                value={this.state.AberturaOcular}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -44,6 +47,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Espontânea"
+                name="Espontânea"
+                value={this.state.AberturaOcular}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -53,6 +59,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Comando Verbal"
+                name="Comando Verbal"
+                value={this.state.AberturaOcular}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -62,6 +71,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Estímulo Doloroso"
+                name="Estímulo Doloroso"
+                value={this.state.AberturaOcular}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -79,6 +91,9 @@ function MetodoOcorrencias3() {
             <div className="checkboxG">
               <CheckboxG
                 titulo="Nenhuma"
+                name="Nenhuma"
+                value={this.state.RespostaVerbal}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -88,6 +103,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Espontânea"
+                name="Espontânea"
+                value={this.state.RespostaVerbal}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -97,6 +115,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Comando Verbal"
+                name="Comando Verbal"
+                value={this.state.RespostaVerbal}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -106,6 +127,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Estímulo Doloroso"
+                name="Estímulo Doloroso"
+                value={this.state.RespostaVerbal}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -123,6 +147,9 @@ function MetodoOcorrencias3() {
             <div className="checkboxG">
               <CheckboxG
                 titulo="Nenhuma"
+                name="Nenhuma"
+                value={this.state.RespostaMotora}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -132,6 +159,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Espontânea"
+                name="Espontânea"
+                value={this.state.RespostaMotora}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -141,6 +171,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Comando Verbal"
+                name="Comando Verbal"
+                value={this.state.RespostaMotora}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",
@@ -150,6 +183,9 @@ function MetodoOcorrencias3() {
 
               <CheckboxG
                 titulo="Estímulo Doloroso"
+                name="Estímulo Doloroso"
+                value={this.state.RespostaMotora}
+                onChange={this.handleChange}
                 style={{
                   width: "15px",
                   height: "15px",

@@ -34,6 +34,9 @@ function MetodoOcorrencias9() {
               <BsEmojiFrown size={70} />
               <Checkbox
                 titulo={"Crítico"}
+                name="Critico"
+                value={this.state.Critico}
+                onChange={this.handleChange}
                 style={{ widht: "30px", height: "30px" }}
               />
             </div>
@@ -41,6 +44,9 @@ function MetodoOcorrencias9() {
               <BsEmojiGrimace size={70} />
               <Checkbox
                 titulo={"Instável "}
+                name="Instavel"
+                value={this.state.Instavel}
+                onChange={this.handleChange}
                 style={{ widht: "30px", height: "30px" }}
               />
             </div>
@@ -48,6 +54,9 @@ function MetodoOcorrencias9() {
               <BsEmojiNeutral size={70} />
               <Checkbox
                 titulo={"Potencialmente instável"}
+                name="Potencialmente_instavel"
+                value={this.state.Potencialmente_instavel}
+                onChange={this.handleChange}
                 style={{ widht: "30px", height: "30px" }}
               />
             </div>
@@ -55,6 +64,9 @@ function MetodoOcorrencias9() {
               <BsEmojiSmile size={70} />
               <Checkbox
                 titulo={"Estável"}
+                name="Estavel"
+                value={this.state.Estavel}
+                onChange={this.handleChange}
                 style={{ widht: "30px", height: "30px" }}
               />
             </div>
@@ -64,6 +76,9 @@ function MetodoOcorrencias9() {
             <div className="inputs">
               <InputD
                 type={"text"}
+                name="objetos recolhidos"
+                value={this.state.objetos_recolhidos2}
+                onChange={this.handleChange}
                 placeholder={"Digite os objetos recolhidos"}
                 style={{ width: "300px", height: "20px", marginBottom: "20px" }}
               />
