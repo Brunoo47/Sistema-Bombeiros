@@ -1,3 +1,22 @@
+class Registrarocorre extends Component {
+    state = {
+        nome: '',
+        idade: '',
+        cpf: '',
+        sexo: '',
+        telefone: '',
+        acompanhanteNome: '',
+        acompanhanteIdade: '',
+        localOcorrencia: '',
+        equipeM: '',
+        equipeS1: '',
+        equipeS2: '',
+        equipeS3: '',
+        equipeDemandante: '',
+        equipeGeral: '',
+    }
+}
+
 class MetodoHistorico1 extends Component {
     state = {
         Aspiracao: "",
