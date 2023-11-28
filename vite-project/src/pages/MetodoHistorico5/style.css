@@ -1,16 +1,16 @@
 .metAcoPage {
   width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .containerACO {
-  width: 100%;
-  height: 100vh;
+  margin: 30px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
-  margin-top: 30px;
 }
 
 .elementACO {
@@ -32,4 +32,18 @@
   width: 25px;
   height: 25px;
   margin: 0 10px 10px 0;
+}
+
+.containerObsImp {
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+}
+
+.spanObsImp {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: start;
 }

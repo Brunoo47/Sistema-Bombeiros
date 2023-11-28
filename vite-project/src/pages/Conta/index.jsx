@@ -12,7 +12,44 @@ import "./style.css";
 
 function Conta() {
 
+  const [clicked1, setClicked1] = useState(false);
+  const [clicked2, setClicked2] = useState(false);
+  const [clicked3, setClicked3] = useState(false);
+  const [clicked4, setClicked4] = useState(false);
+
+  const clickedColor1 = () => {
+    setClicked1(true);
+    setClicked2(false);
+    setClicked3(false);
+    setClicked4(false);
+  }
+
+  const clickedColor2 = () => {
+    setClicked1(false);
+    setClicked2(true);
+    setClicked3(false);
+    setClicked4(false);
+  }
+
+  const clickedColor3 = () => {
+    setClicked1(false);
+    setClicked2(false);
+    setClicked3(true);
+    setClicked4(false);
+  }
+  const clickedColor4 = () => {
+    setClicked1(false);
+    setClicked2(false);
+    setClicked3(false);
+    setClicked4(true);
+  }
+
+
+
+
   const pageGeral = () => {
+    clickedColor1()
+
     return (
       <>
         <label className="formText">Nome</label>
@@ -26,6 +63,7 @@ function Conta() {
   }
 
   const pageContato = () => {
+    clickedColor2()
     return (
       <>
         <label className="formText">Telefone</label>
@@ -38,6 +76,7 @@ function Conta() {
   }
 
   const pageEndereço = () => {
+    clickedColor3()
     return (
       <>
         <label className="formText">Rua</label>
@@ -50,6 +89,7 @@ function Conta() {
   }
 
   const pageSenha = () => {
+    clickedColor4()
     return (
       <>
         <label className="formText">Senha</label>
@@ -64,7 +104,6 @@ function Conta() {
 
   const renderPage = (pageFunction) => {
     return mainPage => setMainPage(pageFunction);
-
   }
 
   return (
@@ -73,12 +112,10 @@ function Conta() {
         <div className="cabecalho">
           <span>
             <div className="logout">
-              <Link to="/">
-                <Button
-                  nome={"logout"}
-                  style={{ width: "150px", height: "40px", margin: "10px" }}
-                />
-              </Link>
+              <Button
+                nome={"logout"}
+                style={{ width: "150px", height: "40px", margin: "10px" }}
+              />
             </div>
           </span>
           <div className="center">
@@ -91,25 +128,25 @@ function Conta() {
         <div className="containerInput">
           <div className="ribbon">
             <div className="buttons-ribbon">
-              <div className="element" onClick={renderPage(pageGeral)}><FaUserCog size="2rem" color="#000" />Gerais</div>
-              <div className="element" onClick={renderPage(pageContato)}><HiOutlineMail size="2rem" color="#000" />Contato</div>
-              <div className="element" onClick={renderPage(pageEndereço)}><GrHomeRounded size="2rem" color="#000" />Endereço</div>
-              <div className="element" onClick={renderPage(pageSenha)}><GiPadlock size="2rem" color="#000" />Senha</div>
+              <div className={`element1 ${clicked1 ? 'clicked1' : ''}`} onClick={renderPage(pageGeral)} onMouseClick={renderPage(pageGeral)} ><FaUserCog size="2rem" color={clicked1 ? '#FFF' : '#000'} />Gerais</div>
+              <div className={`element2 ${clicked2 ? 'clicked2' : ''}`} onClick={renderPage(pageContato)} onMouseClick={renderPage(pageContato)}><HiOutlineMail size="2rem" color={clicked2 ? '#FFF' : '#000'} />Contato</div>
+              <div className={`element3 ${clicked3 ? 'clicked3' : ''}`} onClick={renderPage(pageEndereço)}><GrHomeRounded size="2rem" color={clicked3 ? '#FFF' : '#000'} />Endereço</div>
+              <div className={`element4 ${clicked4 ? 'clicked4' : ''}`} onClick={renderPage(pageSenha)}><GiPadlock size="2rem" color={clicked4 ? '#FFF' : '#000'} />Senha</div>
             </div>
           </div>
           <div className="align">
             <div className="inputs">
               {mainPage}
             </div>
-            <div className="alterar-dados-btn">
-              <Button
-                nome={"Alterar Dados"}
-                style={{
-                  width: "270px",
-                  height: "60px",
-                }}
-              />
-            </div>
+          </div>
+          <div className="alterarDadosBtn">
+            <Button
+              nome={"Alterar Dados"}
+              style={{
+                width: "270px",
+                height: "60px",
+              }}
+            />
           </div>
           <Navbar />
         </div>

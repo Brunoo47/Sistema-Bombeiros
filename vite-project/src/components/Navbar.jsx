@@ -1,6 +1,6 @@
-import menuLogo from "../assets/menu-2.png";
-import registerLogo from "../assets/pencil-plus.png";
-import accountLogo from "../assets/user.png";
+import { FiMenu } from "react-icons/fi";
+import { HiOutlineClipboardCopy } from "react-icons/hi";
+import { MdAccountCircle } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
@@ -13,17 +13,17 @@ function Navbar() {
           <ul>
             <li>
             <Link to="/menu">
-                <img className="navbaricone" src={menuLogo} alt="Logo menu" />
+                <FiMenu size={35} color={"#000"}/>
                 </Link>
             </li>
             <li>
             <Link to="/registrar">
-                <img className="navbaricone" src={registerLogo} alt="Logo registro" />
+            <HiOutlineClipboardCopy size={35} color={"#000"}/>
                 </Link>
             </li>
             <li>
             <Link to="/conta">
-                <img className="navbaricone" src={accountLogo} alt="Logo conta" />
+               <MdAccountCircle size={35} color={"#000"}/>
             </Link>
             </li>
           </ul>

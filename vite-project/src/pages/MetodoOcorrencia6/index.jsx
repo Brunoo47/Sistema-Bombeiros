@@ -1,20 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import Arrow from "../../components/arrow";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import corpo from "../../assets/corpo.png";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoOcorrencias6() {
   return (
     <>
       <div className="metLTPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonO />
         </div>
         <div className="tarjaV">
@@ -118,6 +116,18 @@ function MetodoOcorrencias6() {
               </select>
             </div>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoOcorrencias5">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoOcorrencias7">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

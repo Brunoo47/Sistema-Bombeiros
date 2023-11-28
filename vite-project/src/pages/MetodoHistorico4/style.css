@@ -1,20 +1,19 @@
 .metAnanGPage {
   width: 100vw;
-  height: 100vh;
 }
 
 .containerAnamneseG {
-  width: 100%;
-  height: 100vh;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 20px;
-  margin-top: 30px;
+  row-gap: 10px;
+  margin: 30px 15px;
 }
 
 .textAnamnese {
   height: 30px;
+  width: auto;
   margin-right: 10px;
   margin-left: 10px;
   font-weight: bold;
@@ -45,5 +44,14 @@
 }
 
 .fieldAnamneseGInput {
-  display: flex;
+  display: grid;
+  width: 132px;
+  margin-bottom: 5px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.inputAnamnese {
+  width: 40px;
+  height: 30px;
+  justify-self: flex-end;
 }

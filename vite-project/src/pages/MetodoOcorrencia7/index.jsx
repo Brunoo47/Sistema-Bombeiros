@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuButtonO from "../../components/MenuButtonO";
-import { AiOutlineArrowLeft } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+import Arrow from "../../components/arrow"
 import "./style.css"
+import { Link } from "react-router-dom";
 
 function MetodoOcorrencias7() {
   return (
     <>
       <div className="metQPage">
         <div className="metOcorreTitle">
-          <div className="arrowIcon">
-            <Link to="/RegistrarOcorre">
-              <AiOutlineArrowLeft size={55} color={"#000"} />
-            </Link>
-          </div>
+          <Arrow />
           <MenuButtonO />
         </div>
         <div className="tarjaV">
@@ -61,6 +59,18 @@ function MetodoOcorrencias7() {
               <option value="opcao2">Queimadura 3° grau</option>
             </select>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoOcorrencias6">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoOcorrencias8">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

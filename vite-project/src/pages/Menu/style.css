@@ -1,5 +1,5 @@
 .MenuPage {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
   
@@ -37,6 +37,7 @@
     justify-content: space-between;
     border-radius: 40px;
     background: #efefef;
+    padding: 20px;
   }
   
   .cardMenuBottom {
@@ -60,6 +61,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
   }
   

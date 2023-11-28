@@ -1,78 +1,137 @@
 .containerConta {
-    height: 100vh;
-    max-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
 }
 
 .cabecalho {
-    width: 100%;
-    height: 220px;
-    background-color: #8a0000;
-  }
-  
-  .align {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    min-height: calc(100vh - 390px);
-    position: relative;
-  }
+  width: 100%;
+  height: 220px;
+  background-color: #8a0000;
+}
 
-  .containerInput {
-    min-height: calc(100% - 220px);
-  }
+.align {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 390px);
+  margin-bottom: 30px;
+  position: relative;
+}
 
 .buttons-ribbon {
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .element {
-    width: 100px;
-    height: 80px;
-    border: 10px transparent #000;
-    border-radius: 12px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .foto-do-usuario {
-    width: 100px;
-    height: 100px;
-    background-color: #000;
-    border-radius: 50%;
-    border: 3px solid #fff;
-  }
-  
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .nome-do-usuario {
-    color: #fff;
-    padding: 8px;
-  }
+.element1 {
+  width: 100px;
+  height: 80px;
+  border: 10px transparent #000;
+  border-radius: 12px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .redButton {
-    background-color: red;
-    color: white;
-  }
+.element2 {
+  width: 100px;
+  height: 80px;
+  border: 10px transparent #000;
+  border-radius: 12px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .formText {
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
+.element3 {
+  width: 100px;
+  height: 80px;
+  border: 10px transparent #000;
+  border-radius: 12px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .alterar-dados-btn {
-    position: absolute;
-    bottom: 0;
-  }
-  
+.element4 {
+  width: 100px;
+  height: 80px;
+  border: 10px transparent #000;
+  border-radius: 12px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-do-usuario {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nome-do-usuario {
+  color: #fff;
+  padding: 8px;
+}
+
+.redButton {
+  background-color: red;
+  color: white;
+}
+
+.formText {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.alterarDadosBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.clicked1 {
+  background-color: #8a0000;
+  color: #FFF;
+
+}
+
+.clicked1 svg {
+  background-color: #8a0000;
+  color: #FFF;
+
+}
+
+.clicked2 {
+  background-color: #8a0000;
+  color: #FFF;
+}
+
+.clicked3 {
+  background-color: #8a0000;
+  color: #FFF;
+}
+
+.clicked4 {
+  background-color: #8a0000;
+  color: #FFF;
+}

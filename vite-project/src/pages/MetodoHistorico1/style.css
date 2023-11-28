@@ -1,14 +1,42 @@
 .metPeHistoricoPage {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 .PeContainerCampo {
-  height: 100%;
+  height: calc(100% - 224.19px);
   width: calc(100% - 20px);
   margin-left: 20px;
-  margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 15px;
+}
+
+.peInvisible {
+  height: auto;
+}
+
+.containerPeInvisible {
+  height: auto;
+  width: calc(100% - 20px);
+  display: grid;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+}
+
+.backArrow {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upArrow {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }

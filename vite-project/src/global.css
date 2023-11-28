@@ -125,6 +125,7 @@ h2 {
   flex-direction: column;
   margin-bottom: 10px;
 }
+
 .containerSelect h4 {
   height: 10px;
 }
@@ -207,6 +208,7 @@ nav {
   align-items: center;
   margin-right: 15px;
 }
+
 .buttonMenu {
   border: none;
   background-color: transparent;
@@ -218,4 +220,144 @@ nav {
   width: 100vw;
   background-color: white;
   z-index: 1;
+}
+
+/* Hamburguer menu */
+
+.containerIcone {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  height: 70px;
+  color: #000;
+}
+
+.containerPages {
+  width: 100vw;
+  min-height: 100%;
+  background-color: #FFF;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  text-wrap: break-word;
+  text-align: center;
+}
+
+.containerLinks {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  margin: 100px auto;
+}
+
+.containerLinks a {
+  text-decoration: none;
+  color: #000;
+  padding: 15px;
+  font-size: 16px
+}
+
+.containerIconX {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.iconX {
+  z-index: 1;
+}
+
+/* Aviso de saída da tela */
+
+.containerWarning {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255);
+  /* Adicione um plano de fundo de sua escolha */
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+  color: #fff;
+  /* Adicione a cor do texto desejada */
+  pointer-events: auto;
+  /* Permite que este elemento seja clicado */
+  z-index: 2;
+}
+
+.titleWarning {
+  height: 80px;
+  width: 100%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.warningButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttonYes {
+  background-color: green;
+  color: #FFF;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid green;
+}
+
+.buttonNo {
+  background-color: red;
+  color: #FFF;
+  width: 50px;
+  border-radius: 10px;
+  border: 1px solid red;
+}
+
+.backGroundWarning {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+}
+
+.infoInput {
+  width: 100px;
+  height: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.arrowNavigation {
+  float: right;
+  background-color: #bf0010;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.arrowNavigationL {
+  float: inline-start;
+  background-color: #bf0010;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.areaNavigation {
+  display: flex;
+  justify-content: space-between;
 }

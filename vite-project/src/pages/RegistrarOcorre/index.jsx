@@ -46,7 +46,7 @@ function RegistrarOcorre() {
           <div className="secondInfo">
             <div className="marginInput">
               <label htmlFor="">CPF:</label>
-              <input type="text" className="inputRegistrarOcorre" />
+              <input type="text" className="inputRegistrarOcorre additionalWidth" />
             </div>
             <div className="marginInput">
               <label htmlFor="">Sexo:</label>
@@ -59,7 +59,7 @@ function RegistrarOcorre() {
           <div className="thirdInfo">
             <div className="marginInput">
               <label htmlFor="">Telefone:</label>
-              <input type="text" className="inputRegistrarOcorre" />
+              <input type="text" className="inputRegistrarOcorre additionalWidth" />
             </div>
           </div>
           <div className="fourthInfo">

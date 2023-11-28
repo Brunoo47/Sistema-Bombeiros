@@ -1,13 +1,21 @@
 import React from "react";
 import InputD from "../../components/InputD";
 import Button from "../../components/Button";
+import MenuButtonH from "../../components/MenuButtonH";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+import Arrow from "../../components/arrow"
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoHistorico5() {
   return (
     <>
       <div className="metAcoPage  metOcorronciasPageD">
-        <div className="metOcorreTitle"></div>
+        <div className="metOcorreTitle">
+          <Arrow />
+          <MenuButtonH />
+        </div>
         <div className="tarjaV">
           <div className="metTitle">
             <h1>Avaliação Cinemática</h1>
@@ -22,14 +30,16 @@ function MetodoHistorico5() {
 
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="disturbioC"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="disturbioC"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -44,14 +54,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="capacete"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="capacete"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -66,14 +78,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="encotradoCinto"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="encotradoCinto"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -88,14 +102,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="paraBrisasAva"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="paraBrisasAva"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -110,14 +126,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="caminhandoCena"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="caminhandoCena"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -132,14 +150,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="painelAva"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="painelAva"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -154,14 +174,16 @@ function MetodoHistorico5() {
             </div>
             <div className="fieldACO">
               <input
-                type="checkbox"
+                type="radio"
+                name="volanteTor"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
                 <span>Sim</span>
               </div>
               <input
-                type="checkbox"
+                type="radio"
+                name="volanteTor"
                 style={{ width: "25px", height: "30px" }}
               />
               <div className="textAnamnese">
@@ -169,13 +191,15 @@ function MetodoHistorico5() {
               </div>
             </div>
           </div>
-          <span className="spanHistorico">Objetos Recolhidos</span>
-          <div className="inputs">
-            <InputD
-              type={"text"}
-              placeholder={"Digite aqui os objetos recolhidos"}
-              style={{ width: "300px", height: "10px", fontSize: "10px" }}
-            />
+
+          <div className="containerObsImp">
+            <span className="spanObsImp">Objetos recolhidos</span>
+            <div className="inputs">
+              <InputD
+                type={"text"}
+                style={{ width: "300px", height: "20px", marginBottom: "20px" }}
+              />
+            </div>
           </div>
         </div>
         <Button
@@ -186,6 +210,12 @@ function MetodoHistorico5() {
             fontSize: "20px",
           }}
         />
+        <Link to="/metodoHistorico4">
+          <button className="arrowNavigation">
+            <FaArrowLeft size={55} color="#FFF" />
+          </button>
+        </Link>
+
       </div>
     </>
   );
