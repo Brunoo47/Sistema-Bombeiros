@@ -3,19 +3,21 @@ import InputD from "../../components/InputD";
 import Button from "../../components/Button";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
+import { FaArrowLeft } from "react-icons/fa";
 import { BsEmojiFrown } from "react-icons/bs";
 import { BsEmojiNeutral } from "react-icons/bs";
 import { BsEmojiSmile } from "react-icons/bs";
 import { BsEmojiGrimace } from "react-icons/bs";
 import Arrow from "../../components/arrow"
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoOcorrencias9() {
   return (
     <>
-    <body>
-      
-    
+
+
+
       <div className="metDTOPage metOcorrenciasPageD">
         <div className="metOcorreTitle">
           <Arrow />
@@ -78,8 +80,13 @@ function MetodoOcorrencias9() {
             />
           </div>
         </div>
+        <Link to="/metodoOcorrencias8">
+          <button className="arrowNavigationL">
+            <FaArrowLeft size={55} color="#FFF" />
+          </button>
+        </Link>
       </div>
-      </body>
+
     </>
   );
 }

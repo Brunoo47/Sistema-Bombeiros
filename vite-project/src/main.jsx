@@ -10,7 +10,7 @@ import Registrar from "./pages/Registrar";
 import RegistrarOcorre from "./pages/RegistrarOcorre";
 import MetodoOcorrencias from "./pages/MetodoOcorrencias";
 import MetodoOcorrencias2 from "./pages/MetodoOcorrencia2";
-import MetodoOcorrencias3 from "./pages/MetodoOcorrencia3";
+import MetodoOcorrencias3 from "./pages/MetodoOcorrencia3/MetodoOcorrencias3";
 import MetodoOcorrencias4 from "./pages/MetodoOcorrencia4";
 import MetodoOcorrencias5 from "./pages/MetodoOcorrencia5";
 import MetodoOcorrencias6 from "./pages/MetodoOcorrencia6";
@@ -46,7 +46,7 @@ root.render(
       <Route path="/metodoHistorico1" element={<MetodoHistorico1 />} />
       <Route path="/metodoHistorico2" element={<MetodoHistorico2 />} />
       <Route path="/metodoHistorico3" element={<MetodoHistorico3 />} />
-      <Route path="/metodoHistorico4" element={<MetodoHistorico4  />} />
+      <Route path="/metodoHistorico4" element={<MetodoHistorico4 />} />
       <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
     </Routes>
   </BrowserRouter>

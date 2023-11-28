@@ -1,7 +1,10 @@
 import InputD from "../../components/InputD";
 import MenuButtonO from "../../components/MenuButtonO";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow"
 import "./style.css"
+import { Link } from "react-router-dom";
 
 function MetodoOcorrencias5() {
   return (
@@ -186,6 +189,18 @@ function MetodoOcorrencias5() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoOcorrencias4">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoOcorrencias6">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

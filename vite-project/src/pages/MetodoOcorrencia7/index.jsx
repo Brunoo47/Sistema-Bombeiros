@@ -1,7 +1,10 @@
 import React from "react";
 import MenuButtonO from "../../components/MenuButtonO";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow"
 import "./style.css"
+import { Link } from "react-router-dom";
 
 function MetodoOcorrencias7() {
   return (
@@ -56,6 +59,18 @@ function MetodoOcorrencias7() {
               <option value="opcao2">Queimadura 3° grau</option>
             </select>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoOcorrencias6">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoOcorrencias8">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

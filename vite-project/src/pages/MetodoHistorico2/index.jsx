@@ -3,7 +3,10 @@ import InputD from "../../components/InputD";
 import MenuButtonH from "../../components/MenuButtonH";
 import Arrow from "../../components/arrow"
 import Checkbox from "../../components/checkbox";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoHistorico2() {
   const [selectedOption, setSelectedOption] = useState('opcao1');
@@ -581,6 +584,19 @@ function MetodoHistorico2() {
           <div className="containerFieldMateriais">
             {renderContent()}
           </div>
+        </div>
+
+        <div className='areaNavigation'>
+          <Link to="/metodoHistorico1">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoHistorico3">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

@@ -278,13 +278,16 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255); /* Adicione um plano de fundo de sua escolha */
+  background-color: rgba(255, 255, 255);
+  /* Adicione um plano de fundo de sua escolha */
   padding: 20px;
   width: 300px;
   height: 150px;
   border-radius: 10px;
-  color: #fff; /* Adicione a cor do texto desejada */
-  pointer-events: auto; /* Permite que este elemento seja clicado */
+  color: #fff;
+  /* Adicione a cor do texto desejada */
+  pointer-events: auto;
+  /* Permite que este elemento seja clicado */
   z-index: 2;
 }
 
@@ -331,7 +334,30 @@ nav {
 
 .infoInput {
   width: 100px;
-  height:10px;
+  height: 10px;
   padding: 10px;
   margin-bottom: 15px;
+}
+
+.arrowNavigation {
+  float: right;
+  background-color: #bf0010;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.arrowNavigationL {
+  float: inline-start;
+  background-color: #bf0010;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.areaNavigation {
+  display: flex;
+  justify-content: space-between;
 }

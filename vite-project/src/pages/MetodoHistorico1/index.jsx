@@ -1,10 +1,13 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonH from "../../components/MenuButtonH";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow"
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoHistorico1() {
 
@@ -57,7 +60,7 @@ function MetodoHistorico1() {
           <InputD
             type={"text"}
             placeholder={"Digite o tipo de sintoma"}
-            style={{ width: "85%", height: "10px"}}
+            style={{ width: "85%", height: "10px" }}
           />
         </div>
         <div className="PeContainerCampo">
@@ -284,6 +287,11 @@ function MetodoHistorico1() {
         <div className="upArrow" id="upArrow" onClick={toggleCheck} style={{ display: "none" }}>
           <SlArrowUp size={80} id="arrowUp" />
         </div>
+        <Link to="/metodoHistorico2">
+          <button className="arrowNavigation">
+            <FaArrowRight size={55} color="#FFF" />
+          </button>
+        </Link>
       </div >
     </>
   );

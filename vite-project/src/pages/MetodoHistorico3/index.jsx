@@ -1,8 +1,11 @@
 import React from "react";
 import InputD from "../../components/InputD";
 import MenuButtonH from "../../components/MenuButtonH";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow"
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoHistorico3() {
   return (
@@ -129,6 +132,18 @@ function MetodoHistorico3() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoHistorico2">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoHistorico4">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

@@ -1,8 +1,11 @@
 import React from "react";
 import InputD from "../../components/InputD";
 import MenuButtonH from "../../components/MenuButtonH";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow"
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function MetodoHistorico4() {
   return (
@@ -10,7 +13,7 @@ function MetodoHistorico4() {
       <div className="metAnanGPage">
         <div className="metOcorreTitle">
           <Arrow />
-          <MenuButtonH/>
+          <MenuButtonH />
         </div>
         <div className="tarjaV">
           <div className="metTitle">
@@ -268,6 +271,18 @@ function MetodoHistorico4() {
               </div>
             </div>
           </div>
+        </div>
+        <div className='areaNavigation'>
+          <Link to="/metodoHistorico3">
+            <button className="arrowNavigation">
+              <FaArrowLeft size={55} color="#FFF" />
+            </button>
+          </Link>
+          <Link to="/metodoHistorico5">
+            <button className="arrowNavigation">
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
+          </Link>
         </div>
       </div>
     </>

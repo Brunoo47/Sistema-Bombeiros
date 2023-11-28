@@ -1,6 +1,9 @@
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
+import { FaArrowRight } from "react-icons/fa";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Arrow from "../../components/arrow"
 import "./style.css";
 
@@ -9,7 +12,7 @@ function MetodoOcorrencias() {
   const showCheck = () => {
     const pickChecks = document.getElementsByClassName("checkboxTipoOcorre");
     const containerCompanions = document.getElementsByClassName("containerSelect");
-    
+
 
     for (let i = 0; i < pickChecks.length; i++) {
       if (pickChecks[i].checked) {
@@ -22,10 +25,12 @@ function MetodoOcorrencias() {
 
   return (
     <>
+
+
       <div className="metTipoOcorrrenciasPage">
         <div className="metOcorreTitle">
-        <Arrow />
-        <MenuButtonO />
+          <Arrow />
+          <MenuButtonO />
         </div>
         <div className="tarjaV">
           <div className="metTitle">
@@ -172,8 +177,13 @@ function MetodoOcorrencias() {
           />
         </div>
       </div >
+      <Link to="/metodoOcorrencias2">
+        <button className="arrowNavigation">
+          <FaArrowRight size={55} color="#FFF" />
+        </button>
+      </Link>
     </>
   );
-         }
+}
 
 export default MetodoOcorrencias;
