@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import "./style.css";
 
 function MetodoHistorico2() {
-  const [selectedOption, setSelectedOption] = useState('opcao1');
+  const [selectedOption, setSelectedOption] = useState("opcao1");
 
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
@@ -293,9 +293,7 @@ function MetodoHistorico2() {
                 <h5>Quantidade</h5>
               </div>
             </div>
-            <div className="fieldMateriais">
-
-            </div>
+            <div className="fieldMateriais"></div>
             <div className="fieldMateriais">
               <Checkbox
                 titulo="Base Estabiliza."
@@ -484,8 +482,7 @@ function MetodoHistorico2() {
         </>
       );
     }
-
-  }
+  };
 
   return (
     <>
@@ -500,12 +497,12 @@ function MetodoHistorico2() {
           <div className="selectMateriais">
             <select onChange={handleSelectChange}>
               <option value="opcao1">Materiais Utilizados Descartável</option>
-              <option value="opcao2">Materiais Utilizados Deixado no Hospital</option>
+              <option value="opcao2">
+                Materiais Utilizados Deixado no Hospital
+              </option>
             </select>
           </div>
-          <div className="containerFieldMateriais">
-            {renderContent()}
-          </div>
+          <div className="containerFieldMateriais">{renderContent()}</div>
         </div>
       </div>
     </>
