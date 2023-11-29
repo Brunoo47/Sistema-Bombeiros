@@ -26,14 +26,6 @@ class Informacoes extends Component {
       .then((response) => {
         console.log(localStorage);
         localStorage.setItem("userID", response.data.id);
-        // if (this.handleSubmit) {
-        //   alert("Login realizado com sucesso");
-        // } else {
-        //   alert("erro de autenticação");
-        // }
-
-        // Redirecionar para outra página ou fazer outras operações necessárias após o login
-        // Exemplo: this.props.history.push('/outra-rota');
       })
       .catch((err) => {
         console.error(err);

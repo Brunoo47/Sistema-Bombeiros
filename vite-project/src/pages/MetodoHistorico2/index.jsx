@@ -1,17 +1,79 @@
-import { useState } from "react";
+import { Component } from "react";
+class MetodoHistorico2 extends Component {}
+export default MetodoHistorico2;
+/*
+import { Component, useState } from "react";
 import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import "./style.css";
+import axios from "axios";
 
-function MetodoHistorico2() {
-  const [selectedOption, setSelectedOption] = useState("opcao1");
+
+class MetodoHistorico2 extends Component{
+ state = {
+    Ataduras:"",
+Catetertpoculos:"",
+Kits:"",
+Luvasdesc:"",
+Mantaaluminizada:"",
+Pasdodea:"",
+Sondaaspiracao:"",
+Sorofisiologico:"",
+Telaspap:"",
+BaseEstabilizacolar:"",
+Coxinsestabiliza:"",
+Ked:"",
+Ttf:"",
+Tirantearanha:"",
+Tiratecabeca:"",
+Canula:"",
+
+
+
+ }
+ handleChange = (e) => {
+  const { name, value } = e.target;
+  this.setState({
+    [name]: value,
+  });
+};
+
+handleSubmit = (e) => {
+  e.preventDefault(); // Evite o comportamento padrão do formulário
+  console.log(this.state);
+  axios
+    .post("http://localhost:8000/Procedimentos_efetuados/", this.state)
+    .then((response) => {
+      console.log(localStorage);
+      localStorage.setItem("userID", response.data.id);
+      // if (this.handleSubmit) {
+      //   alert("Login realizado com sucesso");
+      // } else {
+      //   alert("erro de autenticação");
+      // }
+
+      // Redirecionar para outra página ou fazer outras operações necessárias após o login
+      // Exemplo: this.props.history.push('/outra-rota');
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
+
+
+
+
+
+
+render () {
 
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
   };
 
   const renderContent = () => {
-    if (selectedOption === "opcao1") {
+    if (this.state.SelectedOption === "opcao1") {
       return (
         <>
           <div className="fieldLeftMateriais">
@@ -576,5 +638,7 @@ function MetodoHistorico2() {
     </>
   );
 }
+}
 
 export default MetodoHistorico2;
+*/

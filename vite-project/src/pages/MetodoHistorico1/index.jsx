@@ -5,7 +5,43 @@ import "./style.css";
 import axios from "axios";
 axios;
 
-
+class MetodoHistorico1 extends Component {
+  state = {
+    aspiração: "",
+    Rolamento180: "",
+    AvaliacaoInicial: "",
+    TomadaDecisao: "",
+    AvaliacaoDirigida: "",
+    TratadoChoque: "",
+    AvaliacaoContinuada: "",
+    ChaveRautek: "",
+    UsoColar: "",
+    canula_de_guedel: "",
+    uso_ked: "",
+    desobstrucao_de_va: "",
+    uso_ttf: "",
+    emprego_de_dea: "",
+    ventilacao_de_suporte: "",
+    gerenciamento_de_riscos: "",
+    Oxigenioterapia: "",
+    LimpezaCurativos: "",
+    Reanimador: "",
+    Curativos: "",
+    MeiosAuxiliares: "",
+    Encravamento: "",
+    Ocular: "",
+    Queimadura: "",
+    Simples: "",
+    TresPontas: "",
+    Imobilizações: "",
+    MacaSobreRodas: "",
+    MacaRigida: "",
+    Ponte: "",
+    RetiradoCapacete: "",
+    RCP: "",
+    Rolamento90: "",
+    ha_outra_ocorrencia: "",
+  };
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +54,7 @@ axios;
     e.preventDefault(); // Evite o comportamento padrão do formulário
     console.log(this.state);
     axios
-      .post("http://localhost:8000/token/", this.state)
+      .post("http://localhost:8000/Procedimentos_efetuados/", this.state)
       .then((response) => {
         console.log(localStorage);
         localStorage.setItem("userID", response.data.id);
@@ -35,7 +71,7 @@ axios;
         console.error(err);
       });
   };
-
+  render() {
     return (
       <>
         <div className="metPeHistoricoPage">
@@ -258,9 +294,9 @@ axios;
               <Checkbox
                 titulo="Meios auxiliares "
                 type="Checkbox"
-              name="Meios auxiliares"
-              value={this.state.MeiosAuxiliares}
-              onChange={this.handleChange}
+                name="Meios auxiliares"
+                value={this.state.MeiosAuxiliares}
+                onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <select
@@ -342,49 +378,49 @@ axios;
           <Checkbox
             titulo="Maca sobre rodas"
             type="Checkbox"
-              name="Maca sobre rodas"
-              value={this.state.MacaSobreRodas}
-              onChange={this.handleChange}
+            name="Maca sobre rodas"
+            value={this.state.MacaSobreRodas}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
           <Checkbox
             titulo="Maca rígida"
             type="Checkbox"
-              name="Maca rígida"
-              value={this.state.MacaRigida}
-              onChange={this.handleChange}
+            name="Maca rígida"
+            value={this.state.MacaRigida}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
           <Checkbox
             titulo="Ponte "
             type="Checkbox"
-              name="Ponte"
-              value={this.state.Ponte}
-              onChange={this.handleChange}
+            name="Ponte"
+            value={this.state.Ponte}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
           <Checkbox
             titulo="Retirado capacete"
             type="Checkbox"
-              name="Retirado capacete"
-              value={this.state.RetiradoCapacete}
-              onChange={this.handleChange}
+            name="Retirado capacete"
+            value={this.state.RetiradoCapacete}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
           <Checkbox
             titulo="R. C. P."
             type="Checkbox"
-              name="R. C. P."
-              value={this.state.RCP}
-              onChange={this.handleChange}
+            name="R. C. P."
+            value={this.state.RCP}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
           <Checkbox
             titulo="Rolamento 90°"
             type="Checkbox"
-              name="Rolamento 90°"
-              value={this.state.Rolamento90}
-              onChange={this.handleChange}
+            name="Rolamento 90°"
+            value={this.state.Rolamento90}
+            onChange={this.handleChange}
             style={{ width: "25px", height: "25px", marginBottom: "10px" }}
           />
 
@@ -402,5 +438,6 @@ axios;
         </div>
       </>
     );
-
+  }
+}
 export default MetodoHistorico1;
