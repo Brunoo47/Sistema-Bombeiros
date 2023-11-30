@@ -2,209 +2,293 @@ import InputD from "../../components/InputD";
 import MenuButtonO from "../../components/MenuButtonO";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
-import Arrow from "../../components/arrow"
-import "./style.css"
+import Arrow from "../../components/arrow";
+import "./style.css";
 import { Link } from "react-router-dom";
+import axios from "../../axios";
+import { Component } from "react";
 
-function MetodoOcorrencias5() {
-  return (
-    <>
-      <div className="metSVPage">
-        <div className="metOcorreTitle">
-          <Arrow />
-          <MenuButtonO />
-        </div>
-        <div className="tarjaV">
-          <div className="metTitle">
-            <h1>Sinais vitais</h1>
+class MetodoOcorrencias5 extends Component {
+  state = {
+    Pressaoarterial1: "",
+    Pressaoarterial2: "",
+    Pulso: "",
+    Respiracao: "",
+    Saturação: "",
+    Hgt: "",
+    Temperatura: "",
+    Profissao1: "",
+    Profissao2: "",
+    Profissao3: "",
+    Profissao4: "",
+  };
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault(); // Evite o comportamento padrão do formulário
+    console.log(this.state);
+    axios
+      .post("http://localhost:8000/Sinais_Vitais/", this.state)
+      .then((response) => {
+        console.log(localStorage);
+        localStorage.setItem("userID", response.data.id);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  render() {
+    return (
+      <>
+        <div className="metSVPage">
+          <div className="metOcorreTitle">
+            <Arrow />
+            <MenuButtonO />
           </div>
-        </div>
-
-        <div className="containerSV">
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Pressão arterial: </h4>
-            </div>
-            <div className="asideSV" style={{ justifySelf: "start" }}>
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>x</b>
-              </span>
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>mmgg</b>
-              </span>
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Pulso: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>B. C. P. M.</b>
-              </span>
+          <div className="tarjaV">
+            <div className="metTitle">
+              <h1>Sinais vitais</h1>
             </div>
           </div>
 
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Respiração: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>M. R. M.</b>
-              </span>
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Saturação: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>%</b>
-              </span>
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>HGT: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Temperatura: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>°C</b>
-              </span>
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Saturação: </h4>
-            </div>
-            <div className="asideSV">
-              <InputD
-                style={{
-                  width: "60px",
-                  height: "25px",
-                  borderRadius: "20px",
-                  border: "1px solid #000"
-                }}
-              />
-              <span>
-                <b>%</b>
-              </span>
-            </div>
-          </div>
-
-          <div className="fieldSV">
-            <div className="titleSV">
-              <h4>Perfissão: </h4>
-            </div>
-            <div className="asideSV">
-              <div className="asideCheckLeft">
-                <div className="containerCheckBox">
-                  <input type="checkbox" className="checkBoxSV" />
-                  <span className="spanSV">&gt;2 seg</span>
-                </div>
-                <div className="containerCheckBox">
-                  <input type="checkbox" className="checkBoxSV" />
-                  <span className="spanSV">&lt;2 seg</span>
-                </div>
+          <div className="containerSV">
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Pressão arterial: </h4>
               </div>
-              <div className="asideCheckRight">
-                <div className="containerCheckBox">
-                  <input type="checkbox" className="checkBoxSV" />
-                  <span className="spanSV">Normal</span>
-                </div>
-                <div className="containerCheckBox">
-                  <input type="checkbox" className="checkBoxSV" />
-                  <span className="spanSV">Anormal</span>
-                </div>
+              <div className="asideSV" style={{ justifySelf: "start" }}>
+                <InputD
+                  name="pressao_arterial"
+                  value={this.state.pressao_arterial}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>x</b>
+                </span>
+                <InputD
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>mmgg</b>
+                </span>
               </div>
             </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Pulso: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="pulso"
+                  value={this.state.pulso}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>B. C. P. M.</b>
+                </span>
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Respiração: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="respiracao"
+                  value={this.state.respiracao}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>M. R. M.</b>
+                </span>
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Saturação: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="saturacao"
+                  value={this.state.saturacao}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>%</b>
+                </span>
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>HGT: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="hgt"
+                  value={this.state.hgt}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Temperatura: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="temperatura"
+                  value={this.state.temperatura}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>°C</b>
+                </span>
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Saturação: </h4>
+              </div>
+              <div className="asideSV">
+                <InputD
+                  name="saturacao"
+                  value={this.state.saturacao}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "60px",
+                    height: "25px",
+                    borderRadius: "20px",
+                    border: "1px solid #000",
+                  }}
+                />
+                <span>
+                  <b>%</b>
+                </span>
+              </div>
+            </div>
+
+            <div className="fieldSV">
+              <div className="titleSV">
+                <h4>Perfissão: </h4>
+              </div>
+              <div className="asideSV">
+                <div className="asideCheckLeft">
+                  <div className="containerCheckBox">
+                    <input
+                      type="checkbox"
+                      name="perfissao"
+                      value={this.state.perfissao}
+                      onChange={this.handleChange}
+                      className="checkBoxSV"
+                    />
+                    <span className="spanSV">&gt;2 seg</span>
+                  </div>
+                  <div className="containerCheckBox">
+                    <input
+                      type="checkbox"
+                      name="perfissao"
+                      value={this.state.perfissao}
+                      onChange={this.handleChange}
+                      className="checkBoxSV"
+                    />
+                    <span className="spanSV">&lt;2 seg</span>
+                  </div>
+                </div>
+                <div className="asideCheckRight">
+                  <div className="containerCheckBox">
+                    <input
+                      name="perfissao"
+                      value={this.state.perfissao}
+                      onChange={this.handleChange}
+                      type="checkbox"
+                      className="checkBoxSV"
+                    />
+                    <span className="spanSV">Normal</span>
+                  </div>
+                  <div className="containerCheckBox">
+                    <input
+                      name="perfissao"
+                      value={this.state.perfissao}
+                      onChange={this.handleChange}
+                      type="checkbox"
+                      className="checkBoxSV"
+                    />
+                    <span className="spanSV">Anormal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="areaNavigation">
+            <Link to="/metodoOcorrencias4">
+              <button className="arrowNavigation">
+                <FaArrowLeft size={55} color="#FFF" />
+              </button>
+            </Link>
+            <Link to="/metodoOcorrencias6">
+              <button className="arrowNavigation">
+                <FaArrowRight size={55} color="#FFF" />
+              </button>
+            </Link>
           </div>
         </div>
-        <div className='areaNavigation'>
-          <Link to="/metodoOcorrencias4">
-            <button className="arrowNavigation">
-              <FaArrowLeft size={55} color="#FFF" />
-            </button>
-          </Link>
-          <Link to="/metodoOcorrencias6">
-            <button className="arrowNavigation">
-              <FaArrowRight size={55} color="#FFF" />
-            </button>
-          </Link>
-        </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
 
 export default MetodoOcorrencias5;

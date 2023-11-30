@@ -11,7 +11,7 @@ function Registrar() {
     <>
       <div className="OcorrenciaPage">
         <div className="menuOcorrencias">
-          <div class="MenuPageHeader">
+          <div className="MenuPageHeader">
             <img className="logo" src={Logo} alt="logo do sistema" />
             <img className="avatar" src={Avatar} alt="avatar do user" />
           </div>

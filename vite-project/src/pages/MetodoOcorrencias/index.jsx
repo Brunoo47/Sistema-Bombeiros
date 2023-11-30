@@ -2,17 +2,15 @@ import InputD from "../../components/InputD";
 import Checkbox from "../../components/checkbox";
 import MenuButtonO from "../../components/MenuButtonO";
 import { FaArrowRight } from "react-icons/fa";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Arrow from "../../components/arrow"
+import Arrow from "../../components/arrow";
 import "./style.css";
 
 function MetodoOcorrencias() {
-
   const showCheck = () => {
     const pickChecks = document.getElementsByClassName("checkboxTipoOcorre");
-    const containerCompanions = document.getElementsByClassName("containerSelect");
-
+    const containerCompanions =
+      document.getElementsByClassName("containerSelect");
 
     for (let i = 0; i < pickChecks.length; i++) {
       if (pickChecks[i].checked) {
@@ -21,12 +19,10 @@ function MetodoOcorrencias() {
         containerCompanions[i].style.display = "none";
       }
     }
-  }
+  };
 
   return (
     <>
-
-
       <div className="metTipoOcorrrenciasPage">
         <div className="metOcorreTitle">
           <Arrow />
@@ -39,6 +35,9 @@ function MetodoOcorrencias() {
         </div>
         <div className="inputs">
           <InputD
+            name="tipo ocorrencia"
+            value={this.state.tipo_ocorrencia}
+            onChange={this.handleChange}
             type={"text"}
             placeholder={"Digite o tipo de ocorrência"}
             style={{ width: "85%", height: "3px" }}
@@ -48,6 +47,10 @@ function MetodoOcorrencias() {
         <div className="tipoOcorrenciaContainercampo">
           <div>
             <Checkbox
+              name="Causado por animais"
+              value={this.state.CausadoPorAnimais}
+              onChange={this.handleChange}
+              type={"checkbox"}
               titulo="Causado por animais"
               style={{
                 width: "25px",
@@ -57,20 +60,31 @@ function MetodoOcorrencias() {
           </div>
           <div>
             <Checkbox
+              name="Desmoronamento/Deslizamento"
+              value={this.state.DesmoronamentoDeslizamento}
+              onChange={this.handleChange}
+              type={"checkbox"}
               titulo="Desmoronamento/Deslizamento"
-              style={{ width: "25px", height: "25px", }}
+              style={{ width: "25px", height: "25px" }}
             />
           </div>
           <div>
             <Checkbox
+              name="Afogamento"
+              value={this.state.Afogamento}
+              onChange={this.handleChange}
+              type={"checkbox"}
               titulo="Afogamento"
-              style={{ width: "25px", height: "25px", }}
+              style={{ width: "25px", height: "25px" }}
             />
           </div>
           <div>
             <Checkbox
-              titulo="Queda de altura "
-              style={{ width: "25px", height: "25px", }}
+              titulo="Queda de altura"
+              name="QuedaDeAltura"
+              value={this.state.QuedaDeAltura}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
               className={"checkboxTipoOcorre"}
               onClick={showCheck}
             />
@@ -92,82 +106,121 @@ function MetodoOcorrencias() {
           <div>
             <Checkbox
               titulo="Atropelamento"
-              style={{ width: "25px", height: "25px", }}
+              name="Atropelamento"
+              value={this.state.Atropelamento}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
           </div>
           <div>
             <Checkbox
               titulo="Desabamento"
-              style={{ width: "25px", height: "25px", }}
+              name="Desabamento"
+              value={this.state.Desabamento}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
           </div>
           <div>
             <Checkbox
               titulo="Esportivo"
-              style={{ width: "25px", height: "25px", }}
+              name="Esportivo"
+              value={this.state.Esportivo}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
           </div>
           <div>
             <Checkbox
               titulo="Queda de bicicleta"
-              style={{ width: "25px", height: "25px", }}
+              name="Queda de bicicleta"
+              value={this.state.QuedaDeBicicleta}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Com meio de transporte"
-              style={{ width: "25px", height: "25px", }}
+              name="ComMeioDeTransporte"
+              value={this.state.ComMeioDeTransporte}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Emergência médica"
-              style={{ width: "25px", height: "25px", }}
+              name=" EmergenciaMedica"
+              value={this.state.EmergenciaMedica}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Tentativa suicídio"
-              style={{ width: "25px", height: "25px", }}
+              name="Tentativa suicidio"
+              value={this.state.TentativaSuicidio}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Agressão"
-              style={{ width: "25px", height: "25px", }}
+              name="Agressao"
+              value={this.state.Agressao}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Choque elétrico"
-              style={{ width: "25px", height: "25px", }}
+              name="ChoqueEletrico"
+              value={this.state.ChoqueEletrico}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Doméstico"
-              style={{ width: "25px", height: "25px", }}
+              name="Domestico"
+              value={this.state.Domestico}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Intoxicação"
-              style={{ width: "25px", height: "25px", }}
+              name="Intoxicacao"
+              value={this.state.Intoxicacao}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Queda de moto"
-              style={{ width: "25px", height: "25px", }}
+              name="QuedaDeMoto"
+              value={this.state.QuedaDeMoto}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
+          </div>
           <div>
             <Checkbox
               titulo="Transferência"
-              style={{ width: "25px", height: "25px", }}
+              name="Transferencia"
+              value={this.state.Transferencia}
+              onChange={this.handleChange}
+              style={{ width: "25px", height: "25px" }}
             />
-          </div >
-        </div >
+          </div>
+        </div>
         <span className="spanOcorrencia">Há outra ocorrência?</span>
         <div className="inputs">
           <InputD
@@ -176,7 +229,7 @@ function MetodoOcorrencias() {
             style={{ width: "85%", height: "10px" }}
           />
         </div>
-      </div >
+      </div>
       <Link to="/metodoOcorrencias2">
         <button className="arrowNavigation">
           <FaArrowRight size={55} color="#FFF" />

@@ -1,11 +1,9 @@
-import React from "react";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import "./style.css";
 
 function RegistrarOcorre() {
-
   const showCheck = () => {
     const pickCheck = document.getElementById("companionCheck");
     const containerCompanion = document.getElementById("containerCompanion");
@@ -15,8 +13,7 @@ function RegistrarOcorre() {
     } else {
       containerCompanion.style.display = "none";
     }
-
-  }
+  };
 
   return (
     <>
@@ -27,7 +24,6 @@ function RegistrarOcorre() {
               <AiOutlineArrowLeft size={55} color={"#000"} />
             </Link>
           </div>
-
         </div>
         <div className="containerInfo">
           <div className="titleInfo">
@@ -46,7 +42,10 @@ function RegistrarOcorre() {
           <div className="secondInfo">
             <div className="marginInput">
               <label htmlFor="">CPF:</label>
-              <input type="text" className="inputRegistrarOcorre additionalWidth" />
+              <input
+                type="text"
+                className="inputRegistrarOcorre additionalWidth"
+              />
             </div>
             <div className="marginInput">
               <label htmlFor="">Sexo:</label>
@@ -59,17 +58,28 @@ function RegistrarOcorre() {
           <div className="thirdInfo">
             <div className="marginInput">
               <label htmlFor="">Telefone:</label>
-              <input type="text" className="inputRegistrarOcorre additionalWidth" />
+              <input
+                type="text"
+                className="inputRegistrarOcorre additionalWidth"
+              />
             </div>
           </div>
           <div className="fourthInfo">
             <div className="titleCompanion">
               <div className="marginInput">
                 <label htmlFor="">Acompanhante:</label>
-                <input type="checkbox" id="companionCheck" onClick={showCheck} />
+                <input
+                  type="checkbox"
+                  id="companionCheck"
+                  onClick={showCheck}
+                />
               </div>
             </div>
-            <div id="containerCompanion" className="containerCompanion" style={{ display: "none" }}>
+            <div
+              id="containerCompanion"
+              className="containerCompanion"
+              style={{ display: "none" }}
+            >
               <div className="marginInput">
                 <label htmlFor="">Nome:</label>
                 <input type="text" className="inputRegistrarOcorre" />
@@ -88,10 +98,14 @@ function RegistrarOcorre() {
           </div>
           <div className="sixthInfo">
             <Link to="/metodoOcorrencias">
-              <button className="buttonRegistrarOcorre">Tipo de Ocorrência</button>
+              <button className="buttonRegistrarOcorre">
+                Tipo de Ocorrência
+              </button>
             </Link>
             <Link to="/metodoHistorico1">
-              <button className="buttonRegistrarOcorre">Histórico de Ocorrência</button>
+              <button className="buttonRegistrarOcorre">
+                Histórico de Ocorrência
+              </button>
             </Link>
           </div>
           <div className="seventhInfo">
@@ -99,27 +113,45 @@ function RegistrarOcorre() {
             <div>
               <div className="marginInput">
                 <label htmlFor=""> M:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam"
+                />
               </div>
               <div className="marginInput">
                 <label htmlFor="">S1:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam " />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam "
+                />
               </div>
               <div className="marginInput">
                 <label htmlFor="">S2:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam"
+                />
               </div>
               <div className="marginInput">
                 <label htmlFor="">S3:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam"
+                />
               </div>
               <div className="marginInput">
                 <label htmlFor=""> Demandante:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam"
+                />
               </div>
               <div className="marginInput">
                 <label htmlFor="">Equipe:</label>
-                <input type="text" className="inputRegistrarOcorre configurationTeam" />
+                <input
+                  type="text"
+                  className="inputRegistrarOcorre configurationTeam"
+                />
               </div>
             </div>
           </div>
@@ -134,10 +166,7 @@ function RegistrarOcorre() {
             />
           </div>
         </div>
-
-
-
-      </div >
+      </div>
     </>
   );
 }
