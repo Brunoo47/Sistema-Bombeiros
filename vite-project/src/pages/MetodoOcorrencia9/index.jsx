@@ -11,7 +11,7 @@ import { BsEmojiGrimace } from "react-icons/bs";
 import Arrow from "../../components/arrow";
 import "./style.css";
 import { Link } from "react-router-dom";
-import axios from "../../axios";
+import axios from "axios";
 
 class MetodoOcorrencias9 extends Component {
   state = {

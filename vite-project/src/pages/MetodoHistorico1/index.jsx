@@ -7,7 +7,7 @@ import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
 import "./style.css";
 import { Link } from "react-router-dom";
-import axios from "../../axios";
+import axios from "axios";
 import { Component } from "react";
 
 class MetodoHistorico1 extends Component {

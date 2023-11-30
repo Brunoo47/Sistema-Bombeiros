@@ -8,7 +8,7 @@ import Arrow from "../../components/arrow";
 import CheckboxG from "../../components/checkboxG";
 import "./style.css";
 import { Link } from "react-router-dom";
-import axios from "../../axios";
+import axios from "axios";
 import { Component } from "react";
 
 class IndexAdult extends Component {

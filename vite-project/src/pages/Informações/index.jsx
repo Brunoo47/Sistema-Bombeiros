@@ -4,7 +4,7 @@ import Logo from "../../assets/logo.png";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import axios from "../../axios";
+import axios from "axios";
 class Informacoes extends Component {
   state = {
     username: "",
@@ -24,7 +24,9 @@ class Informacoes extends Component {
     axios
       .post("http://localhost:8000/token/", this.state)
       .then((response) => {
+        console.log(this.state);
         localStorage.setItem("userID", response.data.id);
+        window.location.href = "http://localhost:5173/menu";
       })
       .catch((err) => {
         console.error(err);

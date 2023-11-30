@@ -6,7 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import Arrow from "../../components/arrow";
 import { Link } from "react-router-dom";
 import "./style.css";
-import axios from "../../axios";
+import axios from "axios";
 
 class MetodoOcorrencias8 extends Component {
   state = {

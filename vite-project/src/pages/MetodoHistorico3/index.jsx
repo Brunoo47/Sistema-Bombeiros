@@ -6,7 +6,7 @@ import Arrow from "../../components/arrow";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import axios from "../../axios";
+import axios from "axios";
 
 class MetodoHistorico3 extends Component {
   state = {

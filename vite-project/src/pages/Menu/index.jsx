@@ -7,7 +7,7 @@ function Menu() {
   return (
     <>
       <div className="menu">
-        <div class="MenuPageHeader">
+        <div>
           <img className="logo" src={Logo} alt="logo do sistema" />
           <img className="avatar" src={Avatar} alt="avatar do user" />
         </div>
@@ -33,7 +33,6 @@ function Menu() {
         <div className="cardMenu cardMenuBottom"></div>
         <Navbar />
       </div>
-     
     </>
   );
 }

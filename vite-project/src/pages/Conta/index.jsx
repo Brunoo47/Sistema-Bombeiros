@@ -7,7 +7,7 @@ import { GrHomeRounded } from "react-icons/gr";
 import { GiPadlock } from "react-icons/gi";
 import Navbar from "../../components/Navbar";
 import "./style.css";
-import axios from "../../axios";
+import axios from "axios";
 
 class Conta extends Component {
   constructor(props) {
