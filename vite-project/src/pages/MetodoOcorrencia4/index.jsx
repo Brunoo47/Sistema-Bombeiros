@@ -12,74 +12,94 @@ import axios from "axios";
 import { Component } from "react";
 class MetodoOcorrencias4 extends Component {
   state = {
-    digite_sintoma: "",
-    AbdomenSensivelRigido: "",
-    EstaseJugular: "",
-    AfundamentoCranio: "",
-    FacePalida: "",
-    Agitacao: "",
-    Hemorragia: "",
-    HemorragiaTipo: "",
-    Amnesia: "",
-    Hipertensao: "",
-    Apneia: "",
-    Hiponeia: "",
-    AnginaPeito: "",
-    NauseasVomitos: "",
-    Bradicardia: "",
-    Nasorragia: "",
-    Bradipneia: "",
-    Obito: "",
-    BroncoAspirando: "",
-    Otorreia: "",
-    Cefaleia: "",
-    Otorragia: "",
-    Cianose: "",
-    CianoseLocal: "",
-    O_V_A_C_E: "",
-    Convulsao: "",
-    Parada: "",
-    ParadaTipo: "",
-    DesvioTraqueia: "",
-    Priaprismo: "",
-    DorLocal: "",
-    PruridoPele: "",
-    Edema: "",
-    EdemaTipo: "",
-    Pupilas: "",
-    PupilasTipo: "",
-    EnfisemaSubcutaneo: "",
-    Sede: "",
-    Taquipneia: "",
-    SinalBattle: "",
-    Taquicardia: "",
-    SinalGuaxinim: "",
-    Tontura: "",
-    Sudorese: "",
-    OutraOcorrencia: "",
+    abdomen_sensivel_rigido: "",
+    afundamento_cranio: "",
+    agitacao: "",
+    amnesia: "",
+    apineia: "",
+    angina_peito: "",
+    bradicardia: "",
+    bradipneia: "",
+    bronco_aspirado: "",
+    cefaleia: "",
+    cianose: "",
+    convulsao: "",
+    desvio_traqueia: "",
+    dor_local: "",
+    edema: "",
+    enfisema_subcutaneo: "",
+    estase_jugular: "",
+    face_palida: "",
+    hemorragia: "",
+    hipertensao: "",
+    hipotensao: "",
+    useas_vomitos: "",
+    nasorogia: "",
+    obito: "",
+    otorreia: "",
+    otorragia: "",
+    ovace: "",
+    parada: "",
+    priaprismo: "",
+    prurido_na_pele: "",
+    pupilas: "",
+    sede: "",
+    sinal_de_battle: "",
+    sinal_de_guaxinim: "",
+    sudorese: "",
+    taquipneia: "",
+    taquicardia: "",
+    tontura: "",
+    outro: "",
+  };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
   };
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
+    if (localStorage.getItem("registroSinais_e_Sintomas")) {
+      window.location.href = "http://localhost:5173/metodoOcorrencia4";
+      return;
+    }
     console.log(this.state);
     axios
-      .post("http://localhost:8000/Sinais_e_Sintomas/", this.state)
+      .post("http://localhost:8000/registroSinais_e_Sintomas/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "ProblemasEncontrados",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoOcorrencias5";
       })
       .catch((err) => {
+        alert("Falha ao salvar informações");
         console.error(err);
       });
   };
-
   render() {
     const toggleCheck = () => {
       const backArrow = document.getElementById("backArrow");

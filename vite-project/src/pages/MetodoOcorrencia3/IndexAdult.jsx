@@ -14,17 +14,29 @@ import { Component } from "react";
 class IndexAdult extends Component {
   state = {
     Nenhuma: "",
-    Espontanea: "",
-    Comandoverbal: "",
-    Estimuloboloroso: "",
+    espontanea: "",
+    comando_verbal: "",
+    estimulo_boloroso: "",
     Confuso: "",
-    Orientado: "",
-    Palavrasinapropriadas: "",
-    Palavrasincompreensiveis: "",
-    Obdececomandos: "",
-    Localizaador: "",
-    Movimentoderetirada: "",
-    Extensaonormal: "",
+    orientado: "",
+    palavras_inapropriadas: "",
+    palavras_incompreensiveis: "",
+    obdece_comandos: "",
+    localiza_a_dor: "",
+    movimento_de_retirada: "",
+    extensao_normal: "",
+  };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
   };
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,14 +47,22 @@ class IndexAdult extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      window.location.href = "http://localhost:5173/metodoOcorrencias4";
+      return;
+    }
     console.log(this.state);
     axios
-      .post("http://localhost:8000/AvaliacaoGlassGOW/", this.state)
+      .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "ProblemasEncontrados",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoOcorrencias4";
       })
       .catch((err) => {
+        alert("Falha ao salvar informações");
         console.error(err);
       });
   };
@@ -201,7 +221,7 @@ class IndexAdult extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias4">
+            <Link to="/metodoOcorrencias2">
               <button className="arrowNavigation">
                 <FaArrowRight size={55} color="#FFF" />
               </button>

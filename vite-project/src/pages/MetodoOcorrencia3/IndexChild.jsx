@@ -26,6 +26,17 @@ class IndexChild extends Component {
     Movimentoderetirada: "",
     Extensaonormal: "",
   };
+  componentDidMount = () => {
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
+  };
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
@@ -35,22 +46,22 @@ class IndexChild extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      window.location.href = "http://localhost:5173/metodoOcorrencias4";
+      return;
+    }
     console.log(this.state);
     axios
-      .post("http://localhost:8000/AvaliacaoGlassGOW/", this.state)
+      .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
-        // if (this.handleSubmit) {
-        //   alert("Login realizado com sucesso");
-        // } else {
-        //   alert("erro de autenticação");
-        // }
-
-        // Redirecionar para outra página ou fazer outras operações necessárias após o login
-        // Exemplo: this.props.history.push('/outra-rota');
+        localStorage.setItem(
+          "ProblemasEncontrados",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoOcorrencias4";
       })
       .catch((err) => {
+        alert("Falha ao salvar informações");
         console.error(err);
       });
   };
@@ -245,7 +256,7 @@ class IndexChild extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias4">
+            <Link to="/metodoOcorrencias2">
               <button className="arrowNavigation">
                 <FaArrowRight size={55} color="#FFF" />
               </button>
