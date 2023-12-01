@@ -23,7 +23,6 @@ import MetodoHistorico3 from "./pages/MetodoHistorico3";
 import MetodoHistorico4 from "./pages/MetodoHistorico4";
 import MetodoHistorico5 from "./pages/MetodoHistorico5";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
@@ -34,6 +33,7 @@ root.render(
       <Route path="/registrar" element={<Registrar />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/RegistrarOcorre" element={<RegistrarOcorre />} />
+      <Route path="/RegistrarOcorre/:id" element={<RegistrarOcorre />} />
       <Route path="/metodoOcorrencias" element={<MetodoOcorrencias />} />
       <Route path="/metodoOcorrencias2" element={<MetodoOcorrencias2 />} />
       <Route path="/metodoOcorrencias3" element={<MetodoOcorrencias3 />} />
@@ -50,6 +50,4 @@ root.render(
       <Route path="/metodoHistorico5" element={<MetodoHistorico5 />} />
     </Routes>
   </BrowserRouter>
-
-
 );

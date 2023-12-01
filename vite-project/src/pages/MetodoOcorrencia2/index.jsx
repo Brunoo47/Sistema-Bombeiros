@@ -11,30 +11,57 @@ import axios from "axios";
 
 class MetodoOcorrencias2 extends Component {
   state = {
-    Psiquiatrico: "",
-    Respiratorio: "",
-    Diabeticos: "",
-    Obstetrico: "",
-    Outro: "",
+    psiquiatrico: false,
+    respiratorio: false,
+    diabeticos: false,
+    obstetrico: false,
+    outro: null,
   };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
+  };
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
+  };
+
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
+    if (localStorage.getItem("ProblemasEncontrados")) {
+      window.location.href = "http://localhost:5173/metodoOcorrencias3";
+      return;
+    }
     console.log(this.state);
     axios
-      .post("http://localhost:8000/ProblemasEncontrados/", this.state)
+      .post("http://localhost:8000/registroProblemasEncontrados/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
-        // if (this.handleSubmit) {
-        //   alert("Login realizado com sucesso");
-        // } else {
-        //   alert("erro de autenticação");
-        // }
-
-        // Redirecionar para outra página ou fazer outras operações necessárias após o login
-        // Exemplo: this.props.history.push('/outra-rota');
+        localStorage.setItem(
+          "ProblemasEncontrados",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoOcorrencias3";
       })
       .catch((err) => {
+        alert("Falha ao salvar informações");
         console.error(err);
       });
   };
@@ -70,6 +97,9 @@ class MetodoOcorrencias2 extends Component {
           <div className="PEContainercampo ">
             <div className="containerPE">
               <Checkbox
+                name="psiquiatrico"
+                value={this.state.psiquiatrico}
+                onChange={this.handleChange}
                 titulo="Psiquiátrico "
                 style={{ width: "25px", height: "25px" }}
               />
@@ -152,11 +182,9 @@ class MetodoOcorrencias2 extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias3">
-              <button className="arrowNavigation">
-                <FaArrowRight size={55} color="#FFF" />
-              </button>
-            </Link>
+            <button className="arrowNavigation" onClick={this.handleSubmit}>
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
           </div>
         </div>
       </>

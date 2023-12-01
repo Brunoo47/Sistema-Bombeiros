@@ -1,9 +1,16 @@
 const InputD = (props) => {
-    return (
-      <>
-        <input type={props.type} placeholder={props.placeholder} style={props.style} />
-      </>
-    );
-  };
-  
-  export default InputD;
+  return (
+    <>
+      <input
+        type={props.type}
+        onChange={props.onChange}
+        name={props.name}
+        value={props.value}
+        className={props.className}
+        placeholder={props.placeholder}
+      />
+    </>
+  );
+};
+
+export default InputD;

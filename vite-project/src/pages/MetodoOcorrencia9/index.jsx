@@ -38,8 +38,8 @@ class MetodoOcorrencias9 extends Component {
         this.state
       )
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem("objetosRecolhidosId", response.data.id);
+        window.location.href = "http://localhost:5173/RegistrarOcorre";
       })
       .catch((err) => {
         console.error(err);
@@ -119,6 +119,7 @@ class MetodoOcorrencias9 extends Component {
             <div className="buttonDTO">
               <Button
                 nome={"Finalizar"}
+                onClick={this.handleSubmit}
                 style={{
                   width: "320px",
                   height: "60px",
