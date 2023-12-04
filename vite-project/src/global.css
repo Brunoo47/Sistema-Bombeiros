@@ -14,8 +14,9 @@
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 75%;
+.logo,
+.avatar {
+  width: 100%;
 }
 
 .inputs {
@@ -235,7 +236,7 @@ nav {
 .containerPages {
   width: 100vw;
   min-height: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -255,7 +256,7 @@ nav {
   text-decoration: none;
   color: #000;
   padding: 15px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .containerIconX {
@@ -310,7 +311,7 @@ nav {
 
 .buttonYes {
   background-color: green;
-  color: #FFF;
+  color: #fff;
   width: 50px;
   border-radius: 10px;
   border: 1px solid green;
@@ -318,7 +319,7 @@ nav {
 
 .buttonNo {
   background-color: red;
-  color: #FFF;
+  color: #fff;
   width: 50px;
   border-radius: 10px;
   border: 1px solid red;

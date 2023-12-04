@@ -13,23 +13,23 @@ import { Component } from "react";
 
 class IndexChild extends Component {
   state = {
-    Nenhuma: "",
-    Espontanea: "",
-    Comandoverbal: "",
-    Estimuloboloroso: "",
-    Confuso: "",
-    Orientado: "",
-    Palavrasinapropriadas: "",
-    Palavrasincompreensiveis: "",
-    Obdececomandos: "",
-    Localizaador: "",
-    Movimentoderetirada: "",
-    Extensaonormal: "",
+    Nenhuma: false,
+    Espontanea: false,
+    Comandoverbal: false,
+    Estimuloboloroso: false,
+    Confuso: false,
+    Orientado: false,
+    Palavrasinapropriadas: false,
+    Palavrasincompreensiveis: false,
+    Obdececomandos: false,
+    Localizaador: false,
+    Movimentoderetirada: false,
+    Extensaonormal: false,
   };
   componentDidMount = () => {
-    if (localStorage.getItem("ProblemasEncontrados")) {
+    if (localStorage.getItem("AvaliacaoGlassGOW")) {
       Object.entries(
-        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+        JSON.parse(localStorage.getItem("AvaliacaoGlassGOW"))
       ).forEach((element) => {
         this.setState({
           [element[0]]: element[1],
@@ -46,7 +46,7 @@ class IndexChild extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("ProblemasEncontrados")) {
+    if (localStorage.getItem("AvaliacaoGlassGOW")) {
       window.location.href = "http://localhost:5173/metodoOcorrencias4";
       return;
     }
@@ -55,7 +55,7 @@ class IndexChild extends Component {
       .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
       .then((response) => {
         localStorage.setItem(
-          "ProblemasEncontrados",
+          "AvaliacaoGlassGOW",
           JSON.stringify(response.data)
         );
         window.location.href = "http://localhost:5173/metodoOcorrencias4";

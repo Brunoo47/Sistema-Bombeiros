@@ -129,7 +129,7 @@ class MetodoOcorrencias extends Component {
             </div>
             <div>
               <Checkbox
-                name="Desmoronamento/Deslizamento"
+                name="deslizamento_desmoronamento"
                 value={this.state.deslizamento_desmoronamento}
                 onChange={this.handleChange}
                 type={"checkbox"}
@@ -139,7 +139,7 @@ class MetodoOcorrencias extends Component {
             </div>
             <div>
               <Checkbox
-                name="Afogamento"
+                name="afogamento"
                 value={this.state.afogamento}
                 onChange={this.handleChange}
                 type={"checkbox"}
@@ -150,7 +150,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Queda de altura"
-                name="QuedaDeAltura"
+                name="queda_altura"
                 value={this.state.queda_altura}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -175,7 +175,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Atropelamento"
-                name="Atropelamento"
+                name="atropelamento"
                 value={this.state.atropelamento}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -184,7 +184,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Desabamento"
-                name="Desabamento"
+                name="desabamento"
                 value={this.state.desabamento}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -193,7 +193,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Esportivo"
-                name="Esportivo"
+                name="esportivo"
                 value={this.state.esportivo}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -202,7 +202,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Queda de bicicleta"
-                name="Queda de bicicleta"
+                name="queda_bicicleta"
                 value={this.state.queda_bicicleta}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -211,7 +211,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Com meio de transporte"
-                name="ComMeioDeTransporte"
+                name="transporte"
                 value={this.state.transporte}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -220,7 +220,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Emergência médica"
-                name=" EmergenciaMedica"
+                name="emergencia_medica"
                 value={this.state.emergencia_medica}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -229,7 +229,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Tentativa suicídio"
-                name="Tentativa suicidio"
+                name="suicidio"
                 value={this.state.suicidio}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -238,7 +238,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Agressão"
-                name="Agressao"
+                name="agressao"
                 value={this.state.agressao}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -247,7 +247,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Choque elétrico"
-                name="ChoqueEletrico"
+                name="choque"
                 value={this.state.choque}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -256,7 +256,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Doméstico"
-                name="Domestico"
+                name="domestico"
                 value={this.state.domestico}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -265,7 +265,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Intoxicação"
-                name="Intoxicacao"
+                name="intoxicacao"
                 value={this.state.intoxicacao}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -274,7 +274,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Queda de moto"
-                name="QuedaDeMoto"
+                name="queda_moto"
                 value={this.state.queda_moto}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -283,7 +283,7 @@ class MetodoOcorrencias extends Component {
             <div>
               <Checkbox
                 titulo="Transferência"
-                name="Transferencia"
+                name="transferencia"
                 value={this.state.transferencia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
@@ -294,7 +294,7 @@ class MetodoOcorrencias extends Component {
           <div className="inputs">
             <InputD
               type={"text"}
-              name="Outros"
+              name="outro"
               value={this.state.outro}
               onChange={this.handleChange}
               placeholder={"Digite o tipo de ocorrência"}

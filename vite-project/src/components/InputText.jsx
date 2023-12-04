@@ -2,12 +2,12 @@ const InputText = (props) => {
   return (
     <>
       <input
-        type={props.type}
-        onChange={props.onChange}
-        name={props.name}
-        value={props.value}
-        className={props.className}
-        placeholder={props.placeholder}
+        type={props.type ? props.type : ""}
+        onChange={props.onChange ? props.onChange : ""}
+        name={props.name ? props.name : ""}
+        value={props.value ? props.value : ""}
+        className={props.className ? props.className : ""}
+        placeholder={props.placeholder ? props.placeholder : ""}
       />
     </>
   );

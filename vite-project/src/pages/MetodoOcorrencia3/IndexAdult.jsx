@@ -13,24 +13,24 @@ import { Component } from "react";
 
 class IndexAdult extends Component {
   state = {
-    Nenhuma: "",
-    espontanea: "",
-    comando_verbal: "",
-    estimulo_boloroso: "",
-    Confuso: "",
-    orientado: "",
-    palavras_inapropriadas: "",
-    palavras_incompreensiveis: "",
-    obdece_comandos: "",
-    localiza_a_dor: "",
-    movimento_de_retirada: "",
-    extensao_normal: "",
+    Nenhuma: false,
+    espontanea: false,
+    comando_verbal: false,
+    estimulo_boloroso: false,
+    Confuso: false,
+    orientado: false,
+    palavras_inapropriadas: false,
+    palavras_incompreensiveis: false,
+    obdece_comandos: false,
+    localiza_a_dor: false,
+    movimento_de_retirada: false,
+    extensao_normal: false,
   };
 
   componentDidMount = () => {
-    if (localStorage.getItem("ProblemasEncontrados")) {
+    if (localStorage.getItem("AvaliacaoGlassGOW")) {
       Object.entries(
-        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+        JSON.parse(localStorage.getItem("AvaliacaoGlassGOW"))
       ).forEach((element) => {
         this.setState({
           [element[0]]: element[1],
@@ -47,7 +47,7 @@ class IndexAdult extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("ProblemasEncontrados")) {
+    if (localStorage.getItem("AvaliacaoGlassGOW")) {
       window.location.href = "http://localhost:5173/metodoOcorrencias4";
       return;
     }
@@ -56,7 +56,7 @@ class IndexAdult extends Component {
       .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
       .then((response) => {
         localStorage.setItem(
-          "ProblemasEncontrados",
+          "AvaliacaoGlassGOW",
           JSON.stringify(response.data)
         );
         window.location.href = "http://localhost:5173/metodoOcorrencias4";
@@ -221,11 +221,9 @@ class IndexAdult extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias2">
-              <button className="arrowNavigation">
-                <FaArrowRight size={55} color="#FFF" />
-              </button>
-            </Link>
+            <button className="arrowNavigation" onClick={this.handleSubmit}>
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
           </div>
         </div>
       </>

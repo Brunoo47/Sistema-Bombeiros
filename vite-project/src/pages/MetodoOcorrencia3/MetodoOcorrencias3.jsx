@@ -1,5 +1,5 @@
-import IndexAdult from "./indexAdult";
-import IndexChild from "./indexChild";
+import IndexAdult from "./IndexAdult";
+import IndexChild from "./IndexChild";
 import "./style.css";
 
 function MetodoOcorrencias3() {

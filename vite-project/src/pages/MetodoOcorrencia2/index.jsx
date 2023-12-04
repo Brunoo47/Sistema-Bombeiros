@@ -106,6 +106,9 @@ class MetodoOcorrencias2 extends Component {
             </div>
             <div className="containerPE">
               <Checkbox
+                name="respiratorio"
+                value={this.state.respiratorio}
+                onChange={this.handleChange}
                 titulo="Respiratório "
                 className="checkboxPE"
                 onClick={showCheck}
@@ -123,6 +126,9 @@ class MetodoOcorrencias2 extends Component {
             </div>
             <div className="containerPE">
               <Checkbox
+                name="diabeticos"
+                value={this.state.diabeticos}
+                onChange={this.handleChange}
                 titulo="Diabetes "
                 className="checkboxPE"
                 onClick={showCheck}
@@ -145,6 +151,9 @@ class MetodoOcorrencias2 extends Component {
             </div>
             <div className="containerPE" style={{ marginBottom: "30px" }}>
               <Checkbox
+                name="obstetrico"
+                value={this.state.obstetrico}
+                onChange={this.handleChange}
                 titulo="Obstétrico "
                 className="checkboxPE"
                 onClick={showCheck}

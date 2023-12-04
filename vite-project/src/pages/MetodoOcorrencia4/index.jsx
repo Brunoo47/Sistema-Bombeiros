@@ -54,9 +54,9 @@ class MetodoOcorrencias4 extends Component {
   };
 
   componentDidMount = () => {
-    if (localStorage.getItem("ProblemasEncontrados")) {
+    if (localStorage.getItem("registroSinais_e_Sintomas")) {
       Object.entries(
-        JSON.parse(localStorage.getItem("ProblemasEncontrados"))
+        JSON.parse(localStorage.getItem("registroSinais_e_Sintomas"))
       ).forEach((element) => {
         this.setState({
           [element[0]]: element[1],
@@ -82,7 +82,7 @@ class MetodoOcorrencias4 extends Component {
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
     if (localStorage.getItem("registroSinais_e_Sintomas")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencia4";
+      window.location.href = "http://localhost:5173/metodoOcorrencias5";
       return;
     }
     console.log(this.state);
@@ -90,7 +90,7 @@ class MetodoOcorrencias4 extends Component {
       .post("http://localhost:8000/registroSinais_e_Sintomas/", this.state)
       .then((response) => {
         localStorage.setItem(
-          "ProblemasEncontrados",
+          "registroSinais_e_Sintomas",
           JSON.stringify(response.data)
         );
         window.location.href = "http://localhost:5173/metodoOcorrencias5";
@@ -550,11 +550,9 @@ class MetodoOcorrencias4 extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias5">
-              <button className="arrowNavigation">
-                <FaArrowRight size={55} color="#FFF" />
-              </button>
-            </Link>
+            <button className="arrowNavigation" onClick={this.handleSubmit}>
+              <FaArrowRight size={55} color="#FFF" />
+            </button>
           </div>
         </div>
       </>

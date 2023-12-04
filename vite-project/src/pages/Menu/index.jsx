@@ -9,7 +9,6 @@ function Menu() {
       <div className="menu">
         <div>
           <img className="logo" src={Logo} alt="logo do sistema" />
-          <img className="avatar" src={Avatar} alt="avatar do user" />
         </div>
         <div className="menuTitle menuTitleP ">
           <h1>Menu</h1>

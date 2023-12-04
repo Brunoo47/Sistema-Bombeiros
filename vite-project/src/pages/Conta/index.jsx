@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-// import InputText from "../../components/InputText";
+import InputText from "../../components/InputText";
 import { Component } from "react";
 import { FaUserCog } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -13,7 +13,7 @@ class Conta extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked1: false,
+      clicked1: true,
       clicked2: false,
       clicked3: false,
       clicked4: false,
@@ -83,62 +83,6 @@ class Conta extends Component {
         clicked4: true,
       });
     };
-    // const pageGeral = () => {
-    //   clickedColor1();
-
-    //   return (
-    //     <>
-    //       <label className="formText">Nome</label>
-    //       <InputText className={"formInput"} />
-    //       <label className="formText"> CPF</label>
-    //       <InputText className={"formInput"} />
-    //       <label className="formText">RG</label>
-    //       <InputText className={"formInput"} />
-    //     </>
-    //   );
-    // };
-
-    // const pageContato = () => {
-    //   clickedColor2();
-    //   return (
-    //     <>
-    //       <label className="formText">Telefone</label>
-    //       <InputText className={"formInput"} />
-    //       <label className="formText">Email</label>
-    //       <InputText className={"formInput"} />
-    //     </>
-    //   );
-    // };
-
-    // const pageEndereço = () => {
-    //   clickedColor3();
-    //   return (
-    //     <>
-    //       <label className="formText">Rua</label>
-    //       <InputText className={"formInput"} />
-    //       <label className="formText">Cidade</label>
-    //       <InputText className={"formInput"} />
-    //     </>
-    //   );
-    // };
-
-    // const pageSenha = () => {
-    //   clickedColor4();
-    //   return (
-    //     <>
-    //       <label className="formText">Senha</label>
-    //       <InputText className={"formInput"} />
-    //       <label className="formText">Nova senha</label>
-    //       <InputText className={"formInput"} />
-    //     </>
-    //   );
-    // };
-
-    // const [mainPage, setMainPage] = pageGeral;
-
-    // const renderPage = (pageFunction) => {
-    //   return (mainPage) => setMainPage(pageFunction);
-    // };
 
     return (
       <>
@@ -164,14 +108,14 @@ class Conta extends Component {
               <div className="buttons-ribbon">
                 <div
                   className={`element1 ${clicked1 ? "clicked1" : ""}`}
-                  onClick={clickedColor1()}
+                  onClick={clickedColor1}
                 >
                   <FaUserCog size="2rem" color={clicked1 ? "#FFF" : "#000"} />
                   Gerais
                 </div>
                 <div
                   className={`element2 ${clicked2 ? "clicked2" : ""}`}
-                  onClick={clickedColor2()}
+                  onClick={clickedColor2}
                 >
                   <HiOutlineMail
                     size="2rem"
@@ -181,7 +125,7 @@ class Conta extends Component {
                 </div>
                 <div
                   className={`element3 ${clicked3 ? "clicked3" : ""}`}
-                  onClick={clickedColor3()}
+                  onClick={clickedColor3}
                 >
                   <GrHomeRounded
                     size="2rem"
@@ -191,7 +135,7 @@ class Conta extends Component {
                 </div>
                 <div
                   className={`element4 ${clicked4 ? "clicked4" : ""}`}
-                  onClick={clickedColor4()}
+                  onClick={clickedColor4}
                 >
                   <GiPadlock size="2rem" color={clicked4 ? "#FFF" : "#000"} />
                   Senha
@@ -199,11 +143,54 @@ class Conta extends Component {
               </div>
             </div>
             <div className="align">
-              <div className="inputs"></div>
+              {clicked1 && (
+                <div>
+                  <label className="formText">Nome</label>
+                  <InputText
+                    titulo="Nome"
+                    name="nome"
+                    value={this.state.nome}
+                    onChange={this.handleChange}
+                    className={"formInput"}
+                  />
+                  <label className="formText"> CPF</label>
+                  <InputText className={"formInput"} />
+                  <label className="formText">RG</label>
+                  <InputText className={"formInput"} />
+                </div>
+              )}
+
+              {clicked2 && (
+                <div>
+                  <label className="formText">Telefone</label>
+                  <InputText className={"formInput"} />
+                  <label className="formText">Email</label>
+                  <InputText className={"formInput"} />
+                </div>
+              )}
+
+              {clicked3 && (
+                <div>
+                  <label className="formText">Rua</label>
+                  <InputText className={"formInput"} />
+                  <label className="formText">Cidade</label>
+                  <InputText className={"formInput"} />
+                </div>
+              )}
+
+              {clicked4 && (
+                <div>
+                  <label className="formText">Senha</label>
+                  <InputText className={"formInput"} />
+                  <label className="formText">Nova senha</label>
+                  <InputText className={"formInput"} />
+                </div>
+              )}
             </div>
             <div className="alterarDadosBtn">
               <Button
                 nome={"Alterar Dados"}
+                onClick={this.post}
                 style={{
                   width: "270px",
                   height: "60px",
