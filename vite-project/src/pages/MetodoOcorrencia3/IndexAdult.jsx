@@ -13,18 +13,19 @@ import { Component } from "react";
 
 class IndexAdult extends Component {
   state = {
-    Nenhuma: false,
-    espontanea: false,
-    comando_verbal: false,
-    estimulo_boloroso: false,
-    Confuso: false,
-    orientado: false,
-    palavras_inapropriadas: false,
-    palavras_incompreensiveis: false,
-    obdece_comandos: false,
-    localiza_a_dor: false,
-    movimento_de_retirada: false,
-    extensao_normal: false,
+    Nenhuma: "",
+    espontanea: "",
+    comando_verbal: "",
+    estimulo_boloroso: "",
+    Confuso: "",
+    orientado: "",
+    palavras_inapropriadas: "",
+    palavras_incompreensiveis: "",
+    obdece_comandos: "",
+    localiza_a_dor: "",
+    movimento_de_retirada: "",
+    flexao_normal: "",
+    extensao_normal: "",
   };
 
   componentDidMount = () => {
@@ -90,6 +91,9 @@ class IndexAdult extends Component {
               <div className="checkboxG">
                 <CheckboxG
                   titulo="Nenhuma"
+                  name="nenhuma"
+                  value={this.state.Nenhuma}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -99,6 +103,9 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Espontânea"
+                  name="espontanea"
+                  value={this.state.espontanea}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -108,6 +115,9 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Comando Verbal"
+                  name="comando verbal"
+                  value={this.state.comando_verbal}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -117,6 +127,9 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Estímulo Doloroso"
+                  name="comando verbal"
+                  value={this.state.comando_verbal}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -133,7 +146,10 @@ class IndexAdult extends Component {
               </div>
               <div className="checkboxG">
                 <CheckboxG
-                  titulo="Nenhuma"
+                  titulo="Confuso"
+                  name="confuso"
+                  value={this.state.Confuso}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -142,7 +158,10 @@ class IndexAdult extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Espontânea"
+                  titulo="Orientado"
+                  name="orientado"
+                  value={this.state.orientado}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -151,7 +170,10 @@ class IndexAdult extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Comando Verbal"
+                  titulo="Palavras inapropriadas"
+                  name="palavrasinapropriadas"
+                  value={this.state.palavras_inapropriadas}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -160,7 +182,10 @@ class IndexAdult extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Estímulo Doloroso"
+                  titulo="Palavras incompreensíveis"
+                  name="palavrasincompreensiveis"
+                  value={this.state.palavras_incompreensiveis}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",
@@ -177,34 +202,70 @@ class IndexAdult extends Component {
               </div>
               <div className="checkboxG">
                 <CheckboxG
+                  titulo="Obedece comandos"
+                  name="obedececomandos"
+                  value={this.state.obdece_comandos}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Localiza dor"
+                  name="localizador"
+                  value={this.state.localiza_a_dor}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Movimento de retirada"
+                  name="movimentoderetirada"
+                  value={this.state.movimento_de_retirada}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Flexão anormal"
+                  name="flexaoanormal"
+                  value={this.state.flexao_normal}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Extensão anormal"
+                  name="extensaoanormal"
+                  value={this.state.extensao_normal}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
                   titulo="Nenhuma"
-                  style={{
-                    width: "15px",
-                    height: "15px",
-                    marginBottom: "3px",
-                  }}
-                />
-
-                <CheckboxG
-                  titulo="Espontânea"
-                  style={{
-                    width: "15px",
-                    height: "15px",
-                    marginBottom: "3px",
-                  }}
-                />
-
-                <CheckboxG
-                  titulo="Comando Verbal"
-                  style={{
-                    width: "15px",
-                    height: "15px",
-                    marginBottom: "3px",
-                  }}
-                />
-
-                <CheckboxG
-                  titulo="Estímulo Doloroso"
+                  name="nenhuma"
+                  value={this.state.Nenhuma}
+                  onChange={this.handleChange}
                   style={{
                     width: "15px",
                     height: "15px",

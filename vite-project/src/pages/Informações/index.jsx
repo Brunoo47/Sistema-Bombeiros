@@ -49,14 +49,14 @@ class Informacoes extends Component {
                 <InputText
                   type="text"
                   name="username"
-                  placeholder="Numero de registro"
+                  placeholder="Número de registro"
                   value={this.state.username}
                   onChange={this.handleChange}
                 />
                 <InputText
                   type="password"
                   name="password"
-                  placeholder="password"
+                  placeholder="Senha"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />

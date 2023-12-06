@@ -196,7 +196,7 @@ class RegistrarOcorre extends Component {
               </Link>
               <Link to="/metodoHistorico1">
                 <button className="buttonRegistrarOcorre">
-                  Histórico de Ocorrência
+                  Registrar Histórico Ocorrê.
                 </button>
               </Link>
             </div>

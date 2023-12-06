@@ -12,44 +12,44 @@ import axios from "axios";
 import { Component } from "react";
 class MetodoOcorrencias4 extends Component {
   state = {
-    abdomen_sensivel_rigido: "",
-    afundamento_cranio: "",
-    agitacao: "",
-    amnesia: "",
-    apineia: "",
-    angina_peito: "",
-    bradicardia: "",
-    bradipneia: "",
-    bronco_aspirado: "",
-    cefaleia: "",
-    cianose: "",
-    convulsao: "",
-    desvio_traqueia: "",
-    dor_local: "",
-    edema: "",
-    enfisema_subcutaneo: "",
-    estase_jugular: "",
-    face_palida: "",
-    hemorragia: "",
-    hipertensao: "",
-    hipotensao: "",
-    useas_vomitos: "",
-    nasorogia: "",
-    obito: "",
-    otorreia: "",
-    otorragia: "",
-    ovace: "",
-    parada: "",
-    priaprismo: "",
-    prurido_na_pele: "",
-    pupilas: "",
-    sede: "",
-    sinal_de_battle: "",
-    sinal_de_guaxinim: "",
-    sudorese: "",
-    taquipneia: "",
-    taquicardia: "",
-    tontura: "",
+    abdomen_sensivel_rigido: false,
+    afundamento_cranio: false,
+    agitacao: false,
+    amnesia: false,
+    apineia: false,
+    angina_peito: false,
+    bradicardia: false,
+    bradipneia: false,
+    bronco_aspirado: false,
+    cefaleia: false,
+    cianose: false,
+    convulsao: false,
+    desvio_traqueia: false,
+    dor_local: false,
+    edema: false,
+    enfisema_subcutaneo: false,
+    estase_jugular: false,
+    face_palida: false,
+    hemorragia: false,
+    hipertensao: false,
+    hipotensao: false,
+    useas_vomitos: false,
+    nasorogia: false,
+    obito: false,
+    otorreia: false,
+    otorragia: false,
+    ovace: false,
+    parada: false,
+    priaprismo: false,
+    prurido_na_pele: false,
+    pupilas: false,
+    sede: false,
+    sinal_de_battle: false,
+    sinal_de_guaxinim: false,
+    sudorese: false,
+    taquipneia: false,
+    taquicardia: false,
+    tontura: false,
     outro: "",
   };
 
@@ -82,7 +82,7 @@ class MetodoOcorrencias4 extends Component {
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
     if (localStorage.getItem("registroSinais_e_Sintomas")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencias5";
+      window.location.href = "http://localhost:5173/metodoOcorrencias4";
       return;
     }
     console.log(this.state);
@@ -93,7 +93,7 @@ class MetodoOcorrencias4 extends Component {
           "registroSinais_e_Sintomas",
           JSON.stringify(response.data)
         );
-        window.location.href = "http://localhost:5173/metodoOcorrencias5";
+        window.location.href = "http://localhost:5173/metodoOcorrencias4";
       })
       .catch((err) => {
         alert("Falha ao salvar informações");
@@ -153,6 +153,7 @@ class MetodoOcorrencias4 extends Component {
               type={"text"}
               placeholder={"Digite o tipo de sintoma"}
               style={{ width: "85%", height: "10px" }}
+              onChange={this.handleChange}
             />
           </div>
 
@@ -530,6 +531,7 @@ class MetodoOcorrencias4 extends Component {
                 type={"text"}
                 placeholder={"Digite o tipo de ocorrência"}
                 style={{ width: "85%", height: "10px", marginBottom: "20px" }}
+                onChange={this.handleChange}
               />
             </div>
           </div>

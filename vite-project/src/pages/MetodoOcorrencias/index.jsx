@@ -27,7 +27,7 @@ class MetodoOcorrencias extends Component {
     domestico: false,
     intoxicacao: false,
     transferencia: false,
-    outro: null,
+    outro: "",
   };
 
   componentDidMount = () => {

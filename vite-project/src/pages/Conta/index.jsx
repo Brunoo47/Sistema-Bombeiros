@@ -154,36 +154,76 @@ class Conta extends Component {
                     className={"formInput"}
                   />
                   <label className="formText"> CPF</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="cpf"
+                    value={this.state.cpf}
+                    onChange={this.handleChange}
+                  />
                   <label className="formText">RG</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="rg"
+                    value={this.state.rg}
+                    onChange={this.handleChange}
+                  />
                 </div>
               )}
 
               {clicked2 && (
                 <div>
                   <label className="formText">Telefone</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="telefone"
+                    value={this.state.telefone}
+                    onChange={this.handleChange}
+                  />
                   <label className="formText">Email</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
                 </div>
               )}
 
               {clicked3 && (
                 <div>
                   <label className="formText">Rua</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="rua"
+                    value={this.state.rua}
+                    onChange={this.handleChange}
+                  />
                   <label className="formText">Cidade</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="cidade"
+                    value={this.state.cidade}
+                    onChange={this.handleChange}
+                  />
                 </div>
               )}
 
               {clicked4 && (
                 <div>
                   <label className="formText">Senha</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="senha"
+                    value={this.state.senha}
+                    onChange={this.handleChange}
+                  />
                   <label className="formText">Nova senha</label>
-                  <InputText className={"formInput"} />
+                  <InputText
+                    className={"formInput"}
+                    name="nova senha"
+                    value={this.state.novasenha}
+                    onChange={this.handleChange}
+                  />
                 </div>
               )}
             </div>

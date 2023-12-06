@@ -65,7 +65,7 @@ class MetodoOcorrencias5 extends Component {
               </div>
               <div className="asideSV" style={{ justifySelf: "start" }}>
                 <InputD
-                  name="pressao_arterial"
+                  name="pressao_arterial1"
                   value={this.state.pressao_arterial}
                   onChange={this.handleChange}
                   style={{
@@ -79,6 +79,9 @@ class MetodoOcorrencias5 extends Component {
                   <b>x</b>
                 </span>
                 <InputD
+                  name="pressao_arterial2"
+                  value={this.state.pressao_arterial2}
+                  onChange={this.handleChange}
                   style={{
                     width: "60px",
                     height: "25px",
@@ -230,8 +233,8 @@ class MetodoOcorrencias5 extends Component {
                   <div className="containerCheckBox">
                     <input
                       type="checkbox"
-                      name="perfissao"
-                      value={this.state.perfissao}
+                      name="perfissao1"
+                      value={this.state.perfissao1}
                       onChange={this.handleChange}
                       className="checkBoxSV"
                     />
@@ -240,8 +243,8 @@ class MetodoOcorrencias5 extends Component {
                   <div className="containerCheckBox">
                     <input
                       type="checkbox"
-                      name="perfissao"
-                      value={this.state.perfissao}
+                      name="perfissao2"
+                      value={this.state.perfissao2}
                       onChange={this.handleChange}
                       className="checkBoxSV"
                     />
@@ -251,8 +254,8 @@ class MetodoOcorrencias5 extends Component {
                 <div className="asideCheckRight">
                   <div className="containerCheckBox">
                     <input
-                      name="perfissao"
-                      value={this.state.perfissao}
+                      name="perfissao3"
+                      value={this.state.perfissao3}
                       onChange={this.handleChange}
                       type="checkbox"
                       className="checkBoxSV"
@@ -261,8 +264,8 @@ class MetodoOcorrencias5 extends Component {
                   </div>
                   <div className="containerCheckBox">
                     <input
-                      name="perfissao"
-                      value={this.state.perfissao}
+                      name="perfissao4"
+                      value={this.state.perfissao4}
                       onChange={this.handleChange}
                       type="checkbox"
                       className="checkBoxSV"

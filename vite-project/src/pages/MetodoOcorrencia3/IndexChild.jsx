@@ -90,7 +90,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Nenhuma"
                   name="nenhuma"
-                  value={this.state.AberturaOcular}
+                  value={this.state.Nenhuma}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -102,7 +102,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Espontânea"
                   name="Espontânea"
-                  value={this.state.AberturaOcular}
+                  value={this.state.Espontanea}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -114,7 +114,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Comando Verbal"
                   name="Comando Verbal"
-                  value={this.state.AberturaOcular}
+                  value={this.state.Comandoverbal}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -126,7 +126,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Estímulo Doloroso"
                   name="Estímulo Doloroso"
-                  value={this.state.AberturaOcular}
+                  value={this.state.Estimuloboloroso}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -146,7 +146,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Nenhuma"
                   name="Nenhuma"
-                  value={this.state.RespostaVerbal}
+                  value={this.state.Nenhuma}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -158,7 +158,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Espontânea"
                   name="Espontânea"
-                  value={this.state.RespostaVerbal}
+                  value={this.state.Espontanea}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -170,7 +170,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Comando Verbal"
                   name="Comando Verbal"
-                  value={this.state.RespostaVerbal}
+                  value={this.state.Comandoverbal}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -182,7 +182,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Estímulo Doloroso"
                   name="Estímulo Doloroso"
-                  value={this.state.RespostaVerbal}
+                  value={this.state.Estimuloboloroso}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -202,7 +202,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Nenhuma"
                   name="Nenhuma"
-                  value={this.state.RespostaMotora}
+                  value={this.state.Nenhuma}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -214,7 +214,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Espontânea"
                   name="Espontânea"
-                  value={this.state.RespostaMotora}
+                  value={this.state.Espontanea}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -226,7 +226,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Comando Verbal"
                   name="Comando Verbal"
-                  value={this.state.RespostaMotora}
+                  value={this.state.Comandoverbal}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -238,7 +238,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Estímulo Doloroso"
                   name="Estímulo Doloroso"
-                  value={this.state.RespostaMotora}
+                  value={this.state.Estimuloboloroso}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -256,7 +256,7 @@ class IndexChild extends Component {
                 <FaArrowLeft size={55} color="#FFF" />
               </button>
             </Link>
-            <Link to="/metodoOcorrencias2">
+            <Link to="/metodoOcorrencias4">
               <button className="arrowNavigation">
                 <FaArrowRight size={55} color="#FFF" />
               </button>
