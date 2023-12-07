@@ -23,7 +23,7 @@ class MetodoHistorico3 extends Component {
     injeriualimentoouliquido2: false,
   };
   componentDidMount = () => {
-    if (localStorage.getItem("AnamneseMédica")) {
+    if (localStorage.getItem("EmergenciaMedica")) {
       Object.entries(
         JSON.parse(localStorage.getItem("EmergenciaMedica"))
       ).forEach((element) => {
@@ -117,7 +117,7 @@ class MetodoHistorico3 extends Component {
               </div>
               <div className="fieldAnamneseRight">
                 <InputD
-                  type="Text"
+                  type="text"
                   name="quantotempoaconteceu"
                   value={this.state.quantotempoaconteceu}
                   onChange={this.handleChange}

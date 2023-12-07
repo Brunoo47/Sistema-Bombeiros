@@ -10,19 +10,45 @@ import { Link } from "react-router-dom";
 
 class MetodoHistorico5 extends Component {
   state = {
-    Disturbiodecomportamento: "",
-    Encontradocapacete: "",
-    Parabrisasavariado: "",
-    Caminhandonacena: "",
-    Painelavariado: "",
-    Volantetorcido: "",
-    Obs: "",
+    disturbiodecomportamento: false,
+    disturbiodecomportamento_2: false,
+    encontradocapacete: false,
+    encontradocapacete_2: false,
+    parabrisasavariado: false,
+    parabrisasavariado_2: false,
+    caminhandonacena: false,
+    caminhandonacena_2: false,
+    painelavariado: false,
+    painelavariado_2: false,
+    volantetorcido: false,
+    volantetorcido_2: false,
+    obs: null,
   };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("obscinematica")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("obscinematica"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
+  };
+
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
@@ -30,12 +56,15 @@ class MetodoHistorico5 extends Component {
     console.log(this.state);
     axios
       .post(
-        "http://localhost:8000/AvaliacaodacinematicaeObsImportantes/",
+        "http://localhost:8000/registroAvaliacaodacinematicaeObsImportantes/",
         this.state
       )
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "obscinematica",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/RegistrarOcorre";
       })
       .catch((err) => {
         console.error(err);
@@ -64,8 +93,8 @@ class MetodoHistorico5 extends Component {
 
               <div className="fieldACO">
                 <input
-                  name="disturbioComportamento"
-                  value={this.state.disturbioComportamento}
+                  name="disturbiodecomportamento"
+                  value={this.state.disturbiodecomportamento}
                   onChange={this.handleChange}
                   type="checkbox"
                   style={{ width: "25px", height: "30px" }}
@@ -75,6 +104,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="disturbiodecomportamento_2"
+                  value={this.state.disturbiodecomportamento_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -100,6 +132,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="capaceteEncontrado_2"
+                  value={this.state.capaceteEncontrado_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -125,6 +160,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="cintoEncontrado_2"
+                  value={this.state.cintoEncontrado_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -150,6 +188,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="paraBrisasAvariado_2"
+                  value={this.state.paraBrisasAvariado_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -165,7 +206,7 @@ class MetodoHistorico5 extends Component {
               <div className="fieldACO">
                 <input
                   name="caminhandoCena"
-                  value={this.state.caminhandoCena}
+                  value={this.state.caminhandonacena}
                   onChange={this.handleChange}
                   type="checkbox"
                   style={{ width: "25px", height: "30px" }}
@@ -175,6 +216,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="caminhandoCena_2"
+                  value={this.state.caminhandonacena_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -200,6 +244,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name="painelAvariado_2"
+                  value={this.state.painelAvariado_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -225,6 +272,9 @@ class MetodoHistorico5 extends Component {
                 </div>
                 <input
                   type="checkbox"
+                  name=" volanteTorcido_2"
+                  value={this.state.volantetorcido_2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -235,8 +285,8 @@ class MetodoHistorico5 extends Component {
             <span className="spanHistorico">Objetos Recolhidos</span>
             <div className="inputs">
               <InputD
-                name="objetos_recolhidos"
-                value={this.state.objetos_recolhidos}
+                name="obs"
+                value={this.state.obs}
                 onChange={this.handleChange}
                 type={"text"}
                 placeholder={"Digite aqui os objetos recolhidos"}
@@ -246,6 +296,7 @@ class MetodoHistorico5 extends Component {
           </div>
           <Button
             nome={"Finalizar"}
+            onClick={this.handleSubmit}
             style={{
               width: "270px",
               height: "60px",
@@ -253,7 +304,7 @@ class MetodoHistorico5 extends Component {
             }}
           />
           <Link to="/metodoHistorico4">
-            <button className="arrowNavigation">
+            <button className="arrowNavigation" >
               <FaArrowLeft size={55} color="#FFF" />
             </button>
           </Link>
