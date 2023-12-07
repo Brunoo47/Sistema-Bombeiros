@@ -12,54 +12,83 @@ import { Component } from "react";
 
 class MetodoHistorico1 extends Component {
   state = {
-    aspiração: "",
-    Rolamento180: "",
-    AvaliacaoInicial: "",
-    TomadaDecisao: "",
-    AvaliacaoDirigida: "",
-    TratadoChoque: "",
-    AvaliacaoContinuada: "",
-    ChaveRautek: "",
-    UsoColar: "",
-    canula_de_guedel: "",
-    uso_ked: "",
-    desobstrucao_de_va: "",
-    uso_ttf: "",
-    emprego_de_dea: "",
-    ventilacao_de_suporte: "",
-    gerenciamento_de_riscos: "",
-    Oxigenioterapia: "",
-    LimpezaCurativos: "",
-    Reanimador: "",
-    Curativos: "",
-    MeiosAuxiliares: "",
-    Encravamento: "",
-    Ocular: "",
-    Queimadura: "",
-    Simples: "",
-    TresPontas: "",
-    Imobilizações: "",
-    MacaSobreRodas: "",
-    MacaRigida: "",
-    Ponte: "",
-    RetiradoCapacete: "",
-    RCP: "",
-    Rolamento90: "",
-    ha_outra_ocorrencia: "",
+    aspiracao: true,
+    avaliacao_inicial: false,
+    avaliacao_dirigida: false,
+    avaliacao_continua: false,
+    chave_de_rautek: false,
+    canula_de_guedel: false,
+    desobstrucao_de_vva: false,
+    emprego_de_dea: false,
+    gerenciamento_de_riscos: false,
+    limpeza_de_ferimentos: false,
+    curativos: false,
+    compressivo: false,
+    encravamento: false,
+    ocular: false,
+    queimadura: false,
+    simples: false,
+    tres_pontos: false,
+    rolamento_sento_e_oitenta: false,
+    tomada_de_decisao: false,
+    tratado_de_choque: false,
+    imobilizacoes: false,
+    uso_de_canula: false,
+    uso_colar: false,
+    uso_ked: false,
+    uso_ttf: false,
+    ventilacao_de_suporte: false,
+    oxigenioterapia: false,
+    reanimador: false,
+    rolamento_noventa: false,
+    meios_auxiliares: false,
+    ha_outra_ocorrencia: null,
   };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("ProcedimentosEfetuados")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("ProcedimentosEfetuados"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
+  };
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
+  };
+
+
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
     console.log(this.state);
     axios
-      .post("http://localhost:8000/Procedimentos_efetuados/", this.state)
+      .post("http://localhost:8000/registroProcedimentos_efetuados/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "ProcedimentosEfetuados",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoHistorico2";
       })
       .catch((err) => {
         console.error(err);
       });
   };
+
   render() {
     const toggleCheck = () => {
       const backArrow = document.getElementById("backArrow");
@@ -115,73 +144,74 @@ class MetodoHistorico1 extends Component {
           </div>
           <div className="PeContainerCampo">
             <Checkbox
+              titulo="Aspiração"
               type="Checkbox"
-              name="aspiração"
+              name="aspiracao"
               placeholder="Aspiração"
-              value={this.state.Aspiracao}
+              value={this.state.aspiracao}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Rolamento 180°"
-              value={this.state.Rolamento180}
+              name="rolamento_sento_e_oitenta"
+              value={this.state.rolamento_sento_e_oitenta}
               onChange={this.handleChange}
               titulo="Rolamento 180°"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Avaliação inicial"
-              value={this.state.AvaliacaoInicial}
+              name="avaliacao_inicial"
+              value={this.state.avaliacao_inicial}
               onChange={this.handleChange}
               titulo="Avaliação inicial"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Tomada de decisão"
-              value={this.state.TomadaDecisao}
+              name="tomada_de_decisao"
+              value={this.state.tomada_de_decisao}
               onChange={this.handleChange}
               titulo="Tomada de decisão "
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Avaliação dirigida"
-              value={this.state.AvaliacaoDirigida}
+              name="avaliacao_dirigida"
+              value={this.state.avaliacao_dirigida}
               onChange={this.handleChange}
               titulo="Avaliação dirigida"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Tratado de choque"
-              value={this.state.TratadoChoqu}
+              name="tratado_de_choque"
+              value={this.state.tratado_de_choque}
               onChange={this.handleChange}
               titulo="Tratado de choque"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Avaliação continuada"
-              value={this.state.AvaliacaoContinuada}
+              name="avaliacao_continua"
+              value={this.state.avaliacao_continua}
               onChange={this.handleChange}
               titulo="Avaliação continuada"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Uso de cânula"
-              value={this.state.UsoCanula}
+              name="uso_de_canula"
+              value={this.state.uso_de_canula}
               onChange={this.handleChange}
               titulo="Uso de cânula"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               type="Checkbox"
-              name="Chave de Rautek"
-              value={this.state.ChaveRautek}
+              name="chave_de_rautek"
+              value={this.state.chave_de_rautek}
               onChange={this.handleChange}
               titulo="Chave de Rautek"
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -190,8 +220,8 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Uso colar "
                 style={{ width: "25px", height: "25px" }}
-                name="Uso colar"
-                value={this.state.UsoColar}
+                name="uso_colar"
+                value={this.state.uso_colar}
                 onChange={this.handleChange}
                 className={"checkboxSISE"}
                 onClick={showCheck}
@@ -213,7 +243,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Cânula de guedel"
               type="Checkbox"
-              name="Cânula de guedel"
+              name="canula_de_guedel"
               value={this.state.canula_de_guedel}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -221,7 +251,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Uso KED"
               type="Checkbox"
-              name="Uso KED"
+              name="uso_ked"
               value={this.state.uso_ked}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -229,15 +259,15 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Desobstruçção de V. A."
               type="Checkbox"
-              name="Desobstruçção de V. A."
-              value={this.state.desobstrucao_de_va}
+              name="desobstrucao_de_vva"
+              value={this.state.desobstrucao_de_vva}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
             />
             <Checkbox
               titulo="Uso TTF"
               type="Checkbox"
-              name="Uso TTF"
+              name="uso_ttf"
               value={this.state.uso_ttf}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -245,7 +275,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Emprego do D. E. A."
               type="Checkbox"
-              name="Emprego do D. E. A."
+              name="emprego_de_dea"
               value={this.state.emprego_de_dea}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -253,7 +283,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Ventilação de suporte"
               type="Checkbox"
-              name="Ventilação de suporte"
+              name="ventilacao_de_suporte"
               value={this.state.ventilacao_de_suporte}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -261,7 +291,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Gerenciamento de riscos"
               type="Checkbox"
-              name="gerenciamento de riscos"
+              name="gerenciamento_de_riscos"
               value={this.state.gerenciamento_de_riscos}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -269,7 +299,7 @@ class MetodoHistorico1 extends Component {
             <Checkbox
               titulo="Oxigenioterapia"
               type="Checkbox"
-              name="Oxigenioterapia"
+              name="oxigenioterapia"
               value={this.state.oxigenioterapia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -278,42 +308,34 @@ class MetodoHistorico1 extends Component {
           <div className="peInvisible" style={{ display: "none" }}>
             <div className="containerPeInvisible">
               <Checkbox
-                titulo="Limpeza de curativos"
+                titulo="Limpeza de ferimentos"
                 type="Checkbox"
-                name="Limpeza de curativos"
-                value={this.state.LimpezaCurativos}
+                name="limpeza_de_ferimentos"
+                value={this.state.limpeza_de_ferimentos}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Reanimador"
                 type="Checkbox"
-                name="Reanimador"
-                value={this.state.Reanimador1}
+                name="reanimador"
+                value={this.state.reanimador}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Curativos"
                 type="Checkbox"
-                name="Curativos"
+                name="curativos"
                 value={this.state.curativos}
-                onChange={this.handleChange}
-                style={{ width: "25px", height: "25px", marginBottom: "10px" }}
-              />
-              <Checkbox
-                titulo="Reanimador"
-                type="Checkbox"
-                name="Reanimador"
-                value={this.state.Reanimador2}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Compressivo"
                 type="Checkbox"
-                name="Compressivo"
-                value={this.state.Compressivo}
+                name="compressivo"
+                value={this.state.compressivo}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
@@ -321,8 +343,8 @@ class MetodoHistorico1 extends Component {
                 <Checkbox
                   titulo="Meios auxiliares "
                   style={{ width: "25px", height: "25px" }}
-                  name="Meios auxiliares"
-                  value={this.state.MeiosAuxiliares}
+                  name="meios_auxiliares"
+                  value={this.state.meios_auxiliares}
                   onChange={this.handleChange}
                   className={"checkboxSISE"}
                   onClick={showCheck}
@@ -345,7 +367,7 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Encravamento"
                 type="Checkbox"
-                name="Encravamento"
+                name="encravamento"
                 value={this.state.encravamento}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -353,7 +375,7 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Ocular"
                 type="Checkbox"
-                name="Ocular"
+                name="ocular"
                 value={this.state.ocular}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -361,7 +383,7 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Queimadura"
                 type="Checkbox"
-                name="Queimadura"
+                name="queimadura"
                 value={this.state.queimadura}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -369,7 +391,7 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Simples"
                 type="Checkbox"
-                name="Simples"
+                name="simples"
                 value={this.state.simples}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -377,8 +399,8 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="3 pontas"
                 type="Checkbox"
-                name="3 pontas"
-                value={this.state.TresPontas}
+                name="tres_pontos"
+                value={this.state.tres_pontos}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
@@ -386,8 +408,8 @@ class MetodoHistorico1 extends Component {
                 <Checkbox
                   titulo="Imobilizações "
                   style={{ width: "25px", height: "25px" }}
-                  name="Imobilizações"
-                  value={this.state.Imobilizacoes}
+                  name="imobilizacoes"
+                  value={this.state.imobilizacoes}
                   onChange={this.handleChange}
                   className={"checkboxSISE"}
                   onClick={showCheck}
@@ -409,39 +431,39 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Maca sobre rodas"
                 type="Checkbox"
-                name="Maca sobre rodas"
-                value={this.state.MacaSobreRodas}
+                name="macaSobreRodas"
+                value={this.state.macaSobreRodas}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Maca rígida"
                 type="Checkbox"
-                name="Maca rígida"
-                value={this.state.MacaRigida}
+                name="macaRigida"
+                value={this.state.macaRigida}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Ponte "
                 type="Checkbox"
-                name="Ponte"
-                value={this.state.Ponte}
+                name="ponte"
+                value={this.state.ponte}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="Retirado capacete"
                 type="Checkbox"
-                name="Retirado capacete"
-                value={this.state.RetiradoCapacete}
+                name="retiradoCapacete"
+                value={this.state.retiradoCapacete}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
               <Checkbox
                 titulo="R. C. P."
                 type="Checkbox"
-                name="R. C. P."
+                name="RCP"
                 value={this.state.RCP}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
@@ -449,8 +471,8 @@ class MetodoHistorico1 extends Component {
               <Checkbox
                 titulo="Rolamento 90°"
                 type="Checkbox"
-                name="Rolamento 90°"
-                value={this.state.Rolamento90}
+                name="rolamento_noventa"
+                value={this.state.rolamento_noventa}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px", marginBottom: "10px" }}
               />
@@ -459,6 +481,9 @@ class MetodoHistorico1 extends Component {
             <div className="inputs">
               <InputD
                 type={"text"}
+                name="ha_outra_ocorrencia"
+                value={this.state.ha_outra_ocorrencia}
+                onChange={this.handleChange}
                 placeholder={"Digite o tipo de ocorrência"}
                 style={{ width: "85%", height: "10px", marginBottom: "20px" }}
               />
@@ -476,7 +501,7 @@ class MetodoHistorico1 extends Component {
             <SlArrowUp size={80} id="arrowUp" />
           </div>
           <Link to="/metodoHistorico2">
-            <button className="arrowNavigation">
+            <button className="arrowNavigation" onClick={this.handleSubmit}>
               <FaArrowRight size={55} color="#FFF" />
             </button>
           </Link>

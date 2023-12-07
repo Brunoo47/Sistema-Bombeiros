@@ -13,19 +13,20 @@ import { Component } from "react";
 
 class IndexAdult extends Component {
   state = {
-    Nenhuma: "",
-    espontanea: "",
-    comando_verbal: "",
-    estimulo_boloroso: "",
-    Confuso: "",
-    orientado: "",
-    palavras_inapropriadas: "",
-    palavras_incompreensiveis: "",
-    obdece_comandos: "",
-    localiza_a_dor: "",
-    movimento_de_retirada: "",
-    flexao_normal: "",
-    extensao_normal: "",
+    nenhuma1: false,
+    espontanea: false,
+    comando_verbal: false,
+    estimulo_boloroso: false,
+    confuso: false,
+    orientado: false,
+    nenhuma2: false,
+    palavras_inapropriadas: false,
+    palavras_incompreensiveis: false,
+    obdece_comandos: false,
+    localiza_a_dor: false,
+    movimento_de_retirada: false,
+    extensao_normal: false,
+    nenhuma3: false
   };
 
   componentDidMount = () => {
@@ -39,19 +40,24 @@ class IndexAdult extends Component {
       });
     }
   };
+
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
+    debugger
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("AvaliacaoGlassGOW")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencias4";
-      return;
-    }
     console.log(this.state);
     axios
       .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
@@ -91,8 +97,8 @@ class IndexAdult extends Component {
               <div className="checkboxG">
                 <CheckboxG
                   titulo="Nenhuma"
-                  name="nenhuma"
-                  value={this.state.Nenhuma}
+                  name="nenhuma1"
+                  value={this.state.nenhuma1}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -127,7 +133,7 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Estímulo Doloroso"
-                  name="comando verbal"
+                  name="comando_verbal"
                   value={this.state.comando_verbal}
                   onChange={this.handleChange}
                   style={{
@@ -168,10 +174,21 @@ class IndexAdult extends Component {
                     marginBottom: "3px",
                   }}
                 />
+                <CheckboxG
+                  titulo="Estímulo Doloroso"
+                  name="nenhuma2"
+                  value={this.state.nenhuma2}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
 
                 <CheckboxG
                   titulo="Palavras inapropriadas"
-                  name="palavrasinapropriadas"
+                  name="palavras_inapropriadas"
                   value={this.state.palavras_inapropriadas}
                   onChange={this.handleChange}
                   style={{
@@ -183,7 +200,7 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Palavras incompreensíveis"
-                  name="palavrasincompreensiveis"
+                  name="palavras_incompreensiveis"
                   value={this.state.palavras_incompreensiveis}
                   onChange={this.handleChange}
                   style={{
@@ -203,7 +220,7 @@ class IndexAdult extends Component {
               <div className="checkboxG">
                 <CheckboxG
                   titulo="Obedece comandos"
-                  name="obedececomandos"
+                  name="obedece_comandos"
                   value={this.state.obdece_comandos}
                   onChange={this.handleChange}
                   style={{
@@ -227,7 +244,7 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Movimento de retirada"
-                  name="movimentoderetirada"
+                  name="movimento_de_retirada"
                   value={this.state.movimento_de_retirada}
                   onChange={this.handleChange}
                   style={{
@@ -239,7 +256,7 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Flexão anormal"
-                  name="flexaoanormal"
+                  name="flexao_anormal"
                   value={this.state.flexao_normal}
                   onChange={this.handleChange}
                   style={{
@@ -251,7 +268,7 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Extensão anormal"
-                  name="extensaoanormal"
+                  name="extensao_anormal"
                   value={this.state.extensao_normal}
                   onChange={this.handleChange}
                   style={{
@@ -263,8 +280,8 @@ class IndexAdult extends Component {
 
                 <CheckboxG
                   titulo="Nenhuma"
-                  name="nenhuma"
-                  value={this.state.Nenhuma}
+                  name="nenhuma3"
+                  value={this.state.nenhuma3}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",

@@ -46,10 +46,6 @@ class MetodoOcorrencias2 extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("ProblemasEncontrados")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencias3";
-      return;
-    }
     console.log(this.state);
     axios
       .post("http://localhost:8000/registroProblemasEncontrados/", this.state)

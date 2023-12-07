@@ -3,7 +3,7 @@ import IndexChild from "./IndexChild";
 import "./style.css";
 
 function MetodoOcorrencias3() {
-  const idade = 6;
+  const idade = 3 ;
 
   if (idade > 5) {
     return <IndexAdult />;

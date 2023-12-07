@@ -10,32 +10,55 @@ import axios from "axios";
 
 class MetodoHistorico3 extends Component {
   state = {
-    Digite: "",
-    Aconteceuoutrasvezes: "",
-    Quantotempoaconteceu: "",
-    Possuiproblemadesaude: "",
-    Quais: "",
-    Aleegicoaalgumacoisa: "",
-    Sesimespecifique: "",
-    Injeriualimentoouliquido: "",
-    Quehoras1: "",
-    Quehoras2: "",
+    digite: null,
+    aconteceuoutrasvezes: false,
+    aconteceuoutrasvezes2: false,
+    quantotempoaconteceu: null,
+    possuiproblemadesaude: false,
+    possuiproblemadesaude2: false,
+    alergicoaalgumacoisa: false,
+    alergicoaalgumacoisa2: false,
+    sesimespecifique: null,
+    injeriualimentoouliquido: false,
+    injeriualimentoouliquido2: false,
   };
+  componentDidMount = () => {
+    if (localStorage.getItem("AnamneseMédica")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("EmergenciaMedica"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
+  };
+
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
     console.log(this.state);
     axios
-      .post("http://localhost:8000/EmergenciaMedica/", this.state)
+      .post("http://localhost:8000/registroEmergenciaMedica/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "EmergenciaMedica",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoHistorico4";
       })
       .catch((err) => {
         console.error(err);
@@ -58,8 +81,8 @@ class MetodoHistorico3 extends Component {
           <div className="containerAnamneseEM">
             <span>O que aconteceu?(Sinais e Sintomas)</span>
             <InputD
-              name="Cânula"
-              value={this.state.Canula}
+              name="digite"
+              value={this.state.digite}
               onChange={this.handleChange}
               style={{ width: "300px", height: "30px", borderRadius: "30px" }}
             />
@@ -69,16 +92,18 @@ class MetodoHistorico3 extends Component {
               </div>
               <div className="fieldAnamneseRight">
                 <input
-                  type="radio"
-                  name="sim"
+                  value={this.state.digite}
+                  onChange={this.handleChange}
+                  type="checkbox"
+                  name="aconteceuoutrasvezes"
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
                   <span>Sim</span>
                 </div>
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="aconteceuoutrasvezes2"
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -93,8 +118,8 @@ class MetodoHistorico3 extends Component {
               <div className="fieldAnamneseRight">
                 <InputD
                   type="Text"
-                  name="tempOcorrencia"
-                  value={this.state.tempOcorrencia}
+                  name="quantotempoaconteceu"
+                  value={this.state.quantotempoaconteceu}
                   onChange={this.handleChange}
                   placeHolder={"Digite aqui.."}
                   style={{
@@ -111,16 +136,20 @@ class MetodoHistorico3 extends Component {
               </div>
               <div className="fieldAnamneseRight">
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="possuiproblemadesaude"
+                  value={this.state.possuiproblemadesaude}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
                   <span>Sim</span>
                 </div>
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="possuiproblemadesaude2"
+                  value={this.state.possuiproblemadesaude2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -134,16 +163,20 @@ class MetodoHistorico3 extends Component {
               </div>
               <div className="fieldAnamneseRight">
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="aleegicoaalgumacoisa"
+                  value={this.state.alergicoaalgumacoisa}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
                   <span>Sim</span>
                 </div>
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="aleegicoaalgumacoisa2"
+                  value={this.state.alergicoaalgumacoisa2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -157,16 +190,20 @@ class MetodoHistorico3 extends Component {
               </div>
               <div className="fieldAnamneseRight">
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="injeriualimentoouliquido"
+                  value={this.state.injeriualimentoouliquido}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
                   <span>Sim</span>
                 </div>
                 <input
-                  type="radio"
-                  name="sim"
+                  type="checkbox"
+                  name="injeriualimentoouliquido2"
+                  value={this.state.injeriualimentoouliquido2}
+                  onChange={this.handleChange}
                   style={{ width: "25px", height: "30px" }}
                 />
                 <div className="textAnamnese">
@@ -182,7 +219,7 @@ class MetodoHistorico3 extends Component {
               </button>
             </Link>
             <Link to="/metodoHistorico4">
-              <button className="arrowNavigation">
+              <button className="arrowNavigation" onClick={this.handleSubmit}>
                 <FaArrowRight size={55} color="#FFF" />
               </button>
             </Link>

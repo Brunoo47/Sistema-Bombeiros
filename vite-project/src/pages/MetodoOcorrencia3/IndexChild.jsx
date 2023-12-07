@@ -8,23 +8,25 @@ import Arrow from "../../components/arrow";
 import CheckboxG from "../../components/checkboxG";
 import "./style.css";
 import { Link } from "react-router-dom";
-import axios from "../../axios";
 import { Component } from "react";
+import axios from "axios";
 
 class IndexChild extends Component {
   state = {
-    Nenhuma: false,
-    Espontanea: false,
-    Comandoverbal: false,
-    Estimuloboloroso: false,
-    Confuso: false,
-    Orientado: false,
-    Palavrasinapropriadas: false,
-    Palavrasincompreensiveis: false,
-    Obdececomandos: false,
-    Localizaador: false,
-    Movimentoderetirada: false,
-    Extensaonormal: false,
+    nenhuma: false,
+    espontanea: true,
+    comando_verbal: true,
+    estimulo_boloroso: false,
+    palavras_inapropriadas: false,
+    choro: false,
+    sons_incompreensiveis: false,
+    nenhuma_resposta: false,
+    obdece_prontamente: false,
+    localiza_a_dor_estimulo: false,
+    retirada_estimulo: false,
+    flexao_anormal: false,
+    extensao_anormal: false,
+    ausencia_flacida_hipotonia: false
   };
   componentDidMount = () => {
     if (localStorage.getItem("AvaliacaoGlassGOW")) {
@@ -37,22 +39,26 @@ class IndexChild extends Component {
       });
     }
   };
+
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
+    debugger
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("AvaliacaoGlassGOW")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencias4";
-      return;
-    }
-    console.log(this.state);
     axios
-      .post("http://localhost:8000/registroAvaliacaoGlassGOW/", this.state)
+      .post("http://localhost:8000/registroAvaliacaoGlassGOW_Kids/", this.state)
       .then((response) => {
         localStorage.setItem(
           "AvaliacaoGlassGOW",
@@ -90,7 +96,7 @@ class IndexChild extends Component {
                 <CheckboxG
                   titulo="Nenhuma"
                   name="nenhuma"
-                  value={this.state.Nenhuma}
+                  value={this.state.nenhuma}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -101,8 +107,8 @@ class IndexChild extends Component {
 
                 <CheckboxG
                   titulo="Espontânea"
-                  name="Espontânea"
-                  value={this.state.Espontanea}
+                  name="espontanea"
+                  value={this.state.espontanea}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -113,8 +119,8 @@ class IndexChild extends Component {
 
                 <CheckboxG
                   titulo="Comando Verbal"
-                  name="Comando Verbal"
-                  value={this.state.Comandoverbal}
+                  name="comando_verbal"
+                  value={this.state.comando_verbal}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -125,8 +131,8 @@ class IndexChild extends Component {
 
                 <CheckboxG
                   titulo="Estímulo Doloroso"
-                  name="Estímulo Doloroso"
-                  value={this.state.Estimuloboloroso}
+                  name="estimulo_doloroso"
+                  value={this.state.estimulo_boloroso}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -144,9 +150,9 @@ class IndexChild extends Component {
               </div>
               <div className="checkboxG">
                 <CheckboxG
-                  titulo="Nenhuma"
-                  name="Nenhuma"
-                  value={this.state.Nenhuma}
+                  titulo="Palavras e frases inapropriadas"
+                  name="palavras_inapropriadas"
+                  value={this.state.palavras_inapropriadas}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -156,9 +162,9 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Espontânea"
-                  name="Espontânea"
-                  value={this.state.Espontanea}
+                  titulo="Choro persistente ou grito"
+                  name="choro"
+                  value={this.state.choro}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -168,9 +174,9 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Comando Verbal"
-                  name="Comando Verbal"
-                  value={this.state.Comandoverbal}
+                  titulo="Sons inconpreesíveis"
+                  name="sons_incompreensiveis"
+                  value={this.state.sons_incompreensiveis}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -180,9 +186,9 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Estímulo Doloroso"
-                  name="Estímulo Doloroso"
-                  value={this.state.Estimuloboloroso}
+                  titulo="Nenhuma Resposta Verbal"
+                  name="nenhuma_resposta"
+                  value={this.state.nenhuma_resposta}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -200,9 +206,9 @@ class IndexChild extends Component {
               </div>
               <div className="checkboxG">
                 <CheckboxG
-                  titulo="Nenhuma"
-                  name="Nenhuma"
-                  value={this.state.Nenhuma}
+                  titulo="Obedece Prontamente"
+                  name="obdece_prontamente"
+                  value={this.state.obdece_prontamente}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -212,9 +218,9 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Espontânea"
-                  name="Espontânea"
-                  value={this.state.Espontanea}
+                  titulo="Localiza dor ou estímulo tátil"
+                  name="localiza_a_dor_estimulo"
+                  value={this.state.localiza_a_dor_estimulo}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -224,9 +230,9 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Comando Verbal"
-                  name="Comando Verbal"
-                  value={this.state.Comandoverbal}
+                  titulo="Retirada do Segmento Estimulado"
+                  name="retirada_estimulo"
+                  value={this.state.retirada_estimulo}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -236,9 +242,33 @@ class IndexChild extends Component {
                 />
 
                 <CheckboxG
-                  titulo="Estímulo Doloroso"
-                  name="Estímulo Doloroso"
-                  value={this.state.Estimuloboloroso}
+                  titulo="Flexão anormal(Decortição)"
+                  name="flexao_anormal"
+                  value={this.state.flexao_anormal}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Extensão anormal(Descerebração)"
+                  name="extensao_anormal"
+                  value={this.state.extensao_anormal}
+                  onChange={this.handleChange}
+                  style={{
+                    width: "15px",
+                    height: "15px",
+                    marginBottom: "3px",
+                  }}
+                />
+
+                <CheckboxG
+                  titulo="Ausência(Paralísia Flácida, Hipotônia)"
+                  name="ausencia_flacida_hipotonia"
+                  value={this.state.ausencia_flacida_hipotonia}
                   onChange={this.handleChange}
                   style={{
                     width: "15px",
@@ -257,7 +287,7 @@ class IndexChild extends Component {
               </button>
             </Link>
             <Link to="/metodoOcorrencias4">
-              <button className="arrowNavigation">
+              <button className="arrowNavigation" onClick={this.handleSubmit}>
                 <FaArrowRight size={55} color="#FFF" />
               </button>
             </Link>

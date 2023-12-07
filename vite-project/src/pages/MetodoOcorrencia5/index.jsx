@@ -10,34 +10,56 @@ import { Component } from "react";
 
 class MetodoOcorrencias5 extends Component {
   state = {
-    Pressaoarterial1: "",
-    Pressaoarterial2: "",
-    Pulso: "",
-    Respiracao: "",
-    Saturação: "",
-    Hgt: "",
-    Temperatura: "",
-    Profissao1: "",
-    Profissao2: "",
-    Profissao3: "",
-    Profissao4: "",
+    pressao_arterial1: null,
+    pressa_oarterial2: null,
+    pulso: null,
+    respiracao: null,
+    saturação: null,
+    hgt: null,
+    temperatura: null,
+    profissao1: false,
+    profissao2: false,
+    profissao3: false,
+    profissao4: false,
+  };
+
+  componentDidMount = () => {
+    if (localStorage.getItem("registroSinais_Vitais")) {
+      Object.entries(
+        JSON.parse(localStorage.getItem("registroSinais_Vitais"))
+      ).forEach((element) => {
+        this.setState({
+          [element[0]]: element[1],
+        });
+      });
+    }
   };
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
     console.log(this.state);
     axios
-      .post("http://localhost:8000/Sinais_Vitais/", this.state)
+      .post("http://localhost:8000/registroSinais_Vitais/", this.state)
       .then((response) => {
-        console.log(localStorage);
-        localStorage.setItem("userID", response.data.id);
+        localStorage.setItem(
+          "registroSinais_Vitais",
+          JSON.stringify(response.data)
+        );
+        window.location.href = "http://localhost:5173/metodoOcorrencias6";
       })
       .catch((err) => {
         console.error(err);
@@ -202,27 +224,6 @@ class MetodoOcorrencias5 extends Component {
               </div>
             </div>
 
-            <div className="fieldSV">
-              <div className="titleSV">
-                <h4>Saturação: </h4>
-              </div>
-              <div className="asideSV">
-                <InputD
-                  name="saturacao"
-                  value={this.state.saturacao}
-                  onChange={this.handleChange}
-                  style={{
-                    width: "60px",
-                    height: "25px",
-                    borderRadius: "20px",
-                    border: "1px solid #000",
-                  }}
-                />
-                <span>
-                  <b>%</b>
-                </span>
-              </div>
-            </div>
 
             <div className="fieldSV">
               <div className="titleSV">
@@ -283,7 +284,7 @@ class MetodoOcorrencias5 extends Component {
               </button>
             </Link>
             <Link to="/metodoOcorrencias6">
-              <button className="arrowNavigation">
+              <button className="arrowNavigation" onClick={this.handleSubmit}>
                 <FaArrowRight size={55} color="#FFF" />
               </button>
             </Link>

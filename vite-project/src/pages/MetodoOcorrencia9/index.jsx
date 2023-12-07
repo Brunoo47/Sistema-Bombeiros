@@ -15,18 +15,25 @@ import axios from "axios";
 
 class MetodoOcorrencias9 extends Component {
   state = {
-    Critico: "",
-    Instavel: "",
-    Potencialmente_instavel: "",
-    Estavel: "",
-    objetos_recolhidos2: "",
+    critico: false,
+    instavel: false,
+    potencialmente_instavel: false,
+    estavel: false,
+    objetos_recolhidos2: null,
   };
 
   handleChange = (e) => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-    });
+
+    if (e.target.type == "checkbox") {
+      this.setState({
+        [name]: value === "false",
+      });
+    } else {
+      this.setState({
+        [name]: value,
+      });
+    }
   };
 
   handleSubmit = (e) => {
@@ -34,7 +41,7 @@ class MetodoOcorrencias9 extends Component {
     console.log(this.state);
     axios
       .post(
-        "http://localhost:8000/DecisaoTransporteObjetosRecolhidos/",
+        "http://localhost:8000/registroDecisaoTransporteObjetosRecolhidos/",
         this.state
       )
       .then((response) => {
@@ -64,9 +71,9 @@ class MetodoOcorrencias9 extends Component {
               <div className="containerEmoji">
                 <BsEmojiFrown size={70} />
                 <Checkbox
-                  titulo={"Crítico"}
-                  name="Critico"
-                  value={this.state.Critico}
+                  titulo="Crítico"
+                  name="critico"
+                  value={this.state.critico}
                   onChange={this.handleChange}
                   style={{ widht: "30px", height: "30px" }}
                 />
@@ -74,16 +81,19 @@ class MetodoOcorrencias9 extends Component {
               <div className="containerEmoji">
                 <BsEmojiGrimace size={70} />
                 <Checkbox
-                  titulo={"Instável "}
+                  titulo="Instável "
+                  name="instavel"
+                  value={this.state.instavel}
+                  onChange={this.handleChange}
                   style={{ widht: "30px", height: "30px" }}
                 />
               </div>
               <div className="containerEmoji">
                 <BsEmojiNeutral size={70} />
                 <Checkbox
-                  titulo={"Instável "}
-                  name="Instavel"
-                  value={this.state.Instavel}
+                  titulo="Potencialmente Instável"
+                  name="potencialmente_instavel"
+                  value={this.state.potencialmente_instavel}
                   onChange={this.handleChange}
                   style={{ widht: "30px", height: "30px" }}
                 />
@@ -91,9 +101,9 @@ class MetodoOcorrencias9 extends Component {
               <div className="containerEmoji">
                 <BsEmojiSmile size={70} />
                 <Checkbox
-                  titulo={"Potencialmente instável"}
-                  name="Potencialmente_instavel"
-                  value={this.state.Potencialmente_instavel}
+                  titulo="Estável"
+                  name="estavel"
+                  value={this.state.estavel}
                   onChange={this.handleChange}
                   style={{ widht: "30px", height: "30px" }}
                 />
@@ -104,7 +114,7 @@ class MetodoOcorrencias9 extends Component {
               <div className="inputs">
                 <InputD
                   type={"text"}
-                  name="objetos recolhidos"
+                  name="objetos_recolhidos2"
                   value={this.state.objetos_recolhidos2}
                   onChange={this.handleChange}
                   placeholder={"Digite os objetos recolhidos"}

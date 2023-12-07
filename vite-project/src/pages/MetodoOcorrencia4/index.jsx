@@ -32,8 +32,8 @@ class MetodoOcorrencias4 extends Component {
     face_palida: false,
     hemorragia: false,
     hipertensao: false,
-    hipotensao: false,
-    useas_vomitos: false,
+    hiponeia: false,
+    nauseas_vomitos: false,
     nasorogia: false,
     obito: false,
     otorreia: false,
@@ -50,7 +50,7 @@ class MetodoOcorrencias4 extends Component {
     taquipneia: false,
     taquicardia: false,
     tontura: false,
-    outro: "",
+    outro: null,
   };
 
   componentDidMount = () => {
@@ -81,10 +81,6 @@ class MetodoOcorrencias4 extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault(); // Evite o comportamento padrão do formulário
-    if (localStorage.getItem("registroSinais_e_Sintomas")) {
-      window.location.href = "http://localhost:5173/metodoOcorrencias4";
-      return;
-    }
     console.log(this.state);
     axios
       .post("http://localhost:8000/registroSinais_e_Sintomas/", this.state)
@@ -93,7 +89,7 @@ class MetodoOcorrencias4 extends Component {
           "registroSinais_e_Sintomas",
           JSON.stringify(response.data)
         );
-        window.location.href = "http://localhost:5173/metodoOcorrencias4";
+        window.location.href = "http://localhost:5173/metodoOcorrencias5";
       })
       .catch((err) => {
         alert("Falha ao salvar informações");
@@ -160,44 +156,44 @@ class MetodoOcorrencias4 extends Component {
           <div className="SISEContainerCampo">
             <Checkbox
               titulo="Abdomên sensível ou rígido"
-              name="Abdomên sensível ou rígido"
-              value={this.state.AbdomenSensivelRigido}
+              name="abdomen_sensivel_rigido"
+              value={this.state.abdomen_sensivel_rigido}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Éstase jugular"
-              name="Éstase jugular"
-              value={this.state.EstaseJugular}
+              name=" estase_jugular"
+              value={this.state.estase_jugular}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Afundamento de crânio"
-              name="Afundamento de crânio"
-              value={this.state.AfundamentoCranio}
+              name="afundamento_cranio"
+              value={this.state.afundamento_cranio}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Face pálida "
-              name="Face pálida "
-              value={this.state.FacePalida}
+              name="face_palida "
+              value={this.state.face_palida}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Agitação"
-              name="Agitação"
-              value={this.state.Agitacao}
+              name="agitacao"
+              value={this.state.agitacao}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <div>
               <Checkbox
                 titulo="Hemorragia "
-                name="Hemorragia"
-                value={this.state.Hemorragia}
+                name="hemorragia"
+                value={this.state.hemorragia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
                 className={"checkboxSISE"}
@@ -219,87 +215,87 @@ class MetodoOcorrencias4 extends Component {
               </div>
             </div>
             <Checkbox
-              name="Amnesia"
-              value={this.state.Amnesia}
+              name="amnesia"
+              value={this.state.amnesia}
               onChange={this.handleChange}
               titulo="Amnésia"
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Hipertensão"
-              name="Hipertensao"
-              value={this.state.Hipertensao}
+              name="hipertensao"
+              value={this.state.hipertensao}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Apnéia"
-              name="Apneia"
-              value={this.state.Apneia}
+              name="apineia"
+              value={this.state.apineia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Hiponéia"
-              name="Hiponeia"
-              value={this.state.Hiponeia}
+              name="hiponeia"
+              value={this.state.hiponeia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Angina de peito"
-              name="Angina de Peito"
-              value={this.state.AnginaPeito}
+              name="angina_peito"
+              value={this.state.angina_peito}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Náuseas e vômitos"
-              name="Nauseas e Vômitos"
-              value={this.state.NauseasVomitos}
+              name="nauseas_vomitos"
+              value={this.state.nauseas_vomitos}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Bradicardia"
-              name="Bradicardia"
-              value={this.state.Bradicardia}
+              name="bradicardia"
+              value={this.state.bradicardia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Nasorragia"
-              name="Nasorragia"
-              value={this.state.Nasorragia}
+              name="nasorogia"
+              value={this.state.nasorogia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Bradipnéia"
-              name="Bradipneia"
-              value={this.state.Bradipneia}
+              name="bradipneia"
+              value={this.state.bradipneia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Óbito"
-              name="Obito"
-              value={this.state.Obito}
+              name="obito"
+              value={this.state.obito}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
             <Checkbox
               titulo="Bronco-aspirando"
-              name="BroncoAspirando"
-              value={this.state.BroncoAspirando}
+              name="bronco_aspirado"
+              value={this.state.bronco_aspirado}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
 
             <Checkbox
               titulo="Otorréia"
-              name="Otorreia"
-              value={this.state.Otorreia}
+              name="otorreia"
+              value={this.state.otorreia}
               onChange={this.handleChange}
               style={{ width: "25px", height: "25px" }}
             />
@@ -312,23 +308,23 @@ class MetodoOcorrencias4 extends Component {
             <div className="SISEinvisible" id="SISEinvisible">
               <Checkbox
                 titulo="Cefaléia"
-                name="Cefaleia"
-                value={this.state.Cefaleia}
+                name="cefaleia"
+                value={this.state.cefaleia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Otorragia"
-                name="Otorragia"
-                value={this.state.Otorragia}
+                name="otorragia"
+                value={this.state.otorragia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <div>
                 <Checkbox
                   titulo="Cianose "
-                  name="Cianose"
-                  value={this.state.Cianose}
+                  name="cianose"
+                  value={this.state.cianose}
                   onChange={this.handleChange}
                   style={{ width: "25px", height: "25px" }}
                   className={"checkboxSISE"}
@@ -351,15 +347,15 @@ class MetodoOcorrencias4 extends Component {
               </div>
               <Checkbox
                 titulo="O. V. A. C. E"
-                name="O_V_A_C_E"
-                value={this.state.O_V_A_C_E}
+                name="ovace"
+                value={this.state.ovace}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Convulsão"
-                name="Convulsao"
-                value={this.state.Convulsao}
+                name="convulsao"
+                value={this.state.convulsao}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
@@ -367,8 +363,8 @@ class MetodoOcorrencias4 extends Component {
                 <Checkbox
                   titulo="Parada "
                   style={{ width: "25px", height: "25px" }}
-                  name="Parada"
-                  value={this.state.Parada}
+                  name="parada"
+                  value={this.state.parada}
                   onChange={this.handleChange}
                   className={"checkboxSISE"}
                   onClick={showCheck}
@@ -390,29 +386,29 @@ class MetodoOcorrencias4 extends Component {
               </div>
               <Checkbox
                 titulo="Desvio de traquéia"
-                name="DesvioTraqueia"
-                value={this.state.DesvioTraqueia}
+                name="desvio_traqueia"
+                value={this.state.desvio_traqueia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Priaprismo"
-                name="Priaprismo"
-                value={this.state.Priaprismo}
+                name="priaprismo"
+                value={this.state.priaprismo}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Dor local"
-                name="DorLocal"
-                value={this.state.DorLocal}
+                name="dor_local"
+                value={this.state.dor_local}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Prurido na pele"
-                name="PruridoPele"
-                value={this.state.PruridoPele}
+                name="prurido_na_pele"
+                value={this.state.prurido_na_pele}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
@@ -420,8 +416,8 @@ class MetodoOcorrencias4 extends Component {
                 <Checkbox
                   titulo="EDEMA "
                   style={{ width: "25px", height: "25px" }}
-                  name="Edema"
-                  value={this.state.Edema}
+                  name="edema"
+                  value={this.state.edema}
                   onChange={this.handleChange}
                   className={"checkboxSISE"}
                   onClick={showCheck}
@@ -443,10 +439,10 @@ class MetodoOcorrencias4 extends Component {
               </div>
               <div>
                 <Checkbox
-                  titulo="Pupilas "
+                  titulo="Pupilas"
                   style={{ width: "25px", height: "25px" }}
-                  name="Pupilas"
-                  value={this.state.Pupilas}
+                  name="pupilas"
+                  value={this.state.pupilas}
                   onChange={this.handleChange}
                   className={"checkboxSISE"}
                   onClick={showCheck}
@@ -470,57 +466,57 @@ class MetodoOcorrencias4 extends Component {
               </div>
               <Checkbox
                 titulo="Enfisema subcutâneo"
-                name="EnfisemaSubcutaneo"
-                value={this.state.EnfisemaSubcutaneo}
+                name="enfisema_subcutaneo"
+                value={this.state.enfisema_subcutaneo}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Sede"
-                name="Sede"
-                value={this.state.Sede}
+                name="sede"
+                value={this.state.sede}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Taquipnéia"
-                name="Taquipneia"
-                value={this.state.Taquipneia}
+                name="taquipneia"
+                value={this.state.taquipneia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Sinal de Battle"
-                name="SinalBattle"
-                value={this.state.SinalBattle}
+                name="sinal_de_battle"
+                value={this.state.sinal_de_battle}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Taquicardia"
-                name="Taquicardia"
-                value={this.state.Taquicardia}
+                name="taquicardia"
+                value={this.state.taquicardia}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Sinal de guaxinim"
-                name="SinalGuaxinim"
-                value={this.state.SinalGuaxinim}
+                name="sinal_de_guaxinim"
+                value={this.state.sinal_de_guaxinim}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Tontura"
-                name="Tontura"
-                value={this.state.Tontura}
+                name="tontura"
+                value={this.state.tontura}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
               <Checkbox
                 titulo="Sudorese"
-                name="Sudorese"
-                value={this.state.Sudorese}
+                name="sudorese"
+                value={this.state.sudorese}
                 onChange={this.handleChange}
                 style={{ width: "25px", height: "25px" }}
               />
